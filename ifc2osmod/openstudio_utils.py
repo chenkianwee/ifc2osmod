@@ -2391,7 +2391,7 @@ def add_chw_loop(openstudio_model: osmod, system_name: str = 'Chilled Water Loop
     demand_outlet_pipe.addToNode(chilled_water_loop.demandOutletNode)
 
     return chilled_water_loop
-
+'''
 def add_curve(openstudio_model: osmod, curve_name: str) -> osmod.Curve:
     """
     - Adds a curve from the OpenStudio-Standards dataset to the model based on the curve name.
@@ -2570,6 +2570,7 @@ def add_curve(openstudio_model: osmod, curve_name: str) -> osmod.Curve:
         return nil
     end
     end
+
 def add_cw_loop(openstudio_model: osmod, system_name: str = 'Condenser Water Loop', cooling_tower_type: str = 'Open Cooling Tower', cooling_tower_fan_type: str = 'Propeller or Axial', 
                 cooling_tower_capacity_control: str = 'TwoSpeed Fan', number_of_cells_per_tower: int = 1, number_cooling_towers: int = 1, use_90_1_design_sizing: bool = True, 
                 sup_wtr_temp: float = 21.1, dsgn_sup_wtr_temp: float = 29.4, dsgn_sup_wtr_temp_delt: float = 5.6, wet_bulb_approach: float = 3.9, pump_spd_ctrl: str = 'Constant', 
@@ -2816,8 +2817,7 @@ def add_cw_loop(openstudio_model: osmod, system_name: str = 'Condenser Water Loo
     demand_outlet_pipe.addToNode(condenser_water_loop.demandOutletNode)
 
     return condenser_water_loop
-
-
+'''
 def add_low_temp_radiant():
     """
     It is a translation of the this function (It is a translation of the this function (It is a translation of the this function (https://www.rubydoc.info/gems/openstudio-standards/Standard:model_add_low_temp_radiant)
