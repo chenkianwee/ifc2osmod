@@ -1,0 +1,11 @@
+{"measures": [
+    {"dir": "/home/chenkianwee/kianwee_work/code_workspace/10.ifc2osmod/ifc2osmod/ifc2osmod/measures/ideal_air_loads_zone_hvac/", 
+    "arguments": [{"argument": "include_outdoor_air", "value": true}]}, 
+    {"dir": "/home/chenkianwee/kianwee_work/code_workspace/10.ifc2osmod/ifc2osmod/ifc2osmod/measures/openstudio_results/", 
+    "arguments": [{"argument": "units", "value": "SI"}]},
+    {"dir": "/home/chenkianwee/kianwee_work/code_workspace/10.ifc2osmod/ifc2osmod/ifc2osmod/measures/hvac_results/", 
+    "arguments": [{"argument": "srf_temps", "value": false}]},
+    {"dir": "/home/chenkianwee/kianwee_work/code_workspace/10.ifc2osmod/ifc2osmod/ifc2osmod/measures/PythonEnergyplusMeasureDXF/", 
+    "arguments": [{"argument": "dxf_type", "value": "DXF"}]}
+    ]
+}
