@@ -1,0 +1,22 @@
+Program Version,Conversion 22.2 => 23.1
+   ** Warning ** Object=Coil:Cooling:DX:SingleSpeed, name=PSZ-AC:1 HP Cooling Coil, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Coil:Heating:DX:SingleSpeed, name=PSZ-AC:1 Heating Coil, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Coil:Cooling:DX:SingleSpeed, name=PSZ-AC:2 HP Cooling Coil, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Coil:Heating:DX:SingleSpeed, name=PSZ-AC:2 Heating Coil, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Coil:Cooling:DX:SingleSpeed, name=PSZ-AC:3 HP Cooling Coil, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Coil:Heating:DX:SingleSpeed, name=PSZ-AC:3 Heating Coil, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Coil:Cooling:DX:SingleSpeed, name=PSZ-AC:4 HP Cooling Coil, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Coil:Heating:DX:SingleSpeed, name=PSZ-AC:4 Heating Coil, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Coil:Cooling:DX:SingleSpeed, name=PSZ-AC:5 HP Cooling Coil, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Coil:Heating:DX:SingleSpeed, name=PSZ-AC:5 Heating Coil, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ************* Conversion Completed Successfully-- 10 Warning; 0 Severe Errors

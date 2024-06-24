@@ -2,31 +2,10 @@ import sys
 import json
 import argparse
 from pathlib import Path
-import numpy as np
-import geomie3d
-import ifcopenshell
-import ifcopenshell.geom
 import openstudio
 from openstudio import model as osmod
 import openstudio_utils
-import ifcopenshell_utils
-#===================================================================================================
-# region: PARAMETERS
 
-# ifc_path = Path(__file__).parent.parent.joinpath('data','ifc', 'arch_eg-Building.ifc')
-# res_path = Path(__file__).parent.parent.joinpath('results', 'ifc2osm_eg_result')
-
-# # ifc_path = '/home/chenkianwee/kianwee_work/get/projects/grundfos/model/ifc/grundfos-Site_2zones.ifc'
-# # res_path = '/home/chenkianwee/kianwee_work/get/projects/grundfos/model/osmod/'
-
-# # ifc_path = '/home/chenkianwee/kianwee_work/get/projects/bca_data/model/ifc/remodel_ifc_shading.ifc'
-# # res_path = '/home/chenkianwee/kianwee_work/get/projects/bca_data/model/osmod/'
-
-# epw_path = Path(__file__).parent.parent.joinpath('data', 'epw', 'SGP_Singapore.486980_IWEC', 'SGP_Singapore.486980_IWEC.epw')
-# ddy_path = Path(__file__).parent.parent.joinpath('data', 'epw', 'SGP_Singapore.486980_IWEC', 'SGP_Singapore.486980_IWEC.ddy')
-# ndecimals = 3 # number of decimal places
-
-# endregion: PARAMETERS
 #===================================================================================================
 # region: FUNCTIONS
 def parse_args():
@@ -111,6 +90,11 @@ def main(args: argparse.Namespace) -> str:
 
 # endregion: FUNCTIONS
 #===================================================================================================
+#===================================================================================================
+# region: Main
 if __name__=='__main__':
     args = parse_args()
     main(args)
+
+# endregion: Main
+#===================================================================================================

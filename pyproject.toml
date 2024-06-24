@@ -15,6 +15,7 @@ classifiers = ["License :: OSI Approved :: GNU General Public License v3 (GPLv3)
                "Programming Language :: Python :: 3.10",
                "Operating System :: OS Independent"]
 dependencies = ['numpy==1.26.3',
+                'geomie3d==0.0.7',
                 'pyqtgraph==0.13.3', 
                 'PyOpenGL==3.1.7',
                 'PyQt6==6.6.1',
