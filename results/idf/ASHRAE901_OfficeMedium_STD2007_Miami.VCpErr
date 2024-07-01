@@ -1,0 +1,68 @@
+Program Version,Conversion 22.1 => 22.2
+   ** Warning ** Object=Sizing:System, name=PACU_VAV_bot, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Core_bottom, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Core_bottom Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Perimeter_bot_ZN_1, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Perimeter_bot_ZN_1 Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Perimeter_bot_ZN_2, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Perimeter_bot_ZN_2 Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Perimeter_bot_ZN_3, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Perimeter_bot_ZN_3 Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Perimeter_bot_ZN_4, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Perimeter_bot_ZN_4 Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:System, name=PACU_VAV_mid, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Core_mid, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Core_mid Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Perimeter_mid_ZN_1, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Perimeter_mid_ZN_1 Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Perimeter_mid_ZN_2, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Perimeter_mid_ZN_2 Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Perimeter_mid_ZN_3, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Perimeter_mid_ZN_3 Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Perimeter_mid_ZN_4, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Perimeter_mid_ZN_4 Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:System, name=PACU_VAV_top, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Core_top, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Core_top Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Perimeter_top_ZN_1, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Perimeter_top_ZN_1 Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Perimeter_top_ZN_2, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Perimeter_top_ZN_2 Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Perimeter_top_ZN_3, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Perimeter_top_ZN_3 Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Perimeter_top_ZN_4, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=ZoneHVAC:EquipmentList, name=Perimeter_top_ZN_4 Equipment, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ************* Conversion Completed Successfully-- 33 Warning; 0 Severe Errors

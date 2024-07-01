@@ -37,24 +37,28 @@ def parse_args():
     args = parser.parse_args()
     return args
 
-def main(args: argparse.Namespace) -> str:
-    #------------------------------------------------------------------------------------------------------
-    # region: setup openstudio model
-    #------------------------------------------------------------------------------------------------------
-    pipe_input = args.process
-    if pipe_input == False:
-        idf_filepath = args.idf
-    else:
-        lines = list(sys.stdin)
-        idf_filepath = lines[0].strip()
+def idf_transition(idf_filepath: str, output_filepath: str, bin_dir: str, orig_version: float, target_version: float) -> str:
+    '''
+    Updates EP+ IDF file from its current version to the target version.
 
-    idf_filepath = str(Path(idf_filepath).resolve())
+    Parameters
+    ----------
+    idf_filepath : str
+        The file path of the idf file to transit.
+    
+    output_filepath : str
+        The output directory path.
 
-    bin_dir = args.update
-    orig_version = args.curr_version
-    target_version = args.target_version
+    bin_dir : str
+        The directory path of the updater program to be executed.
 
-    output_filepath = args.output
+    orig_version : float
+        the version of the current file.
+
+    target_version : float
+        The targetted EP+ version.
+
+    '''
     curr_filepath = idf_filepath
     if output_filepath != None:
         output_filepath = str(Path(output_filepath).resolve())
@@ -100,10 +104,6 @@ def main(args: argparse.Namespace) -> str:
             print(res.stderr)
     else:
         print('input EP+ versions not valid')
-    
-    #------------------------------------------------------------------------------------------------------
-    # endregion: setup openstudio model
-    #------------------------------------------------------------------------------------------------------
 
 # endregion: FUNCTIONS
 #===================================================================================================
@@ -111,7 +111,22 @@ def main(args: argparse.Namespace) -> str:
 # region: Main
 if __name__=='__main__':
     args = parse_args()
-    main(args)
+    pipe_input = args.process
+    if pipe_input == False:
+        idf_filepath = args.idf
+    else:
+        lines = list(sys.stdin)
+        idf_filepath = lines[0].strip()
+
+    idf_filepath = str(Path(idf_filepath).resolve())
+
+    bin_dir = args.update
+    orig_version = args.curr_version
+    target_version = args.target_version
+
+    output_filepath = args.output
+
+    idf_transition(idf_filepath, output_filepath, bin_dir, orig_version, target_version)
 
 # endregion: Main
 #===================================================================================================

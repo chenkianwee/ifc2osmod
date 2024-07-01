@@ -1,7 +1,10 @@
+import json
+
 import numpy as np
 import geomie3d
 import ifcopenshell
 import ifcopenshell.geom
+
 
 def get_ifc_facegeom(ifc_object: ifcopenshell.entity_instance) -> tuple[np.ndarray, np.ndarray]:
     """
@@ -72,3 +75,60 @@ def ifcopenshell_entity_geom2g3d(ifc_object: ifcopenshell.entity_instance) -> li
                     n_loose_edges = len(path_dict['loose'])
             loop_cnt+=1
     return mfs
+
+def get_default_pset(pset_path: str) -> dict:
+    '''
+    Get the default pset dictionary.
+
+    Parameters
+    ----------
+    pset_path : str
+        Path of the default pset schema.
+
+    Returns
+    -------
+    dict
+        dictionary of the default pset json with the title as the key
+    '''
+    with open(pset_path) as f:
+        pset_schema = json.load(f)
+    schema_title = pset_schema['title']
+    props = pset_schema['properties']
+    prop_names = props.keys()
+    template = {}
+    for prop_name in prop_names:
+        default_val = props[prop_name]['properties']['value']['default']
+        ifc_measure = props[prop_name]['properties']['primary_measure_type']['default']
+        template[prop_name] = {'value': default_val, 'primary_measure_type': ifc_measure}
+    pset_schema = {schema_title: template}
+    return pset_schema
+
+def create_osmod_pset_template(ifcmodel: ifcopenshell.file, pset_path: str):
+    """
+    create ifc material in the ifcmodel
+    
+    Parameters
+    ----------
+    ifcmodel : ifcopenshell.file.file
+        ifc model.
+    
+    pset_path : str
+        Path of the default pset schema.
+
+    Returns
+    -------
+    dict
+        dictionary of the default pset json with the title as the key
+    """
+    osmod_default = get_default_pset(pset_path)
+    osmod_title = list(osmod_default.keys())[0]
+    ifc_template = ifcopenshell.api.run("pset_template.add_pset_template", ifcmodel, name=osmod_title)
+    props = osmod_default[osmod_title]
+    prop_keys = props.keys()
+    for prop_key in prop_keys:
+        primary_measure_type = props[prop_key]['primary_measure_type']
+        # create template properties
+        ifcopenshell.api.run("pset_template.add_prop_template", ifcmodel,
+                             pset_template=ifc_template, name=prop_key, primary_measure_type=primary_measure_type)
+        
+    return ifc_template

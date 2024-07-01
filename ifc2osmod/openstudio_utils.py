@@ -14,6 +14,12 @@ import openstudio
 from openstudio import model as osmod
 from ladybug.epw import EPW
 
+import ifcopenshell_utils
+import settings
+
+PSET_DATA_DIR = settings.PSET_DATA_DIR
+ASHRAE_DATA_DIR = settings.ASHRAE_DATA_DIR
+
 def g3dverts2ospt3d(g3dverts: list[geomie3d.topobj.Vertex], decimals: int = 6) -> list[openstudio.openstudioutilitiesgeometry.Point3d]:
     pt3ds = []
     for v in g3dverts:
@@ -115,6 +121,16 @@ def save2idf(idf_path: str, openstudio_model: osmod):
     ft = openstudio.energyplus.ForwardTranslator()
     idf = ft.translateModel(openstudio_model)
     idf.save(idf_path, True)
+
+def read_idf_file(idf_path: str) -> osmod:
+    rt = openstudio.energyplus.ReverseTranslator()
+    osmodel = rt.loadModel(idf_path)
+    if osmodel.empty() == False:
+        osmodel = osmodel.get()
+    else:
+        raise RuntimeError(f"Failed to load IDF file: {idf_path}")
+
+    return osmodel
 
 def setup_ppl_schedule(openstudio_model: osmod, ruleset: osmod.ScheduleRuleset, act_ruleset:osmod.ScheduleRuleset, name: str = None) -> osmod.People:
     # occupancy definition
@@ -442,7 +458,7 @@ def lookup_fan_curve_coefficients_from_json(fan_curve: str) -> list[float]:
     coeffs : list[float]
         coefficients of the curve.
     """
-    crv_json = Path(__file__).parent.parent.joinpath('data', 'json', 'ashrae_90_1_prm.curves.json')
+    crv_json = ASHRAE_DATA_DIR.joinpath('ashrae_90_1_prm.curves.json')
     fan_curve = find_obj_frm_json_based_on_type_name(crv_json, 'curves', fan_curve)
 
     return [fan_curve['coeff_1'], fan_curve['coeff_2'], fan_curve['coeff_3'], fan_curve['coeff_4'], fan_curve['coeff_5']]
@@ -679,7 +695,7 @@ def create_fan_by_name(openstudio_model: osmod, standards_name: str, fan_name: s
     fan : osmod.StraightComponent
         fan object.
     """
-    fan_json_path = Path(__file__).parent.parent.joinpath('data', 'json', 'ashrae_90_1.fans.json')
+    fan_json_path = ASHRAE_DATA_DIR.joinpath('ashrae_90_1.fans.json')
     fan_json = find_obj_frm_json_based_on_type_name(fan_json_path, 'fans', standards_name)
 
     if fan_json['type'] == 'ConstantVolume':
@@ -2525,7 +2541,7 @@ def add_schedule(openstudio_model: osmod, schedule_name: str) -> osmod.ScheduleR
         return schedule
     
     # Find all the schedule rules that match the name
-    sch_json_path = Path(__file__).parent.parent.joinpath('data', 'json', 'ashrae_90_1.schedules.json')
+    sch_json_path = ASHRAE_DATA_DIR.joinpath('ashrae_90_1.schedules.json')
     rules = find_obj_frm_json_based_on_type_name(sch_json_path, 'schedules', schedule_name)
     if rules == None:
         print('openstudio.standards.Model', f"Cannot find data for schedule: #{schedule_name}, will not be created.")
@@ -3869,7 +3885,7 @@ def add_curve(openstudio_model: osmod, curve_name: str) -> osmod.Curve:
             return curve
 
     # Find curve data
-    crv_json_path = Path(__file__).parent.parent.joinpath('data', 'json', 'ashrae_90_1_prm.curves.json')
+    crv_json_path = ASHRAE_DATA_DIR.joinpath('ashrae_90_1_prm.curves.json')
     data = find_obj_frm_json_based_on_type_name(crv_json_path, 'curves', curve_name)
     if data == None:
         print(f"Could not find a curve called '#{curve_name}' in the standards.")
@@ -4282,7 +4298,7 @@ def find_climate_zone_set(openstudio_model: osmod, climate_zone: str) -> str:
         climate zone set.
     """
     result = None
-    climate_zone_sets_path = Path(__file__).parent.parent.joinpath('data', 'json', 'ashrae_90_1.climate_zone_sets.json')
+    climate_zone_sets_path = ASHRAE_DATA_DIR.joinpath('ashrae_90_1.climate_zone_sets.json')
 
     with open(climate_zone_sets_path) as json_f:
         data = json.load(json_f)
@@ -6737,6 +6753,125 @@ def add_baseboard():
     It is a translation of the this function (It is a translation of the this function (It is a translation of the this function (https://www.rubydoc.info/gems/openstudio-standards/Standard:model_add_baseboard)
     """
     pass
+
+def get_osmod_srf_info(osmod_srf: osmod.PlanarSurface):
+    '''
+    Extract geometry and material information about the osmod surface.
+
+    Parameters
+    ----------
+    osmod_srf : osmod.PlanarSurface
+        the openstudio surface to extract information from.
+
+    Returns
+    -------
+    str
+        The file path of the ifc result
+    '''
+    osm_verts = osmod_srf.vertices()
+    srf_const = osmod_srf.construction()
+    srf_name = osmod_srf.name()
+    print('srf name', srf_name)
+    if not srf_const.empty():
+        srf_const = srf_const.get()
+        print('const name', srf_const.name())
+        if not srf_const.to_LayeredConstruction().empty():
+            srf_lay_const = srf_const.to_LayeredConstruction().get()
+            srf_layers = srf_lay_const.layers()
+            for layer in srf_layers:
+                lay_name = layer.name()
+                thickness = layer.thickness()
+                print(lay_name)
+                print(thickness)
+
+def get_osmod_material_info(osmodel: osmod) -> list[dict]:
+    '''
+    Extract material information from the openstudio model.
+
+    Parameters
+    ----------
+    osmodel : osmod
+        The openstudio model to extract construction information from.
+
+    Returns
+    -------
+    list[dict]
+        - List of material dictionaries with the following keys:
+        - name: name of the material
+        - thickness: thickness of the material in meter
+        - mat_pset: pset schema to be translated to ifc pset from ../data/json/osmod_material_schema.json
+    '''
+    mat_pset_path = PSET_DATA_DIR.joinpath('osmod_material_schema.json')
+    mat_pset_template = ifcopenshell_utils.get_default_pset(mat_pset_path)
+    mat_pset_title = list(mat_pset_template.keys())[0]
+    mat_pset_template = mat_pset_template[mat_pset_title]
+    materials = osmod.getMaterials(osmodel)
+    mat_dicts = []
+    for material in materials:
+        mat_pset = mat_pset_template
+        name = str(material.name())
+        thickness = material.thickness()
+        if not material.to_StandardOpaqueMaterial().empty():
+            to_mat = material.to_StandardOpaqueMaterial().get()
+            mat_pset['roughness'] = str(to_mat.roughness())
+            mat_pset['conductivity'] = to_mat.conductivity()
+            mat_pset['density'] = to_mat.conductivity()
+            mat_pset['specific_heat'] = to_mat.specificHeat()
+            mat_pset['thermal_absorptance'] = to_mat.thermalAbsorptance()
+            mat_pset['solar_absorptance'] = to_mat.solarAbsorptance()
+            mat_pset['visible_absorptance'] = to_mat.visibleAbsorptance()
+        if not material.to_MasslessOpaqueMaterial().empty():
+            to_mat = material.to_MasslessOpaqueMaterial().get()
+            mat_pset['roughness'] = str(to_mat.roughness())
+            mat_pset['thermal_resistance'] = to_mat.thermalResistance()
+            if not to_mat.thermalAbsorptance().empty():
+                mat_pset['thermal_absorptance'] = to_mat.thermalAbsorptance().get()
+            if not to_mat.solarAbsorptance().empty():
+                mat_pset['solar_absorptance'] = to_mat.solarAbsorptance().get()
+            if not to_mat.visibleAbsorptance().empty():
+                mat_pset['visible_absorptance'] = to_mat.visibleAbsorptance().get()
+        elif not material.to_SimpleGlazing().empty():
+            to_mat = material.to_SimpleGlazing().get()
+            mat_pset['u_factor'] = to_mat.uFactor()
+            mat_pset['solar_heat_gain_coefficient'] = to_mat.solarHeatGainCoefficient()
+            if not to_mat.visibleTransmittance().empty(): 
+                mat_pset['visible_transmittance'] = to_mat.visibleTransmittance().get()
+        #TODO: include all material types from osmod
+        mat_dict = {'name': name, 'thickness': thickness, 'mat_pset': mat_pset}
+        mat_dicts.append(mat_dict)
+    return mat_dicts
+
+def get_osmod_construction_info(osmodel: osmod) -> list[dict]:
+    '''
+    Extract construction information from the openstudio model.
+
+    Parameters
+    ----------
+    osmodel : osmod
+        The openstudio model to extract construction information from.
+
+    Returns
+    -------
+    list[dict]
+        - List of construction dictionaries with the following keys:
+        - name: name of the construction
+        - mat_names: list of material names
+    '''
+    const_bases = osmod.getConstructionBases(osmodel)
+    const_dicts = []
+    for const_base in const_bases:
+        const_dict = {}
+        name = str(const_base.name())
+        const_dict['name'] = name
+        if not const_base.to_LayeredConstruction().empty():
+            lay_const = const_base.to_LayeredConstruction().get()
+            mats = lay_const.layers()
+            const_dict['mat_names'] = []
+            for mat in mats:
+                mat_name = str(mat.name())
+                const_dict['mat_names'].append(mat_name)
+        const_dicts.append(const_dict)
+    return const_dicts
 
 if __name__ == '__main__':
     std_dict = std_dgn_sizing_temps()

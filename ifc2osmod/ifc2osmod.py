@@ -19,16 +19,16 @@ def parse_args():
     parser = argparse.ArgumentParser(description = "Convert IFC Models to OpenStudio Models")
  
     # defining arguments for parser object
-    parser.add_argument('-b', '--ifcbim', type = str, 
-                        metavar = 'ifc filepath', 
+    parser.add_argument('-i', '--ifc', type = str, 
+                        metavar = 'FILE', 
                         help = 'The file path of the IFC to convert')
     
-    parser.add_argument('-o', '--output', type = str,
-                        metavar = 'output filepath', default = None,
+    parser.add_argument('-o', '--osmod', type = str,
+                        metavar = 'FILE', default = None,
                         help = 'The file path of the OpenStudio result')
     
     parser.add_argument('-n', '--ndecimals', type = int,
-                        metavar = 'rounding decimals', default = 3,
+                        metavar = 'INT', default = 3,
                         help = 'The number of decimals to round to for the geometries')
 
     parser.add_argument('-v', '--viz', action = 'store_true', default=False,
@@ -125,31 +125,29 @@ def calc_vobj_height_width(xyzs: np.ndarray, zdir: list[float], ydir: list[float
 
     return height, width
 
-def main(args: argparse.Namespace) -> str:
-    # number of decimal places to round the geometry coordinates to
-    ndecimals = args.ndecimals
-    pipe_input = args.process
-    if pipe_input == False:
-        ifc_path = args.ifcbim
-    else:
-        lines = list(sys.stdin)
-        ifc_path = lines[0].strip()
+def ifc2osmod(ifc_path: str, osmod_path: str, ndecimals: int, viz: bool) -> str:
+    '''
+    Converts ifc to openstudio model.
 
-    osmod_path = args.output
-    if osmod_path == None:
-        ifc_parent_path = Path(ifc_path).parent
-        ifc_name = Path(ifc_path).name
-        ifc_name = ifc_name.lower().replace('.ifc', '')
-        res_folder = ifc_parent_path.joinpath(ifc_name)
-        if res_folder.exists() == False:
-            res_folder.mkdir(parents=True)
-        osmod_path = res_folder.joinpath(ifc_name + '.osm')
-    else:
-        res_folder = Path(osmod_path).parent
-        if res_folder.exists() == False:
-            res_folder.mkdir(parents=True)
+    Parameters
+    ----------
+    ifc_path : str
+        The file path of the IFC to convert.
+    
+    osmod_path : str
+        The file path of the OpenStudio result.
 
-    viz = args.viz
+    ndecimals : int
+        The number of decimals to round to for the geometries.
+
+    viz : bool
+        visualize the calculation procedure if turned on.
+
+    Returns
+    -------
+    str
+        The file path of the OpenStudio result
+    '''
     #------------------------------------------------------------------------------------------------------
     # region: read the ifc file and extract all the necessary information for conversion to osm
     #------------------------------------------------------------------------------------------------------
@@ -633,9 +631,38 @@ def main(args: argparse.Namespace) -> str:
     
 # endregion: FUNCTIONS
 #===================================================================================================
+#===================================================================================================
+# region: Main
 if __name__=='__main__':
     args = parse_args()
-    osmod_path = main(args)
+    # number of decimal places to round the geometry coordinates to
+    ndecimals = args.ndecimals
+    pipe_input = args.process
+    if pipe_input == False:
+        ifc_path = args.ifc
+    else:
+        lines = list(sys.stdin)
+        ifc_path = lines[0].strip()
+
+    osmod_path = args.osmod
+    if osmod_path == None:
+        ifc_parent_path = Path(ifc_path).parent
+        ifc_name = Path(ifc_path).name
+        ifc_name = ifc_name.lower().replace('.ifc', '')
+        res_folder = ifc_parent_path.joinpath(ifc_name)
+        if res_folder.exists() == False:
+            res_folder.mkdir(parents=True)
+        osmod_path = res_folder.joinpath(ifc_name + '.osm')
+    else:
+        res_folder = Path(osmod_path).parent
+        if res_folder.exists() == False:
+            res_folder.mkdir(parents=True)
+
+    viz = args.viz
+
+    osmod_res_path = ifc2osmod(ifc_path, osmod_path, ndecimals, viz)
     # make sure this output can be piped into another command on the cmd
-    print(osmod_path)
+    print(osmod_res_path)
     sys.stdout.flush()
+# endregion: Main
+#===================================================================================================
