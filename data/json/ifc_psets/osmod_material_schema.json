@@ -5,7 +5,7 @@
     "description": "IFC property set schema for mapping OpenStudio material properties to IFC material",
     "type": "object",
     "properties": {
-      "roughness": {
+      "Roughness": {
         "type": "object",
         "description": "VeryRough, Rough, MediumRough, MediumSmooth, Smooth, and VerySmooth. This parameter only influences the convection coefficients, more specifically the exterior convection coefficient.",
         "properties": {
@@ -19,7 +19,7 @@
           }
         } 
       },
-      "conductivity": {
+      "Conductivity": {
         "type": "object",
         "description": "Thermal conductivity of the material layer. Units for this parameter are W/(m-K)",
         "properties": {
@@ -33,7 +33,7 @@
           }
         } 
       },
-      "density": {
+      "Density": {
         "type": "object",
         "description": "Density of the material layer in units of kg/m3",
         "properties": {
@@ -47,7 +47,7 @@
           }
         } 
       },
-      "specific_heat": {
+      "SpecificHeat": {
         "type": "object",
         "description": "Specific heat of the material layer in units of J/(kg-K).",
         "properties": {
@@ -61,7 +61,7 @@
           }
         } 
       },
-      "thermal_absorptance": {
+      "ThermalAbsorptance": {
         "type": "object",
         "description": "0-1.0 represents the fraction of incident long wavelength (>2.5 microns) radiation that is absorbed by the material.",
         "properties": {
@@ -75,7 +75,7 @@
           }
         } 
       },
-      "solar_absorptance": {
+      "SolarAbsorptance": {
         "type": "object",
         "description": "0-1.0 fraction of incident solar radiation that is absorbed by the material.",
         "properties": {
@@ -89,7 +89,7 @@
           }
         } 
       },
-      "visible_absorptance": {
+      "VisibleAbsorptance": {
         "type": "object",
         "description": "0-1.0 fraction of incident visible wavelength radiation that is absorbed by the material.",
         "properties": {
@@ -103,7 +103,7 @@
           }
         } 
       },
-      "thermal_resistance": {
+      "ThermalResistance": {
         "type": "object",
         "description": "Thermal resistance (R-value) of the material layer. Units for this parameter are (m2-K)/W.",
         "properties": {
@@ -117,7 +117,7 @@
           }
         } 
       },
-      "u_factor": {
+      "UFactor": {
         "type": "object",
         "description": "Overall heat transfer coefficient. Units are in W/m2-K.",
         "properties": {
@@ -131,7 +131,7 @@
           }
         } 
       },
-      "solar_heat_gain_coefficient": {
+      "SolarHeatGainCoefficient": {
         "type": "object",
         "description": "0-1.0 ratio of transmitted solar radiation to incident solar radiation of an entire window assembly.",
         "properties": {
@@ -145,7 +145,7 @@
           }
         } 
       },
-      "visible_transmittance": {
+      "VisibleTransmittance": {
         "type": "object",
         "description": "0-1.0 amount of visible light that will be transmitted through the window.",
         "properties": {
@@ -160,5 +160,5 @@
         } 
       }
     },
-    "required": [ "roughness", "conductivity", "density", "specific_heat", "thermal_absorptance", "solar_absorptance", "visible_absorptance", "thermal_resistance", "u_factor", "solar_heat_gain_coefficient", "visible_transmittance"]
+    "required": [ "Roughness", "Conductivity", "Density", "SpecificHeat", "ThermalAbsorptance", "SolarAbsorptance", "VisibleAbsorptance", "ThermalResistance", "UFactor", "SolarHeatGainCoefficient", "VisibleTransmittance"]
 }

@@ -1,22 +1,8 @@
 import sys
-import json
 import argparse
 from pathlib import Path
 
-import ifcopenshell.api.aggregate
-import ifcopenshell.api.aggregate.assign_object
-
-import geomie3d
-import ifcopenshell
-import ifcopenshell.geom
-import ifcopenshell.api
-import ifcopenshell.api.aggregate
-import openstudio
-from openstudio import model as osmod
-
-import settings
 import openstudio_utils
-import ifcopenshell_utils
 
 #===================================================================================================
 # region: FUNCTIONS

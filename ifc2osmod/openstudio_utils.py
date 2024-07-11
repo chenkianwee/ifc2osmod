@@ -1,5 +1,7 @@
 import os
+import math
 import json
+import copy
 from pathlib import Path
 import datetime
 import subprocess
@@ -6754,7 +6756,68 @@ def add_baseboard():
     """
     pass
 
-def get_osmod_srf_info(osmod_srf: osmod.PlanarSurface):
+def get_osmod_planar_srf_info(osmod_srf: osmod.PlanarSurface):
+    '''
+    Extract geometry and material information about the osmod PlanarSurface.
+
+    Parameters
+    ----------
+    osmod_srf : osmod.PlanarSurface
+        the openstudio surface to extract information from.
+
+    Returns
+    -------
+    dict
+        - dictionary with the following keys
+        - name: name of the surface
+        - vertices: list(shape(number of vertices, 3)), vertices of the surface.
+        - construction: handle of the construction of the surface
+    '''
+    srf_dict = {}
+    srf_name = osmod_srf.nameString()
+    verts = osmod_srf.vertices()
+    xyzs = []
+    for vert in verts:
+        xyz = [vert.x(), vert.y(), vert.z()]
+        xyzs.append(xyz)
+    
+    srf_dict['name'] = srf_name
+    srf_dict['vertices'] = xyzs
+    const = osmod_srf.construction()
+    if not const.empty():
+        const = const.get()
+        const_handle = str(const.handle())
+        srf_dict['construction'] = const_handle
+    else:
+        srf_dict['construction'] = None
+    
+    return srf_dict
+
+def get_osmod_srf_info(osmod_srf: osmod.Surface):
+    '''
+    Extract geometry and material information about the osmod surface.
+
+    Parameters
+    ----------
+    osmod_srf : osmod.Surface
+        the openstudio surface to extract information from.
+
+    Returns
+    -------
+    dict
+        - dictionary with the following keys
+        - name: name of the surface
+        - vertices: list(shape(number of vertices, 3)), vertices of the surface.
+        - construction: handle of the construction of the surface
+        - type: type of the surface
+    '''
+    srf_dict = get_osmod_planar_srf_info(osmod_srf)
+    srf_type = osmod_srf.surfaceType()
+    srf_dict['type'] = srf_type
+
+    return srf_dict
+        
+def get_osmod_subsrf_info(osmod_srf: osmod.SubSurface):
     '''
     Extract geometry and material information about the osmod surface.
 
@@ -6765,24 +6828,26 @@ def get_osmod_srf_info(osmod_srf: osmod.PlanarSurface):
 
     Returns
     -------
-    str
-        The file path of the ifc result
+    dict
+        - dictionary with the following keys
+        - name: name of the surface
+        - vertices: list(shape(number of vertices, 3)), vertices of the surface.
+        - construction: handle of the construction of the surface
+        - type: type of the surface
+        - host: handle of the host surface
     '''
-    osm_verts = osmod_srf.vertices()
-    srf_const = osmod_srf.construction()
-    srf_name = osmod_srf.name()
-    print('srf name', srf_name)
-    if not srf_const.empty():
-        srf_const = srf_const.get()
-        print('const name', srf_const.name())
-        if not srf_const.to_LayeredConstruction().empty():
-            srf_lay_const = srf_const.to_LayeredConstruction().get()
-            srf_layers = srf_lay_const.layers()
-            for layer in srf_layers:
-                lay_name = layer.name()
-                thickness = layer.thickness()
-                print(lay_name)
-                print(thickness)
+    srf_dict = get_osmod_planar_srf_info(osmod_srf)
+    srf_type = osmod_srf.subSurfaceType()
+
+    srf_dict['type'] = srf_type
+
+    host = osmod_srf.surface()
+    if not host.empty():
+        host = host.get()
+        host_handle = str(host.handle())
+        srf_dict['host'] = host_handle
+
+    return srf_dict
 
 def get_osmod_material_info(osmodel: osmod) -> list[dict]:
     '''
@@ -6795,53 +6860,53 @@ def get_osmod_material_info(osmodel: osmod) -> list[dict]:
 
     Returns
     -------
-    list[dict]
-        - List of material dictionaries with the following keys:
+    dict
+        - nested dictionaries, the osmod handle of the material is used as the key on the top level
+        - each dictionary has the following keys: 
         - name: name of the material
         - thickness: thickness of the material in meter
-        - mat_pset: pset schema to be translated to ifc pset from ../data/json/osmod_material_schema.json
+        - pset: pset schema to be translated to ifc pset from ../data/json/osmod_material_schema.json
     '''
     mat_pset_path = PSET_DATA_DIR.joinpath('osmod_material_schema.json')
-    mat_pset_template = ifcopenshell_utils.get_default_pset(mat_pset_path)
-    mat_pset_title = list(mat_pset_template.keys())[0]
-    mat_pset_template = mat_pset_template[mat_pset_title]
+    mat_pset_template = ifcopenshell_utils.get_default_pset(mat_pset_path, template_only=True)
     materials = osmod.getMaterials(osmodel)
-    mat_dicts = []
+    mat_dicts = {}
     for material in materials:
-        mat_pset = mat_pset_template
-        name = str(material.name())
+        mat_pset = copy.deepcopy(mat_pset_template)
+        handle = str(material.handle())
+        name = material.nameString()
         thickness = material.thickness()
         if not material.to_StandardOpaqueMaterial().empty():
             to_mat = material.to_StandardOpaqueMaterial().get()
-            mat_pset['roughness'] = str(to_mat.roughness())
-            mat_pset['conductivity'] = to_mat.conductivity()
-            mat_pset['density'] = to_mat.conductivity()
-            mat_pset['specific_heat'] = to_mat.specificHeat()
-            mat_pset['thermal_absorptance'] = to_mat.thermalAbsorptance()
-            mat_pset['solar_absorptance'] = to_mat.solarAbsorptance()
-            mat_pset['visible_absorptance'] = to_mat.visibleAbsorptance()
-        if not material.to_MasslessOpaqueMaterial().empty():
+            mat_pset['Roughness']['value'] = str(to_mat.roughness())
+            mat_pset['Conductivity']['value'] = to_mat.conductivity()
+            mat_pset['Density']['value'] = to_mat.conductivity()
+            mat_pset['SpecificHeat']['value'] = to_mat.specificHeat()
+            mat_pset['ThermalAbsorptance']['value'] = to_mat.thermalAbsorptance()
+            mat_pset['SolarAbsorptance']['value'] = to_mat.solarAbsorptance()
+            mat_pset['VisibleAbsorptance']['value'] = to_mat.visibleAbsorptance()
+        elif not material.to_MasslessOpaqueMaterial().empty():
             to_mat = material.to_MasslessOpaqueMaterial().get()
-            mat_pset['roughness'] = str(to_mat.roughness())
-            mat_pset['thermal_resistance'] = to_mat.thermalResistance()
+            mat_pset['Roughness']['value'] = str(to_mat.roughness())
+            mat_pset['ThermalResistance']['value'] = to_mat.thermalResistance()
             if not to_mat.thermalAbsorptance().empty():
-                mat_pset['thermal_absorptance'] = to_mat.thermalAbsorptance().get()
+                mat_pset['ThermalAbsorptance']['value'] = to_mat.thermalAbsorptance().get()
             if not to_mat.solarAbsorptance().empty():
-                mat_pset['solar_absorptance'] = to_mat.solarAbsorptance().get()
+                mat_pset['SolarAbsorptance']['value'] = to_mat.solarAbsorptance().get()
             if not to_mat.visibleAbsorptance().empty():
-                mat_pset['visible_absorptance'] = to_mat.visibleAbsorptance().get()
+                mat_pset['VisibleAbsorptance']['value'] = to_mat.visibleAbsorptance().get()
         elif not material.to_SimpleGlazing().empty():
             to_mat = material.to_SimpleGlazing().get()
-            mat_pset['u_factor'] = to_mat.uFactor()
-            mat_pset['solar_heat_gain_coefficient'] = to_mat.solarHeatGainCoefficient()
+            mat_pset['UFactor']['value'] = to_mat.uFactor()
+            mat_pset['SolarHeatGainCoefficient']['value'] = to_mat.solarHeatGainCoefficient()
             if not to_mat.visibleTransmittance().empty(): 
-                mat_pset['visible_transmittance'] = to_mat.visibleTransmittance().get()
+                mat_pset['VisibleTransmittance']['value'] = to_mat.visibleTransmittance().get()
         #TODO: include all material types from osmod
-        mat_dict = {'name': name, 'thickness': thickness, 'mat_pset': mat_pset}
-        mat_dicts.append(mat_dict)
+        mat_dict = {'name': name, 'thickness': thickness, 'pset': mat_pset}
+        mat_dicts[handle] = mat_dict
     return mat_dicts
 
-def get_osmod_construction_info(osmodel: osmod) -> list[dict]:
+def get_osmod_construction_info(osmodel: osmod) -> dict:
     '''
     Extract construction information from the openstudio model.
 
@@ -6852,26 +6917,212 @@ def get_osmod_construction_info(osmodel: osmod) -> list[dict]:
 
     Returns
     -------
-    list[dict]
-        - List of construction dictionaries with the following keys:
+    dict
+        - nested dictionaries, the osmod handle of the construction is used as the key on the top level
+        - each dictionary has the following keys: 
         - name: name of the construction
         - mat_names: list of material names
+        - mat_handles: list of material handles
     '''
     const_bases = osmod.getConstructionBases(osmodel)
-    const_dicts = []
+    const_dicts = {}
     for const_base in const_bases:
         const_dict = {}
-        name = str(const_base.name())
+        name = const_base.nameString()
+        handle = str(const_base.handle())
         const_dict['name'] = name
         if not const_base.to_LayeredConstruction().empty():
             lay_const = const_base.to_LayeredConstruction().get()
             mats = lay_const.layers()
             const_dict['mat_names'] = []
+            const_dict['mat_handles'] = []
             for mat in mats:
-                mat_name = str(mat.name())
+                mat_handle = str(mat.handle())
+                mat_name = mat.nameString()
                 const_dict['mat_names'].append(mat_name)
-        const_dicts.append(const_dict)
+                const_dict['mat_handles'].append(mat_handle)
+        const_dicts[handle] = const_dict
     return const_dicts
+
+def get_osmod_space_based_info(osmod_spaces: list[osmod.Space] | list[osmod.SpaceType], pset_template: dict) -> dict:
+    '''
+    Extract space related information from the openstudio model.
+
+    Parameters
+    ----------
+    osmod_space : list[osmod.Space] | list[osmod.SpaceType]
+        The space or spacetype object to extract information from.
+
+    pset_template : dict
+        pset schema to be translated to ifc pset from ../data/json/osmod_space_schema.json or ../data/json/osmod_spacetype_schema.json
+
+    Returns
+    -------
+    dict
+        - nested dictionaries, the osmod handle of the space is used as the key on the top level
+        - each dictionary has the following keys: 
+        - name: name 
+        - pset: pset schema to be translated to ifc pset from ../data/json/osmod_space_schema.json or ../data/json/osmod_spacetype_schema.json
+    '''
+    space_dicts = {}
+    for space in osmod_spaces:
+        pset = copy.deepcopy(pset_template)
+        name = space.nameString()
+        handle = str(space.handle())
+        spec_out_air = space.designSpecificationOutdoorAir()
+        if not spec_out_air.empty():
+            spec_out_air = spec_out_air.get()
+            pset['OutdoorAirFlowperPerson']['value'] = spec_out_air.outdoorAirFlowperPerson()
+            pset['OutdoorAirFlowperFloorArea']['value'] = spec_out_air.outdoorAirFlowperFloorArea()
+
+        if not math.isinf(space.floorAreaPerPerson()): pset['FloorAreaPerPerson']['value'] = space.floorAreaPerPerson()
+        if not math.isinf(space.lightingPowerPerFloorArea()): pset['LightingPowerPerFloorArea']['value'] = space.lightingPowerPerFloorArea()
+        if not math.isinf(space.electricEquipmentPowerPerFloorArea()): 
+            pset['ElectricEquipmentPowerPerFloorArea']['value'] = space.electricEquipmentPowerPerFloorArea()
+            
+        space_dict = {'name': name, 'pset': pset}
+        space_dicts[handle] = space_dict
+    
+    return space_dicts
+
+def get_osmod_space_info(osmodel: osmod) -> dict:
+    '''
+    Extract space information from the openstudio model.
+
+    Parameters
+    ----------
+    osmodel : osmod
+        The openstudio model to extract construction information from.
+
+    Returns
+    -------
+    dict
+        - nested dictionaries, the osmod handle of the space is used as the key on the top level
+        - each dictionary has the following keys: 
+        - name: name 
+        - pset: pset schema to be translated to ifc pset from ../data/json/ifc_psets/osmod_space_schema.json
+        - tzone: the thermal zone handle the space belongs to
+        - spacetype: the spacetype handle of the space if any
+        - story: the building story handle this space belongs to
+        - surfaces: surface dictionaries index by their handles and 
+            - within each dict has keys: name, vertices, construction, type 
+        - sub_surfaces: sub_surface dictionaries index by their handles and 
+            - within each dict has keys: name, vertices, construction, type, host  
+    '''
+    pset_path = PSET_DATA_DIR.joinpath('osmod_space_schema.json')
+    pset_template = ifcopenshell_utils.get_default_pset(pset_path, template_only=True)
+    spaces = osmod.getSpaces(osmodel)
+    space_dicts = get_osmod_space_based_info(spaces, pset_template)
+    for space in spaces:
+        space_handle = str(space.handle())
+        tzone = space.thermalZone()
+        if not tzone.empty():
+            tzone = tzone.get()
+            tzone_handle = str(tzone.handle())
+            space_dicts[space_handle]['tzone'] = tzone_handle
+        sptype = space.spaceType()
+        if not sptype.empty():
+            sptype = sptype.get()
+            sptype_handle = str(sptype.handle())
+            space_dicts[space_handle]['spacetype'] = sptype_handle
+        bldgstory = space.buildingStory()
+        if not bldgstory.empty():
+            bldgstory = bldgstory.get()
+            bldgstory_handle = str(bldgstory.handle())
+            space_dicts[space_handle]['story'] = bldgstory_handle
+        srf_dicts = {}
+        sub_srf_dicts = {}
+        srfs = space.surfaces()
+        for srf in srfs:
+            srf_handle = str(srf.handle())
+            srf_dict = get_osmod_srf_info(srf)
+            srf_dicts[srf_handle] = srf_dict
+            subsrfs = srf.subSurfaces()
+            for subsrf in subsrfs:
+                subsrf_handle = str(subsrf.handle())
+                sub_srf_dict = get_osmod_subsrf_info(subsrf)
+                sub_srf_dicts[subsrf_handle] = sub_srf_dict
+        
+        space_dicts[space_handle]['surfaces'] = srf_dicts
+        space_dicts[space_handle]['sub_surfaces'] = sub_srf_dicts
+
+    return space_dicts
+
+def get_osmod_spacetype_info(osmodel: osmod) -> dict:
+    '''
+    Extract spacetype information from the openstudio model.
+
+    Parameters
+    ----------
+    osmodel : osmod
+        The openstudio model to extract construction information from.
+
+    Returns
+    -------
+    dict
+        - nested dictionaries, the osmod handle of the spacetype is used as the key on the top level
+        - each dictionary has the following keys: 
+        - name: name 
+        - pset: pset schema to be translated to ifc pset from ../data/json/osmod_spacetype_schema.json
+    '''
+    pset_path = PSET_DATA_DIR.joinpath('osmod_spacetype_schema.json')
+    pset_template = ifcopenshell_utils.get_default_pset(pset_path, template_only=True)
+    spacetypes = osmod.getSpaceTypes(osmodel)
+    spacetype_dicts = get_osmod_space_based_info(spacetypes, pset_template)
+    return spacetype_dicts
+
+def get_osmod_tzone_info(osmodel: osmod) -> dict:
+    '''
+    Extract thermal zone information from the openstudio model.
+
+    Parameters
+    ----------
+    osmodel : osmod
+        The openstudio model to extract construction information from.
+
+    Returns
+    -------
+    dict
+        - nested dictionaries, the osmod handle of the thermal zone is used as the key on the top level
+        - each dictionary has the following keys: 
+        - name: name
+    '''
+    tzones = osmod.getThermalZones(osmodel)
+    tzone_dicts = {}
+    for tzone in tzones:
+        name = tzone.nameString()
+        handle = str(tzone.handle())
+
+        tzone_dict = {'name': name}
+        tzone_dicts[handle] = tzone_dict
+
+    return tzone_dicts
+
+def get_osmod_story_info(osmodel: osmod) -> dict:
+    '''
+    Extract building story information from the openstudio model.
+
+    Parameters
+    ----------
+    osmodel : osmod
+        The openstudio model to extract construction information from.
+
+    Returns
+    -------
+    dict
+        - nested dictionaries, the osmod handle of the thermal zone is used as the key on the top level
+        - each dictionary has the following keys: 
+        - name: name
+    '''
+    stories = osmod.getBuildingStorys(osmodel)
+    story_dicts = {}
+    for story in stories:
+        name = story.nameString()
+        handle = str(story.handle())
+        story_dict = {'name': name}
+        story_dicts[handle] = story_dict
+
+    return story_dicts
 
 if __name__ == '__main__':
     std_dict = std_dgn_sizing_temps()

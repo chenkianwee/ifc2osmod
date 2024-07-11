@@ -1,4 +1,5 @@
 import json
+from pprint import pprint
 
 import numpy as np
 import geomie3d
@@ -76,7 +77,7 @@ def ifcopenshell_entity_geom2g3d(ifc_object: ifcopenshell.entity_instance) -> li
             loop_cnt+=1
     return mfs
 
-def get_default_pset(pset_path: str) -> dict:
+def get_default_pset(pset_path: str, template_only: bool = False) -> dict:
     '''
     Get the default pset dictionary.
 
@@ -84,6 +85,9 @@ def get_default_pset(pset_path: str) -> dict:
     ----------
     pset_path : str
         Path of the default pset schema.
+
+    template_only : bool
+        default False, if set to True returns only the template without the tile as key.
 
     Returns
     -------
@@ -100,10 +104,14 @@ def get_default_pset(pset_path: str) -> dict:
         default_val = props[prop_name]['properties']['value']['default']
         ifc_measure = props[prop_name]['properties']['primary_measure_type']['default']
         template[prop_name] = {'value': default_val, 'primary_measure_type': ifc_measure}
-    pset_schema = {schema_title: template}
-    return pset_schema
+    
+    if template_only:
+        return template
+    else:
+        pset_schema = {schema_title: template}
+        return pset_schema
 
-def create_osmod_pset_template(ifcmodel: ifcopenshell.file, pset_path: str):
+def create_osmod_pset_template(ifcmodel: ifcopenshell.file, pset_path: str) -> ifcopenshell.entity_instance:
     """
     create ifc material in the ifcmodel
     
@@ -117,8 +125,8 @@ def create_osmod_pset_template(ifcmodel: ifcopenshell.file, pset_path: str):
 
     Returns
     -------
-    dict
-        dictionary of the default pset json with the title as the key
+    ifcopenshell.entity_instance
+        ifc pset template instance 
     """
     osmod_default = get_default_pset(pset_path)
     osmod_title = list(osmod_default.keys())[0]
@@ -132,3 +140,64 @@ def create_osmod_pset_template(ifcmodel: ifcopenshell.file, pset_path: str):
                              pset_template=ifc_template, name=prop_key, primary_measure_type=primary_measure_type)
         
     return ifc_template
+
+def create_ifc_entity_with_osmod_pset(ifcmodel: ifcopenshell.file, ifc_class: str, pset_path: str, osmod2ifc_dicts: dict) -> ifcopenshell.entity_instance:
+    """
+    create ifc entity in the ifcmodel with the specified osmod pset. https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/pset/index.html#ifcopenshell.api.pset.edit_pset
+    
+    Parameters
+    ----------
+    ifcmodel : ifcopenshell.file.file
+        ifc model.
+    
+    ifc_class : str
+        the ifc object to create, e.g. IfcSpaceType, IfcSpace.
+        
+    pset_path : str
+        Path of the default pset schema.
+    
+    osmod2ifc_dicts: dict
+        - nested dictionaries, the osmod handle of the spacetype is used as the key on the top level
+        - each dictionary in the nested dict must have the following keys: 
+        - name: name 
+        - pset: pset schema to be translated to ifc pset from ../data/json/ifc_psets
+
+    Returns
+    -------
+    ifcopenshell.entity_instance
+        ifc pset template instance 
+    """
+    with open(pset_path) as f:
+        json_data = json.load(f)
+        osmod_pset_title = json_data['title']
+    osmod_pset_template = create_osmod_pset_template(ifcmodel, pset_path)
+
+    ifc_objs = []
+    osmod2ifc_vals = osmod2ifc_dicts.values()
+    for osmod2ifc_val in osmod2ifc_vals:
+        osmod2ifc_name = osmod2ifc_val['name']
+        ifc_obj = ifcopenshell.api.run("root.create_entity", ifcmodel, ifc_class=ifc_class, name=osmod2ifc_name)
+        pset = ifcopenshell.api.run("pset.add_pset", ifcmodel, product=ifc_obj, name=osmod_pset_title)
+        ifcopenshell.api.run("pset.edit_pset", ifcmodel, pset=pset, properties=osmod2ifc_val['pset'], pset_template=osmod_pset_template)
+        ifc_objs.append(ifc_obj)
+
+    return ifc_objs
+
+def validate_ifc(ifc_path: str):
+    """
+    validate the ifc file
+    
+    Parameters
+    ----------
+    ifc_path : str
+        path of ifc model. 
+    """
+    # validate the generated ifc file
+    logger = ifcopenshell.validate.json_logger()
+    ifcopenshell.validate.validate(ifc_path, logger, express_rules=True)
+    
+    if len(logger.statements) == 0:
+        print('Validated !!')
+    else:
+        print('Error !!')
+        pprint(logger.statements)
