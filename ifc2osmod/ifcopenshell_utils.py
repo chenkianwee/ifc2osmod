@@ -5,7 +5,8 @@ import numpy as np
 import geomie3d
 import ifcopenshell
 import ifcopenshell.geom
-
+import ifcopenshell.validate
+import ifcopenshell.util.unit
 
 def get_ifc_facegeom(ifc_object: ifcopenshell.entity_instance) -> tuple[np.ndarray, np.ndarray]:
     """
@@ -87,7 +88,7 @@ def get_default_pset(pset_path: str, template_only: bool = False) -> dict:
         Path of the default pset schema.
 
     template_only : bool
-        default False, if set to True returns only the template without the tile as key.
+        default False, if set to True returns only the template without the title as key.
 
     Returns
     -------
@@ -201,3 +202,210 @@ def validate_ifc(ifc_path: str):
     else:
         print('Error !!')
         pprint(logger.statements)
+
+def convert_pset2csv_str(csv_header_str: str, csv_content_str: str, chosen_pset: dict) -> tuple[str, str]:
+    '''
+    Converts mat pset dictionary to csv str.
+
+    Parameters
+    ----------
+    csv_header_str: str
+        headers of the csv file.
+    
+    csv_content_str: str
+        the content of the csv.
+    
+    chosen_pset: dict
+        the pset dictionary of the material
+
+    Returns
+    -------
+    tuple[str, str]
+        the csv_header_str, csv_content_str
+    '''
+    pset_keys = chosen_pset.keys()
+    if not csv_header_str:
+        for kcnt,key in enumerate(pset_keys):
+            if kcnt == len(pset_keys) - 1:
+                csv_header_str+=f"{key}\n"
+            else:
+                csv_header_str+=f"{key},"   
+    for kcnt,key in enumerate(pset_keys):
+        value = chosen_pset[key]
+        if kcnt == len(pset_keys)-1:
+            csv_content_str += f"{value}\n"
+        else:
+            csv_content_str += f"{value},"
+
+    return csv_header_str, csv_content_str
+
+def extract_mat_layer_sets_pset(ifcmodel: ifcopenshell.file, pset_name: str, is_calc_massless: bool = False) -> dict:
+    """
+    extract material layer set with the specified pset from the ifcmodel
+
+    Parameters
+    ----------
+    ifcmodel : ifcopenshell.file.file
+        ifc model.
+    
+    pset_name : str
+        The name of the pset to retrieve.
+        
+    is_calc_massless : bool, optional
+        Default = False. If set True dictionary will of each material layer set will have 'massless' key.
+
+    Returns
+    -------
+    dict
+        - a dictionary on the first level the material layer set 'id' as key to another dict with the following keys
+        - material_layers: list[dict] of the pset.
+        - material_layers_csv: str converted from the dictionaries written in csv form
+        - if is_calc_massless is True
+        - massless: dictionary of the massless material keys 'Roughness', 'ThermalAbsorptance', 'SolarAbsorptance', 'VisibleAbsorptance', 'ThermalResistance'
+        - massless_csv: csv str of the dictionary from massless
+    """
+    length_scale = ifcopenshell.util.unit.calculate_unit_scale(ifcmodel, unit_type='LENGTHUNIT')
+    mat_layer_sets = ifcmodel.by_type('IfcMaterialLayerSet')
+    mls_psets = {}
+    for mls in mat_layer_sets:
+        mls_info = mls.get_info()
+        mls_name = mls_info['LayerSetName']
+        mls_id = mls_info['id']
+        mat_layers = mls_info['MaterialLayers']
+        mat_ls = []
+        roughs = []
+        tabsorps = []
+        sabsorps = []
+        vabsorps = []
+        resistances = []
+        csv_header_str = ''
+        csv_content_str = ''
+        for mat_layer in mat_layers:
+            ml_info = mat_layer.get_info()
+            mat = ml_info['Material']
+            thickness = ml_info['LayerThickness']*length_scale
+            chosen_pset = ifcopenshell.util.element.get_psets(mat, psets_only=True)[pset_name]
+            chosen_pset['Thickness'] = thickness
+            chosen_pset['Name'] = mat.Name
+            chosen_pset = {'Name': chosen_pset.pop('Name'), 'Thickness': chosen_pset.pop('Thickness'), **chosen_pset}
+            if is_calc_massless:
+                conductivity = chosen_pset['Conductivity']    
+                if conductivity is not None:
+                    resistance = thickness/conductivity
+                    chosen_pset['ThermalResistance'] = resistance
+                rough = chosen_pset['Roughness']
+                if rough == 'VeryRough':
+                    rough = 6
+                elif rough == 'Rough':
+                    rough = 5
+                elif rough == 'MediumRough':
+                    rough = 4
+                elif rough == 'MediumSmooth':
+                    rough = 3
+                elif rough == 'Smooth':
+                    rough = 2
+                elif rough == 'VerySmooth':
+                    rough = 1
+                roughs.append(rough)
+                tabsorps.append(chosen_pset['ThermalAbsorptance'])
+                sabsorps.append(chosen_pset['SolarAbsorptance'])
+                vabsorps.append(chosen_pset['VisibleAbsorptance'])
+                resistances.append(chosen_pset['ThermalResistance'])
+
+            mat_ls.append(chosen_pset)
+            csv_header_str, csv_content_str = convert_pset2csv_str(csv_header_str, csv_content_str, chosen_pset)
+
+        mls_str = f"{mls_name}\n{csv_header_str}{csv_content_str}"
+        mls_psets[mls_id] = {'material_layers': mat_ls, 'material_layers_csv': mls_str}
+
+        if is_calc_massless:
+            # average out all the layers and calc the total resistance
+            if None not in resistances:
+                avg_rough = int(sum(roughs)/len(roughs))
+                if avg_rough >= 6:
+                    avg_rough = 'VeryRough'
+                elif avg_rough == 5:
+                    avg_rough = 'Rough'
+                elif avg_rough == 4:
+                    avg_rough = 'MediumRough'
+                elif avg_rough == 3:
+                    avg_rough = 'MediumSmooth'
+                elif avg_rough == 2:
+                    avg_rough = 'Smooth'
+                elif avg_rough <= 1:
+                    avg_rough = 'VerySmooth'
+
+                avg_tabsorp = sum(tabsorps)/len(tabsorps)
+                avg_sabsorp = sum(sabsorps)/len(sabsorps)
+                avg_vabsorp = sum(vabsorps)/len(vabsorps)
+                ttl_r = sum(resistances)
+                mls_psets[mls_id]['massless'] = {'Roughness': avg_rough, 'ThermalAbsorptance': avg_tabsorp, 'SolarAbsorptance':avg_sabsorp,
+                                                'VisibleAbsorptance': avg_vabsorp, 'ThermalResistance': ttl_r}
+                
+                massless_csv_str="Massless\nRoughness,ThermalAbsorptance,SolarAbsorptance,VisibleAbsorptance,ThermalResistance\n"
+                massless_csv_str+=f"{avg_rough},{avg_tabsorp},{avg_sabsorp},{avg_vabsorp},{ttl_r}\n"
+                mls_psets[mls_id]['massless_csv'] = massless_csv_str
+
+    return mls_psets
+
+def extract_envlp_mat_layer_pset(ifcmodel: ifcopenshell.file, mls_psets: dict) -> tuple[dict, str]:
+    """
+    extract the envelope and material layer set with the specified pset from the ifcmodel
+    
+    Parameters
+    ----------
+    ifcmodel : ifcopenshell.file.file
+        ifc model.
+    
+    mls_pset : dict
+        - a dictionary on the first level the material layer set 'id' as key to another dict with the following keys
+        - material_layers: list[dict] of the pset.
+        - material_layers_csv: str converted from the dictionaries written in csv form
+        - if is_calc_massless is True
+        - massless: dictionary of the massless material keys 'Roughness', 'ThermalAbsorptance', 'SolarAbsorptance', 'VisibleAbsorptance', 'ThermalResistance'
+        - massless_csv: csv str of the dictionary from massless
+
+    Returns
+    -------
+    tuple[dict, str]
+        - dict: dictionary of each envelope with this material layer set property set 
+        - str: the dictionary converted to csv str
+    """
+    walls = ifcmodel.by_type('IfcWall')
+    floors = ifcmodel.by_type('IfcSlab')
+    roofs = ifcmodel.by_type('IfcRoof')
+    windows = ifcmodel.by_type('IfcWindow')
+    doors = ifcmodel.by_type('IfcDoor')
+    envlps = walls + floors + roofs + windows + doors
+    envlp_json = {}
+    csv_str = ''
+    for envlp in envlps:
+        envlp_name = envlp.Name
+        csv_str+=f"{envlp_name}\n"
+        invs = ifcmodel.get_inverse(envlp)
+        envlp_json[envlp_name] = {}
+        mat_found = False
+        # look for material associated with the envelope object
+        for inv in invs:
+            # find the IfcRelAssociatesMaterial
+            if inv.is_a('IfcRelAssociatesMaterial'):
+                inv_info = inv.get_info()
+                mat_usage = inv_info['RelatingMaterial'].get_info()
+                layer_set = mat_usage['ForLayerSet'].get_info()
+                layer_set_name = layer_set['LayerSetName']
+                layer_set_id = layer_set['id']
+                mat_set = mls_psets[layer_set_id]
+                if 'massless' in mat_set.keys():
+                    envlp_json[envlp_name] = {'massless': mat_set['massless'], layer_set_name: mat_set['material_layers']}
+                    csv_str+=mat_set['massless_csv']
+                    csv_str+=f"{mat_set['material_layers_csv']}\n"
+                else:
+                    envlp_json[envlp_name] = {layer_set_name: mat_set['material_layers']}
+                    csv_str+=f"{mat_set['material_layers_csv']}\n"
+                mat_found = True
+                break
+
+        if mat_found == False:
+            csv_str+='\n'
+    
+    return envlp_json, csv_str

@@ -34,23 +34,58 @@
 ### idf2osmod.py example
 - execute the following command to run an example file. In this command, we convert an idf file to openstudio format
     ```
-    python idf2osmod.py ../results/idf/ASHRAE901_OfficeSmall_STD2022_Miami.idf -o ../results/osmod/ASHRAE901_OfficeSmall_STD2022_Miami.osm
+    python idf2osmod.py -i ../results/idf/ASHRAE901_OfficeSmall_STD2022_Miami.idf -o ../results/osmod/ASHRAE901_OfficeSmall_STD2022_Miami.osm
     ```
     ```
-    python idf2osmod.py ../results/idf/ASHRAE901_OfficeMedium_STD2007_Miami.idf -o ../results/osmod/ASHRAE901_OfficeMedium_STD2007_Miami.osm
+    python idf2osmod.py -i ../results/idf/ASHRAE901_OfficeMedium_STD2007_Miami.idf -o ../results/osmod/ASHRAE901_OfficeMedium_STD2007_Miami.osm
     ```
 
 ### osmod2ifc.py example
 - execute the following command to run an example file. In this command, we convert an .osm file to IFC
     ```
-    python osmod2ifc.py ../results/osmod/ASHRAE901_OfficeSmall_STD2022_Miami.osm -i ../results/ifc/ASHRAE901_OfficeSmall_STD2022_Miami.ifc
+    python osmod2ifc.py -o ../results/osmod/ASHRAE901_OfficeSmall_STD2022_Miami.osm -i ../results/ifc/ASHRAE901_OfficeSmall_STD2022_Miami.ifc
     ```
     ```
-    python osmod2ifc.py ../results/osmod/ASHRAE901_OfficeMedium_STD2007_Miami.osm -i ../results/ifc/ASHRAE901_OfficeMedium_STD2007_Miami.ifc
+    python osmod2ifc.py -o ../results/osmod/ASHRAE901_OfficeMedium_STD2007_Miami.osm -i ../results/ifc/ASHRAE901_OfficeMedium_STD2007_Miami.ifc
     ```
 
 ### idf2osmod.py + osmod2ifc.py example
 - you can pipe the result of idf2osmod.py into the osmod2ifc.py program.
     ```
-    python idf2osmod.py ../results/idf/ASHRAE901_OfficeSmall_STD2022_Miami.idf -o ../results/osmod/ASHRAE901_OfficeSmall_STD2022_Miami.osm | python osmod2ifc.py -p -i ../results/ifc/ASHRAE901_OfficeSmall_STD2022_Miami.ifc
+    python idf2osmod.py -i ../results/idf/ASHRAE901_OfficeSmall_STD2022_Miami.idf -o ../results/osmod/ASHRAE901_OfficeSmall_STD2022_Miami.osm | python osmod2ifc.py -p -i ../results/ifc/ASHRAE901_OfficeSmall_STD2022_Miami.ifc
+    ```
+
+### freecad_custom_pset.py example
+```
+python freecad_custom_pset.py -j ../data/json/ifc_psets/ -c ../results/csv/CustomPsets.csv
+```
+
+### read_ifc_mat_pset.py example
+- generate json file
+    ```
+    python read_ifc_mat_pset.py -i ../results/ifc/ASHRAE901_OfficeSmall_STD2022_Miami.ifc -r ../results/json/mat_pset.json
+    ```
+- generate csv file
+    ```
+    python read_ifc_mat_pset.py -i ../results/ifc/ASHRAE901_OfficeSmall_STD2022_Miami.ifc -r ../results/csv/mat_pset.csv -c
+    ```
+
+### read_ifc_envlp_mat_pset.py example
+- generate json file
+    ```
+    python read_ifc_envlp_mat_pset.py -i  ../results/ifc/ASHRAE901_OfficeSmall_STD2022_Miami.ifc -r ../results/json/ifc_env_info.json
+    ```
+- generate csv file
+    ```
+    python read_ifc_envlp_mat_pset.py -i  ../results/ifc/ASHRAE901_OfficeSmall_STD2022_Miami.ifc -r ../results/csv/ifc_env_info.csv -c
+    ```
+
+### calc_massless_mat.py example
+- generate json file
+    ```
+    python calc_massless_mat.py -i  ../results/ifc/ASHRAE901_OfficeSmall_STD2022_Miami.ifc -r ../results/json/massless_mat_info.json
+    ```
+- generate csv file
+    ```
+    python calc_massless_mat.py -i  ../results/ifc/ASHRAE901_OfficeSmall_STD2022_Miami.ifc -r ../results/csv/massless_mat_info.csv -c
     ```

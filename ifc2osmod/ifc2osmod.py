@@ -8,6 +8,7 @@ import ifcopenshell
 import ifcopenshell.geom
 import openstudio
 from openstudio import model as osmod
+
 import openstudio_utils
 import ifcopenshell_utils
 

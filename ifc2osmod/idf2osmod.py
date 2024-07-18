@@ -11,7 +11,7 @@ def parse_args():
     # create parser object
     parser = argparse.ArgumentParser(description = "Convert EP+ Idf geometry to Openstudio Models")
     
-    parser.add_argument('idf', type = str,
+    parser.add_argument('-i', '--idf', type = str,
                         metavar = 'FILE',
                         help = 'The path of the idf model')
     

@@ -3,11 +3,9 @@ import json
 import argparse
 from pathlib import Path
 
-import ifcopenshell.validate
 import numpy as np
 import geomie3d
 import ifcopenshell
-import ifcopenshell.geom
 import ifcopenshell.api
 from openstudio import model as osmod
 
@@ -98,14 +96,14 @@ def create_ifc_built_ele_type(ifcmodel: ifcopenshell.file, type_name: str, const
         const_types[type_name] = ifc_built_ele_type
     return ifc_built_ele_type
 
-def mv_extrude_g3d_srf(face: geomie3d.topobj.Face, extrusion: float, movement: float) -> geomie3d.topobj.Solid:
+def mv_extrude_srf(xyzs: np.ndarray, extrusion: float, movement: float) -> geomie3d.topobj.Solid:
     '''
-    move the surface according to surface normal and extrude in normal direction.
+    move the surface (defined by the xyzs) opposite of the surface normal and extrude in normal direction.
 
     Parameters
     ----------
-    face: geomie3d.topobj.Face
-        face to move and extrude
+    xyzs: np.ndarray
+        np.ndarray[shape(number of points, 3)] points defining the surface to extrude.
 
     extrusion: float
         the magnitude of extrusion
@@ -118,6 +116,8 @@ def mv_extrude_g3d_srf(face: geomie3d.topobj.Face, extrusion: float, movement: f
     dict
         dictionary of the polymesh with two keys: vertices and indices.
     '''
+    g3d_verts = geomie3d.create.vertex_list(xyzs)
+    face = geomie3d.create.polygon_face_frm_verts(g3d_verts) 
     nrml = geomie3d.get.face_normal(face)
     rev_nrml = geomie3d.calculate.reverse_vectorxyz(nrml)
     midxyz = geomie3d.calculate.face_midxyz(face)
@@ -128,9 +128,9 @@ def mv_extrude_g3d_srf(face: geomie3d.topobj.Face, extrusion: float, movement: f
     mesh_dict = geomie3d.modify.faces2polymesh(faces)
     return mesh_dict
 
-def extrude(xyzs: np.ndarray | list, extrusion: float):
+def extrude(xyzs: np.ndarray | list, extrusion: float, direction: list[float] = None):
     '''
-    extrude in normal direction.
+    extrude in normal direction or if specified the direction.
 
     Parameters
     ----------
@@ -140,6 +140,9 @@ def extrude(xyzs: np.ndarray | list, extrusion: float):
     extrusion: float
         the magnitude of extrusion
 
+    direction: list[float]
+        list[shape(3)] direction of the extrusion. Default = None. If none normal of the face (defined by the xyzs) is used for extrusion.
+
     Returns
     -------
     dict
@@ -147,8 +150,9 @@ def extrude(xyzs: np.ndarray | list, extrusion: float):
     '''
     g3d_verts = geomie3d.create.vertex_list(xyzs)
     g3d_srf = geomie3d.create.polygon_face_frm_verts(g3d_verts)
-    srf_nrml = geomie3d.get.face_normal(g3d_srf)
-    extruded = geomie3d.create.extrude_polygon_face(g3d_srf, srf_nrml, extrusion)
+    if direction is None:
+        direction = geomie3d.get.face_normal(g3d_srf)
+    extruded = geomie3d.create.extrude_polygon_face(g3d_srf, direction, extrusion)
     extruded_faces = geomie3d.get.faces_frm_solid(extruded)
     poly_mesh_dict = geomie3d.modify.faces2polymesh(extruded_faces)
     return poly_mesh_dict
@@ -185,6 +189,35 @@ def srf_verts_2pt_wall(xyzs: np.ndarray | list) -> tuple[np.ndarray, float, floa
     fused_xyzs2d = fused_xyzs[:, :2]
     fused_xyzs2d = fused_xyzs2d.tolist()
     return fused_xyzs2d, height, bbox.minz
+
+def create_ifc_srf_style(ifcmodel: ifcopenshell.file, rgb: list[float], transparency: float, representation: ifcopenshell.entity_instance):
+    '''
+    define the color and transparency of an ifc representation.
+
+    Parameters
+    ----------
+    ifcmodel: ifcopenshell.file
+        the ifc model.
+
+    rgb: list[float]
+        list[shape(3)], [r,g,b]. Values of 0-1
+
+    transparency: float
+        value of 0-1. 0 being opaque, 1 being transparent.
+    
+    representation: ifcopenshell.entity_instance
+        the ifc representation to assign the style to.
+    '''
+    # add a style to the material for easy visualization
+    style = ifcopenshell.api.run("style.add_style", ifcmodel)
+    # Create a simple grey shading colour and transparency.
+    ifcopenshell.api.run("style.add_surface_style", ifcmodel,
+        style=style, ifc_class="IfcSurfaceStyleShading", attributes={
+            "SurfaceColour": { "Name": None, "Red": rgb[0], "Green": rgb[1], "Blue": rgb[2] },
+            "Transparency": transparency, # 0 is opaque, 1 is transparent
+        })
+    # Now any element (like our wall) with a concrete material will have
+    ifcopenshell.api.run("style.assign_representation_styles", ifcmodel, shape_representation=representation, styles=[style])
 
 def create_an_ifc_surface(ifcmodel: ifcopenshell.file, xyzs: np.ndarray, name: str, ifc_class: str, const_thickness: float, 
                           surface_dict: dict, body: ifcopenshell.entity_instance, srf_const_dict: dict, const_types: dict, 
@@ -236,10 +269,15 @@ def create_an_ifc_surface(ifcmodel: ifcopenshell.file, xyzs: np.ndarray, name: s
     ifc_surface = ifcopenshell.api.run("root.create_entity", ifcmodel, ifc_class=ifc_class, name=name)
     if srf_const_dict is not None and const_thickness > 0:
         if ifc_class == 'IfcWall':
-            fused_xyzs2d, wall_height, wall_elev = srf_verts_2pt_wall(xyzs)
-            ifc_repr = ifcopenshell.api.run("geometry.create_2pt_wall", ifcmodel, element=ifc_surface, context=body, 
-                                            p1=fused_xyzs2d[0], p2=fused_xyzs2d[1], elevation=wall_elev, height=wall_height, 
-                                            thickness=const_thickness)
+            poly_mesh_dict = mv_extrude_srf(xyzs, const_thickness, const_thickness/2)
+            ifc_repr = ifcopenshell.api.run("geometry.add_mesh_representation", ifcmodel, context=body, 
+                                            vertices=[poly_mesh_dict['vertices'].tolist()], faces=[poly_mesh_dict['indices']])
+            ifcopenshell.api.run("geometry.edit_object_placement", ifcmodel, product=ifc_surface)
+        elif ifc_class == 'IfcRoof':
+            poly_mesh_dict = extrude(xyzs, const_thickness, direction=[0,0,1])
+            ifc_repr = ifcopenshell.api.run("geometry.add_mesh_representation", ifcmodel, context=body, 
+                                            vertices=[poly_mesh_dict['vertices'].tolist()], faces=[poly_mesh_dict['indices']])
+            ifcopenshell.api.run("geometry.edit_object_placement", ifcmodel, product=ifc_surface)
         else:
             poly_mesh_dict = extrude(xyzs, const_thickness)
             ifc_repr = ifcopenshell.api.run("geometry.add_mesh_representation", ifcmodel, context=body, 
@@ -273,7 +311,27 @@ def create_an_ifc_surface(ifcmodel: ifcopenshell.file, xyzs: np.ndarray, name: s
         elif ifc_type_class == 'IfcDoorType':
             ifc_type.OperationType = 'NOTDEFINED'
         ifcopenshell.api.run("type.assign_type", ifcmodel, related_object=ifc_surface, relating_type=ifc_type)
-        
+    
+    # color the representation
+    if ifc_class == 'IfcWall' or ifc_class == 'IfcSlab':
+        rgb = [0.5, 0.5, 0.5]
+        transparency = 0
+        create_ifc_srf_style(ifcmodel, rgb, transparency, ifc_repr)
+    elif ifc_class == 'IfcRoof':
+        rgb = [1.0, 0.0, 0.0]
+        transparency = 0
+        create_ifc_srf_style(ifcmodel, rgb, transparency, ifc_repr)
+
+    elif ifc_class == 'IfcWindow':
+        rgb = [1.0, 1.0, 1.0]
+        transparency = 0.8
+        create_ifc_srf_style(ifcmodel, rgb, transparency, ifc_repr)
+    
+    elif ifc_class == 'IfcDoor':
+        rgb = [0.5, 0.5, 0.5]
+        transparency = 0.0
+        create_ifc_srf_style(ifcmodel, rgb, transparency, ifc_repr)
+
     return ifc_surface
     
 def create_ifc_surfaces(ifcmodel: ifcopenshell.file, surface_dicts: dict, const_dicts: dict, const_types: dict, 
@@ -319,13 +377,14 @@ def create_ifc_surfaces(ifcmodel: ifcopenshell.file, surface_dicts: dict, const_
         if srf_type == 'Wall':
             ifc_srf = create_an_ifc_surface(ifcmodel, vertices, srf_name, 'IfcWall', const_thickness, surface_dict_val, body, srf_const_dict,
                                              const_types, 'IfcWallType', 'NOTDEFINED')
+            
         elif srf_type == 'Floor':
             ifc_srf = create_an_ifc_surface(ifcmodel, vertices, srf_name, 'IfcSlab', const_thickness, surface_dict_val, body, srf_const_dict,
                                                  const_types, 'IfcSlabType', 'FLOOR')
         elif srf_type == 'RoofCeiling':
             ifc_srf = create_an_ifc_surface(ifcmodel, vertices, srf_name, 'IfcRoof', const_thickness, surface_dict_val, body, srf_const_dict,
                                              const_types, 'IfcRoofType', 'NOTDEFINED')
-            
+        print(srf_type, srf_name)
         ifc_envelopes.append(ifc_srf)
 
 def create_ifc_sub_surfaces(ifcmodel: ifcopenshell.file, sub_surface_dicts: dict, surface_dicts: dict, const_dicts: dict, const_types: dict, 
@@ -371,12 +430,9 @@ def create_ifc_sub_surfaces(ifcmodel: ifcopenshell.file, sub_surface_dicts: dict
         sub_srf_host = sub_surface_dict_val['host']
         host_thickness = surface_dicts[sub_srf_host]['thickness']
         ifc_host = surface_dicts[sub_srf_host]['ifc_surface']
-        
         ifcopening = ifcopenshell.api.run("root.create_entity", ifcmodel, ifc_class="IfcOpeningElement", name=f"{sub_srf_name}_opening")
         # make a hole in the wall
-        g3d_verts = geomie3d.create.vertex_list(ssrf_vertices)
-        g3d_ssrf = geomie3d.create.polygon_face_frm_verts(g3d_verts)
-        extruded_ssrf = mv_extrude_g3d_srf(g3d_ssrf, host_thickness*2.5, host_thickness)
+        extruded_ssrf = mv_extrude_srf(ssrf_vertices, host_thickness*2.5, host_thickness)
         opening_repr = ifcopenshell.api.run("geometry.add_mesh_representation", ifcmodel, context=body, 
                                             vertices=[extruded_ssrf['vertices'].tolist()], faces=[extruded_ssrf['indices']])
         ifcopenshell.api.run("geometry.edit_object_placement", ifcmodel, product=ifcopening)
@@ -496,6 +552,7 @@ def osmod2ifc(osmod_path: str, ifc_path: str, viz: bool) -> str:
     with open(osmod_mat_schema_path) as f:
         json_data = json.load(f)
         osmod_mat_pset_title = json_data['title']
+
     osmod_mat_pset_template = ifcopenshell_utils.create_osmod_pset_template(ifcmodel, osmod_mat_schema_path)
     mat_dict_values = mat_dicts.values()
     for mat_dict_value in mat_dict_values:
@@ -505,7 +562,7 @@ def osmod2ifc(osmod_path: str, ifc_path: str, viz: bool) -> str:
         ifc_pset_props = convert_osmod_pset_schema2ifc_pset_props(mat_dict_value['pset'])
         ifcopenshell.api.run("pset.edit_pset", ifcmodel, pset=pset, properties=ifc_pset_props, pset_template=osmod_mat_pset_template)
         mat_dict_value['ifc_mat'] = ifc_mat
-
+        
     # https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html#material-layer-sets
     const_dict_vals = const_dicts.values()
     for const_dict_val in const_dict_vals:
@@ -519,6 +576,7 @@ def osmod2ifc(osmod_path: str, ifc_path: str, viz: bool) -> str:
             const_thickness += thickness
         const_dict_val['ifc_mat_layer_set'] = ifc_mat_set
         const_dict_val['thickness'] = const_thickness
+
     # endregion: translate construction and materials from osmodel to ifc
 
     # region: setting up ifczone and associating spaces to zones

@@ -1,5 +1,4 @@
-import numpy as np
+from pathlib import Path
 
-x = np.identity(4)
-x[:, 3] = [1, .05, 0, 0]
-print(x)
+
+Path('/home/chenkianwee/kianwee_work/get/test_dir').mkdir(parents=True)
