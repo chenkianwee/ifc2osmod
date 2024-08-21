@@ -1,0 +1,871 @@
+{
+    "material_library": {
+        "0": {
+            "name": "CP02 CARPET PAD",
+            "thickness": 0.0,
+            "roughness": "VeryRough",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.8,
+            "thermalresistance": 0.21648,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "1": {
+            "name": "100mm Normalweight concrete floor",
+            "thickness": 0.1016,
+            "roughness": "MediumRough",
+            "conductivity": 2.31,
+            "density": 2322.0,
+            "specificheat": 832.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "2": {
+            "name": "Semiheated_Floor_Insulation",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.0299387330245182,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "3": {
+            "name": "F07 25mm stucco",
+            "thickness": 0.0254,
+            "roughness": "Smooth",
+            "conductivity": 0.72,
+            "density": 1856.0,
+            "specificheat": 840.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "4": {
+            "name": "G01 16mm gypsum board",
+            "thickness": 0.0159,
+            "roughness": "MediumSmooth",
+            "conductivity": 0.16,
+            "density": 800.0,
+            "specificheat": 1090.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "5": {
+            "name": "Semiheated_Exterior_Wall_Insulation_top",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.219395660736179,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "6": {
+            "name": "Semiheated_Exterior_Wall_Insulation_grd",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.159283550695506,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "7": {
+            "name": "Res_Exterior_Wall_Insulation_top",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 1.59504478476111,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "8": {
+            "name": "Res_Exterior_Wall_Insulation_grd",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 1.06783369996193,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "9": {
+            "name": "Semiheated_Roof_Insulation",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 1.88638702129871,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "10": {
+            "name": "Res_Roof_Insulation",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 6.23478687961654,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "11": {
+            "name": "G02 16mm plywood",
+            "thickness": 0.0159,
+            "roughness": "Smooth",
+            "conductivity": 0.12,
+            "density": 544.0,
+            "specificheat": 1210.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "12": {
+            "name": "AC02 Acoustic Ceiling",
+            "thickness": 0.0127,
+            "roughness": "MediumSmooth",
+            "conductivity": 0.057,
+            "density": 288.0,
+            "specificheat": 1339.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.2,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "13": {
+            "name": "M10 200mm concrete block basement wall",
+            "thickness": 0.2032,
+            "roughness": "MediumRough",
+            "conductivity": 1.326,
+            "density": 1842.0,
+            "specificheat": 912.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "14": {
+            "name": "150mm Normalweight concrete floor",
+            "thickness": 0.1524,
+            "roughness": "MediumRough",
+            "conductivity": 2.31,
+            "density": 2322.0,
+            "specificheat": 832.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "15": {
+            "name": "200mm Normalweight concrete floor",
+            "thickness": 0.2032,
+            "roughness": "MediumRough",
+            "conductivity": 2.31,
+            "density": 2322.0,
+            "specificheat": 832.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "16": {
+            "name": "G01 13mm gypsum board",
+            "thickness": 0.0127,
+            "roughness": "Smooth",
+            "conductivity": 0.16,
+            "density": 800.0,
+            "specificheat": 1090.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.5,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "17": {
+            "name": "F12 Asphalt shingles",
+            "thickness": 0.0032,
+            "roughness": "VeryRough",
+            "conductivity": 0.04,
+            "density": 1120.0,
+            "specificheat": 1260.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "18": {
+            "name": "Std Opaque Door Panel",
+            "thickness": 0.0,
+            "roughness": "MediumRough",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.123456790123457,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "19": {
+            "name": "Air_Wall_Material",
+            "thickness": 0.0,
+            "roughness": "Rough",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.2079491,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "20": {
+            "name": "Std Wood 6inch",
+            "thickness": 0.15,
+            "roughness": "MediumSmooth",
+            "conductivity": 0.12,
+            "density": 540.0,
+            "specificheat": 1210.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "21": {
+            "name": "Opaque Door panel_con",
+            "thickness": 0.0,
+            "roughness": "MediumRough",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.475973498005059,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "22": {
+            "name": "Nonres_Exterior_Wall_Insulation_top",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.394071549744213,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "23": {
+            "name": "Semiheated_Exterior_Wall_Insulation_top",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.00382542085486443,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "24": {
+            "name": "Semiheated_Exterior_Wall_Insulation_mid",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.0343588580167448,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "25": {
+            "name": "Semiheated_Exterior_Wall_Insulation_grd",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.0324926419438895,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "26": {
+            "name": "Res_Exterior_Wall_Insulation_mid",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.527655336138411,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "27": {
+            "name": "Res_Exterior_Wall_Insulation_grd",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.518833538844668,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "28": {
+            "name": "F13 Built-up roofing",
+            "thickness": 0.0095,
+            "roughness": "Rough",
+            "conductivity": 0.16,
+            "density": 1120.0,
+            "specificheat": 1460.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "29": {
+            "name": "Semiheated_Roof_Insulation",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.611086308437969,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "30": {
+            "name": "F08 Metal surface",
+            "thickness": 0.0008,
+            "roughness": "Smooth",
+            "conductivity": 45.28,
+            "density": 7824.0,
+            "specificheat": 500.0,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": null,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "31": {
+            "name": "Res_Roof_Insulation",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 3.47220376108688,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "32": {
+            "name": "Nonres_Roof_Insulation",
+            "thickness": 0.0,
+            "roughness": "MediumSmooth",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 2.59864128954982,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        },
+        "33": {
+            "name": "Opaque Door panel_con",
+            "thickness": 0.0,
+            "roughness": "MediumRough",
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": 0.9,
+            "solarabsorptance": 0.7,
+            "visibleabsorptance": 0.7,
+            "thermalresistance": 0.251585991802674,
+            "ufactor": null,
+            "solarheatgaincoefficient": null,
+            "visibletransmittance": null
+        }
+    },
+    "construction_library": {
+        "0.07": {
+            "name": [
+                "ext_slab_6in"
+            ],
+            "material_layers": [
+                [
+                    14
+                ]
+            ]
+        },
+        "0.09": {
+            "name": [
+                "ext_slab_8in"
+            ],
+            "material_layers": [
+                [
+                    15
+                ]
+            ]
+        },
+        "0.12": {
+            "name": [
+                "OpaqueDoor"
+            ],
+            "material_layers": [
+                [
+                    18
+                ]
+            ]
+        },
+        "0.13": {
+            "name": [
+                "ext_soffit_floor"
+            ],
+            "material_layers": [
+                [
+                    11
+                ]
+            ]
+        },
+        "0.15": {
+            "name": [
+                "basement_wall"
+            ],
+            "material_layers": [
+                [
+                    13
+                ]
+            ]
+        },
+        "0.16": {
+            "name": [
+                "int_wall"
+            ],
+            "material_layers": [
+                [
+                    16,
+                    16
+                ]
+            ]
+        },
+        "0.21": {
+            "name": [
+                "AtticRoofDeck",
+                "Air_Wall"
+            ],
+            "material_layers": [
+                [
+                    17,
+                    11
+                ],
+                [
+                    19
+                ]
+            ]
+        },
+        "0.22": {
+            "name": [
+                "DropCeiling"
+            ],
+            "material_layers": [
+                [
+                    12
+                ]
+            ]
+        },
+        "0.24": {
+            "name": [
+                "semiheated_ext_wall_top"
+            ],
+            "material_layers": [
+                [
+                    3,
+                    4,
+                    23,
+                    4
+                ]
+            ]
+        },
+        "0.25": {
+            "name": [
+                "Swinging Door_con"
+            ],
+            "material_layers": [
+                [
+                    33
+                ]
+            ]
+        },
+        "0.26": {
+            "name": [
+                "int_slab_ceiling"
+            ],
+            "material_layers": [
+                [
+                    0,
+                    1
+                ]
+            ]
+        },
+        "0.27": {
+            "name": [
+                "semiheated_ext_wall_mid",
+                "semiheated_ext_wall_grd"
+            ],
+            "material_layers": [
+                [
+                    3,
+                    4,
+                    24,
+                    4
+                ],
+                [
+                    3,
+                    4,
+                    25,
+                    4
+                ]
+            ]
+        },
+        "0.28": {
+            "name": [
+                "ext_slab_6in_with_carpet"
+            ],
+            "material_layers": [
+                [
+                    14,
+                    0
+                ]
+            ]
+        },
+        "0.29": {
+            "name": [
+                "semiheated_floor_ceiling"
+            ],
+            "material_layers": [
+                [
+                    0,
+                    1,
+                    2
+                ]
+            ]
+        },
+        "0.3": {
+            "name": [
+                "ext_slab_8in_with_carpet"
+            ],
+            "material_layers": [
+                [
+                    15,
+                    0
+                ]
+            ]
+        },
+        "0.39": {
+            "name": [
+                "semiheated_ext_wall_grd"
+            ],
+            "material_layers": [
+                [
+                    3,
+                    4,
+                    6,
+                    4
+                ]
+            ]
+        },
+        "0.45": {
+            "name": [
+                "semiheated_ext_wall_top"
+            ],
+            "material_layers": [
+                [
+                    3,
+                    4,
+                    5,
+                    4
+                ]
+            ]
+        },
+        "0.48": {
+            "name": [
+                "Swinging Door_con"
+            ],
+            "material_layers": [
+                [
+                    21
+                ]
+            ]
+        },
+        "0.57": {
+            "name": [
+                "int_wood_floor"
+            ],
+            "material_layers": [
+                [
+                    12,
+                    11,
+                    0
+                ]
+            ]
+        },
+        "0.63": {
+            "name": [
+                "nonres_ext_wall_top"
+            ],
+            "material_layers": [
+                [
+                    3,
+                    4,
+                    22,
+                    4
+                ]
+            ]
+        },
+        "0.67": {
+            "name": [
+                "semiheated_roof"
+            ],
+            "material_layers": [
+                [
+                    28,
+                    29,
+                    30
+                ]
+            ]
+        },
+        "0.75": {
+            "name": [
+                "res_ext_wall_grd"
+            ],
+            "material_layers": [
+                [
+                    3,
+                    4,
+                    27,
+                    4
+                ]
+            ]
+        },
+        "0.76": {
+            "name": [
+                "res_ext_wall_mid"
+            ],
+            "material_layers": [
+                [
+                    3,
+                    4,
+                    26,
+                    4
+                ]
+            ]
+        },
+        "1.25": {
+            "name": [
+                "InteriorFurnishings"
+            ],
+            "material_layers": [
+                [
+                    20
+                ]
+            ]
+        },
+        "1.3": {
+            "name": [
+                "res_ext_wall_grd"
+            ],
+            "material_layers": [
+                [
+                    3,
+                    4,
+                    8,
+                    4
+                ]
+            ]
+        },
+        "1.83": {
+            "name": [
+                "res_ext_wall_top"
+            ],
+            "material_layers": [
+                [
+                    3,
+                    4,
+                    7,
+                    4
+                ]
+            ]
+        },
+        "1.99": {
+            "name": [
+                "semiheated_roof_floor"
+            ],
+            "material_layers": [
+                [
+                    4,
+                    9
+                ]
+            ]
+        },
+        "2.66": {
+            "name": [
+                "nonres_roof"
+            ],
+            "material_layers": [
+                [
+                    28,
+                    32,
+                    30
+                ]
+            ]
+        },
+        "3.53": {
+            "name": [
+                "res_roof"
+            ],
+            "material_layers": [
+                [
+                    28,
+                    31,
+                    30
+                ]
+            ]
+        },
+        "6.33": {
+            "name": [
+                "res_roof_floor"
+            ],
+            "material_layers": [
+                [
+                    4,
+                    10
+                ]
+            ]
+        }
+    }
+}

@@ -76,5 +76,5 @@
         } 
       }
     },
-    "required": [ "Roughness", "ThermalAbsorptance", "SolarAbsorptance", "VisibleAbsorptance", "ThermalResistance", "UFactor", "SolarHeatGainCoefficient", "VisibleTransmittance"]
+    "required": [ "Roughness", "ThermalAbsorptance", "SolarAbsorptance", "VisibleAbsorptance", "ThermalResistance"]
 }

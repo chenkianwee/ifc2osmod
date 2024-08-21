@@ -74,7 +74,35 @@
             "default": "IfcReal"
           }
         } 
-      }   
+      },
+      "CoolingSetpointTemperature": {
+        "type": "object",
+        "description": "cooling setpoint temperature in (degC).",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcThermodynamicTemperatureMeasure"
+          }
+        } 
+      },
+      "HeatingSetpointTemperature": {
+        "type": "object",
+        "description": "heating setpoint temperature in (degC).",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcThermodynamicTemperatureMeasure"
+          }
+        } 
+      }
     },
-    "required": [ "OutdoorAirFlowperPerson", "OutdoorAirFlowperFloorArea", "FloorAreaPerPerson", "LightingPowerPerFloorArea", "ElectricEquipmentPowerPerFloorArea"]
+    "required": [ "OutdoorAirFlowperPerson", "OutdoorAirFlowperFloorArea", "FloorAreaPerPerson", "LightingPowerPerFloorArea", "ElectricEquipmentPowerPerFloorArea", "CoolingSetpointTemperature", "HeatingSetpointTemperature"]
 }

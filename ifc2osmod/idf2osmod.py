@@ -2,8 +2,7 @@ import sys
 import argparse
 from pathlib import Path
 
-import openstudio_utils
-
+import utils.openstudio_utils as openstudio_utils
 #===================================================================================================
 # region: FUNCTIONS
 #===================================================================================================
@@ -47,12 +46,10 @@ def idf2osmod(idf_path: str, osmod_path: str) -> str:
     #------------------------------------------------------------------------------------------------------
     # region: read the idf and convert it to a osmodel
     #------------------------------------------------------------------------------------------------------
-    idf_stem = Path(idf_path).stem
     osmodel = openstudio_utils.read_idf_file(idf_path)
     osmod_dir = Path(osmod_path).parent
     if osmod_dir.exists() == False:
         osmod_dir.mkdir(parents=True)
-    osmod_path = osmod_dir.joinpath(idf_stem + '.osm')
     osmodel.save(osmod_path, True)
     return osmod_path
     #------------------------------------------------------------------------------------------------------

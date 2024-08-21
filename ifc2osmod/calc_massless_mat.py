@@ -5,8 +5,7 @@ from pathlib import Path
 
 import ifcopenshell
 import ifcopenshell.util.unit
-import ifcopenshell_utils
-
+import utils.ifcopenshell_utils as ifcopenshell_utils
 #===================================================================================================
 # region: FUNCTIONS
 #===================================================================================================

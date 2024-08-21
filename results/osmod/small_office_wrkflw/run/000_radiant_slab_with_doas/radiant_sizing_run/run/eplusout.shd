@@ -1,0 +1,356 @@
+Shadowing Combinations
+..Solar Distribution=FullExterior
+..In the following, only the first 10 reference surfaces will be shown.
+..But all surfaces are used in the calculations.
+==================================
+Surface=CORE_ZN_ENVELOPE_0 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=2
+..Surface=PERIMETER_ZN_1_ENVELOPE_0
+..Surface=PERIMETER_ZN_3_ENVELOPE_0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=CORE_ZN_ENVELOPE_1 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=2
+..Surface=PERIMETER_ZN_2_ENVELOPE_1
+..Surface=PERIMETER_ZN_4_ENVELOPE_3
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=CORE_ZN_ENVELOPE_4 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=2
+..Surface=PERIMETER_ZN_2_ENVELOPE_2
+..Surface=PERIMETER_ZN_4_ENVELOPE_4
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=CORE_ZN_ENVELOPE_5 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=2
+..Surface=PERIMETER_ZN_1_ENVELOPE_5
+..Surface=PERIMETER_ZN_3_ENVELOPE_5
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=CORE_ZN_ENVELOPE_2 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=CORE_ZN_ENVELOPE_3 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_1_ENVELOPE_0 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=3
+..Surface=CORE_ZN_ENVELOPE_0
+..Surface=PERIMETER_ZN_3_ENVELOPE_0
+..Surface=PERIMETER_ZN_3_ENVELOPE_1
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_1_ENVELOPE_1 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=7
+....Surface=PERIMETER_ZN_1_WALL_SOUTH_DOOR
+....Surface=PERIMETER_ZN_1_WALL_SOUTH_WINDOW_1
+....Surface=PERIMETER_ZN_1_WALL_SOUTH_WINDOW_2
+....Surface=PERIMETER_ZN_1_WALL_SOUTH_WINDOW_3
+....Surface=PERIMETER_ZN_1_WALL_SOUTH_WINDOW_4
+....Surface=PERIMETER_ZN_1_WALL_SOUTH_WINDOW_5
+....Surface=PERIMETER_ZN_1_WALL_SOUTH_WINDOW_6
+==================================
+Surface=PERIMETER_ZN_1_WALL_SOUTH_DOOR is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_1_WALL_SOUTH_WINDOW_1 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_1_WALL_SOUTH_WINDOW_2 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_1_WALL_SOUTH_WINDOW_3 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_1_WALL_SOUTH_WINDOW_4 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_1_WALL_SOUTH_WINDOW_5 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_1_WALL_SOUTH_WINDOW_6 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_1_ENVELOPE_4 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=7
+..Surface=PERIMETER_ZN_2_ENVELOPE_0
+..Surface=PERIMETER_ZN_2_ENVELOPE_2
+..Surface=PERIMETER_ZN_3_ENVELOPE_0
+..Surface=PERIMETER_ZN_3_ENVELOPE_1
+..Surface=PERIMETER_ZN_3_ENVELOPE_5
+..Surface=PERIMETER_ZN_4_ENVELOPE_4
+..Surface=PERIMETER_ZN_4_ENVELOPE_5
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_1_ENVELOPE_5 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=3
+..Surface=CORE_ZN_ENVELOPE_5
+..Surface=PERIMETER_ZN_3_ENVELOPE_1
+..Surface=PERIMETER_ZN_3_ENVELOPE_5
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_1_ENVELOPE_2 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_1_ENVELOPE_3 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_2_ENVELOPE_0 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=5
+..Surface=PERIMETER_ZN_1_ENVELOPE_4
+..Surface=PERIMETER_ZN_3_ENVELOPE_1
+..Surface=PERIMETER_ZN_4_ENVELOPE_3
+..Surface=PERIMETER_ZN_4_ENVELOPE_4
+..Surface=PERIMETER_ZN_4_ENVELOPE_5
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_2_ENVELOPE_1 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=5
+..Surface=CORE_ZN_ENVELOPE_1
+..Surface=PERIMETER_ZN_3_ENVELOPE_1
+..Surface=PERIMETER_ZN_4_ENVELOPE_3
+..Surface=PERIMETER_ZN_4_ENVELOPE_4
+..Surface=PERIMETER_ZN_4_ENVELOPE_5
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_2_ENVELOPE_2 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=5
+..Surface=CORE_ZN_ENVELOPE_4
+..Surface=PERIMETER_ZN_1_ENVELOPE_4
+..Surface=PERIMETER_ZN_4_ENVELOPE_3
+..Surface=PERIMETER_ZN_4_ENVELOPE_4
+..Surface=PERIMETER_ZN_4_ENVELOPE_5
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_2_ENVELOPE_5 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=4
+....Surface=PERIMETER_ZN_2_WALL_EAST_WINDOW_1
+....Surface=PERIMETER_ZN_2_WALL_EAST_WINDOW_2
+....Surface=PERIMETER_ZN_2_WALL_EAST_WINDOW_3
+....Surface=PERIMETER_ZN_2_WALL_EAST_WINDOW_4
+==================================
+Surface=PERIMETER_ZN_2_WALL_EAST_WINDOW_1 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_2_WALL_EAST_WINDOW_2 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_2_WALL_EAST_WINDOW_3 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_2_WALL_EAST_WINDOW_4 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_2_ENVELOPE_3 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_2_ENVELOPE_4 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_ENVELOPE_0 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=3
+..Surface=CORE_ZN_ENVELOPE_0
+..Surface=PERIMETER_ZN_1_ENVELOPE_0
+..Surface=PERIMETER_ZN_1_ENVELOPE_4
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_ENVELOPE_1 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=7
+..Surface=PERIMETER_ZN_1_ENVELOPE_0
+..Surface=PERIMETER_ZN_1_ENVELOPE_4
+..Surface=PERIMETER_ZN_1_ENVELOPE_5
+..Surface=PERIMETER_ZN_2_ENVELOPE_0
+..Surface=PERIMETER_ZN_2_ENVELOPE_1
+..Surface=PERIMETER_ZN_4_ENVELOPE_3
+..Surface=PERIMETER_ZN_4_ENVELOPE_5
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_ENVELOPE_4 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=8
+....Surface=PERIMETER_ZN_3_WALL_NORTH_DOOR1
+....Surface=PERIMETER_ZN_3_WALL_NORTH_DOOR2
+....Surface=PERIMETER_ZN_3_WALL_NORTH_WINDOW_1
+....Surface=PERIMETER_ZN_3_WALL_NORTH_WINDOW_2
+....Surface=PERIMETER_ZN_3_WALL_NORTH_WINDOW_3
+....Surface=PERIMETER_ZN_3_WALL_NORTH_WINDOW_4
+....Surface=PERIMETER_ZN_3_WALL_NORTH_WINDOW_5
+....Surface=PERIMETER_ZN_3_WALL_NORTH_WINDOW_6
+==================================
+Surface=PERIMETER_ZN_3_WALL_NORTH_DOOR1 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_WALL_NORTH_DOOR2 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_WALL_NORTH_WINDOW_1 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_WALL_NORTH_WINDOW_2 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_WALL_NORTH_WINDOW_3 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_WALL_NORTH_WINDOW_4 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_WALL_NORTH_WINDOW_5 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_WALL_NORTH_WINDOW_6 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_ENVELOPE_5 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=3
+..Surface=CORE_ZN_ENVELOPE_5
+..Surface=PERIMETER_ZN_1_ENVELOPE_4
+..Surface=PERIMETER_ZN_1_ENVELOPE_5
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_ENVELOPE_2 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_3_ENVELOPE_3 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_4_ENVELOPE_0 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=4
+....Surface=PERIMETER_ZN_4_WALL_WEST_WINDOW_1
+....Surface=PERIMETER_ZN_4_WALL_WEST_WINDOW_2
+....Surface=PERIMETER_ZN_4_WALL_WEST_WINDOW_3
+....Surface=PERIMETER_ZN_4_WALL_WEST_WINDOW_4
+==================================
+Surface=PERIMETER_ZN_4_WALL_WEST_WINDOW_1 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_4_WALL_WEST_WINDOW_2 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_4_WALL_WEST_WINDOW_3 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_4_WALL_WEST_WINDOW_4 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_4_ENVELOPE_3 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=5
+..Surface=CORE_ZN_ENVELOPE_1
+..Surface=PERIMETER_ZN_2_ENVELOPE_0
+..Surface=PERIMETER_ZN_2_ENVELOPE_1
+..Surface=PERIMETER_ZN_2_ENVELOPE_2
+..Surface=PERIMETER_ZN_3_ENVELOPE_1
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_4_ENVELOPE_4 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=5
+..Surface=CORE_ZN_ENVELOPE_4
+..Surface=PERIMETER_ZN_1_ENVELOPE_4
+..Surface=PERIMETER_ZN_2_ENVELOPE_0
+..Surface=PERIMETER_ZN_2_ENVELOPE_1
+..Surface=PERIMETER_ZN_2_ENVELOPE_2
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_4_ENVELOPE_5 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=5
+..Surface=PERIMETER_ZN_1_ENVELOPE_4
+..Surface=PERIMETER_ZN_2_ENVELOPE_0
+..Surface=PERIMETER_ZN_2_ENVELOPE_1
+..Surface=PERIMETER_ZN_2_ENVELOPE_2
+..Surface=PERIMETER_ZN_3_ENVELOPE_1
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_4_ENVELOPE_1 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=PERIMETER_ZN_4_ENVELOPE_2 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0

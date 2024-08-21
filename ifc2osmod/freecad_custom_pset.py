@@ -2,7 +2,7 @@ import sys
 import argparse
 from pathlib import Path
 
-import ifcopenshell_utils
+import utils.ifcopenshell_utils as ifcopenshell_utils
 #===================================================================================================
 # region: FUNCTIONS
 #===================================================================================================

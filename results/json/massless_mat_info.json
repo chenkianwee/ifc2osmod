@@ -1,863 +1,4 @@
 {
-    "Perimeter_ZN_3_wall_south": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Perimeter_ZN_3_wall_west": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Perimeter_ZN_3_wall_north": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.7,
-            "ThermalResistance": 1.3018614777397077
-        },
-        "nonres_ext_wall_grd": [
-            {
-                "Name": "F07 25mm stucco",
-                "Thickness": 0.0254,
-                "Roughness": "Smooth",
-                "Conductivity": 0.72,
-                "Density": 0.72,
-                "SpecificHeat": 840.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.035277777777777776,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 518
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            },
-            {
-                "Name": "Nonres_Exterior_Wall_Insulation_grd",
-                "Thickness": 0.0,
-                "Roughness": "MediumSmooth",
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 1.06783369996193,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 245
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            }
-        ]
-    },
-    "Perimeter_ZN_3_wall_east": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Perimeter_ZN_2_wall_east": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.7,
-            "ThermalResistance": 1.3018614777397077
-        },
-        "nonres_ext_wall_grd": [
-            {
-                "Name": "F07 25mm stucco",
-                "Thickness": 0.0254,
-                "Roughness": "Smooth",
-                "Conductivity": 0.72,
-                "Density": 0.72,
-                "SpecificHeat": 840.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.035277777777777776,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 518
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            },
-            {
-                "Name": "Nonres_Exterior_Wall_Insulation_grd",
-                "Thickness": 0.0,
-                "Roughness": "MediumSmooth",
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 1.06783369996193,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 245
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            }
-        ]
-    },
-    "Perimeter_ZN_2_wall_north": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Perimeter_ZN_2_wall_south": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Perimeter_ZN_2_wall_west": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Core_ZN_wall_south": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Core_ZN_wall_east": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Core_ZN_wall_north": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Core_ZN_wall_west": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Perimeter_ZN_1_wall_west": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Perimeter_ZN_1_wall_south": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.7,
-            "ThermalResistance": 1.3018614777397077
-        },
-        "nonres_ext_wall_grd": [
-            {
-                "Name": "F07 25mm stucco",
-                "Thickness": 0.0254,
-                "Roughness": "Smooth",
-                "Conductivity": 0.72,
-                "Density": 0.72,
-                "SpecificHeat": 840.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.035277777777777776,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 518
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            },
-            {
-                "Name": "Nonres_Exterior_Wall_Insulation_grd",
-                "Thickness": 0.0,
-                "Roughness": "MediumSmooth",
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 1.06783369996193,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 245
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            }
-        ]
-    },
-    "Perimeter_ZN_1_wall_east": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Perimeter_ZN_1_wall_north": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.5,
-            "ThermalResistance": 0.15875
-        },
-        "int_wall": [
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            },
-            {
-                "Name": "G01 13mm gypsum board",
-                "Thickness": 0.0127,
-                "Roughness": "Smooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.5,
-                "ThermalResistance": 0.079375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 453
-            }
-        ]
-    },
-    "Perimeter_ZN_4_wall_west": {
-        "massless": {
-            "Roughness": "Smooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.7,
-            "ThermalResistance": 1.3018614777397077
-        },
-        "nonres_ext_wall_grd": [
-            {
-                "Name": "F07 25mm stucco",
-                "Thickness": 0.0254,
-                "Roughness": "Smooth",
-                "Conductivity": 0.72,
-                "Density": 0.72,
-                "SpecificHeat": 840.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.035277777777777776,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 518
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            },
-            {
-                "Name": "Nonres_Exterior_Wall_Insulation_grd",
-                "Thickness": 0.0,
-                "Roughness": "MediumSmooth",
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 1.06783369996193,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 245
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            }
-        ]
-    },
     "Perimeter_ZN_4_wall_south": {
         "massless": {
             "Roughness": "Smooth",
@@ -872,7 +13,7 @@
                 "Thickness": 0.0127,
                 "Roughness": "Smooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -881,14 +22,14 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 453
+                "id": 440
             },
             {
                 "Name": "G01 13mm gypsum board",
                 "Thickness": 0.0127,
                 "Roughness": "Smooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -897,7 +38,7 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 453
+                "id": 440
             }
         ]
     },
@@ -915,7 +56,7 @@
                 "Thickness": 0.0127,
                 "Roughness": "Smooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -924,14 +65,14 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 453
+                "id": 440
             },
             {
                 "Name": "G01 13mm gypsum board",
                 "Thickness": 0.0127,
                 "Roughness": "Smooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -940,7 +81,7 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 453
+                "id": 440
             }
         ]
     },
@@ -958,7 +99,7 @@
                 "Thickness": 0.0127,
                 "Roughness": "Smooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -967,14 +108,14 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 453
+                "id": 440
             },
             {
                 "Name": "G01 13mm gypsum board",
                 "Thickness": 0.0127,
                 "Roughness": "Smooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -983,10 +124,873 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 453
+                "id": 440
             }
         ]
     },
+    "Perimeter_ZN_4_wall_west": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.7,
+            "ThermalResistance": 1.3018614777397077
+        },
+        "nonres_ext_wall_grd": [
+            {
+                "Name": "F07 25mm stucco",
+                "Thickness": 0.0254,
+                "Roughness": "Smooth",
+                "Conductivity": 0.72,
+                "Density": 1856.0,
+                "SpecificHeat": 840.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.035277777777777776,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 505
+            },
+            {
+                "Name": "G01 16mm gypsum board",
+                "Thickness": 0.0159,
+                "Roughness": "MediumSmooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.099375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 544
+            },
+            {
+                "Name": "Nonres_Exterior_Wall_Insulation_grd",
+                "Thickness": 0.0,
+                "Roughness": "MediumSmooth",
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 1.06783369996193,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 258
+            },
+            {
+                "Name": "G01 16mm gypsum board",
+                "Thickness": 0.0159,
+                "Roughness": "MediumSmooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.099375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 544
+            }
+        ]
+    },
+    "Perimeter_ZN_2_wall_east": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.7,
+            "ThermalResistance": 1.3018614777397077
+        },
+        "nonres_ext_wall_grd": [
+            {
+                "Name": "F07 25mm stucco",
+                "Thickness": 0.0254,
+                "Roughness": "Smooth",
+                "Conductivity": 0.72,
+                "Density": 1856.0,
+                "SpecificHeat": 840.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.035277777777777776,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 505
+            },
+            {
+                "Name": "G01 16mm gypsum board",
+                "Thickness": 0.0159,
+                "Roughness": "MediumSmooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.099375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 544
+            },
+            {
+                "Name": "Nonres_Exterior_Wall_Insulation_grd",
+                "Thickness": 0.0,
+                "Roughness": "MediumSmooth",
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 1.06783369996193,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 258
+            },
+            {
+                "Name": "G01 16mm gypsum board",
+                "Thickness": 0.0159,
+                "Roughness": "MediumSmooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.099375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 544
+            }
+        ]
+    },
+    "Perimeter_ZN_2_wall_north": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Perimeter_ZN_2_wall_south": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Perimeter_ZN_2_wall_west": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Perimeter_ZN_1_wall_west": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Perimeter_ZN_1_wall_south": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.7,
+            "ThermalResistance": 1.3018614777397077
+        },
+        "nonres_ext_wall_grd": [
+            {
+                "Name": "F07 25mm stucco",
+                "Thickness": 0.0254,
+                "Roughness": "Smooth",
+                "Conductivity": 0.72,
+                "Density": 1856.0,
+                "SpecificHeat": 840.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.035277777777777776,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 505
+            },
+            {
+                "Name": "G01 16mm gypsum board",
+                "Thickness": 0.0159,
+                "Roughness": "MediumSmooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.099375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 544
+            },
+            {
+                "Name": "Nonres_Exterior_Wall_Insulation_grd",
+                "Thickness": 0.0,
+                "Roughness": "MediumSmooth",
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 1.06783369996193,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 258
+            },
+            {
+                "Name": "G01 16mm gypsum board",
+                "Thickness": 0.0159,
+                "Roughness": "MediumSmooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.099375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 544
+            }
+        ]
+    },
+    "Perimeter_ZN_1_wall_east": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Perimeter_ZN_1_wall_north": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Core_ZN_wall_south": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Core_ZN_wall_east": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Core_ZN_wall_north": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Core_ZN_wall_west": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Perimeter_ZN_3_wall_south": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Perimeter_ZN_3_wall_west": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Perimeter_ZN_3_wall_north": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.7,
+            "ThermalResistance": 1.3018614777397077
+        },
+        "nonres_ext_wall_grd": [
+            {
+                "Name": "F07 25mm stucco",
+                "Thickness": 0.0254,
+                "Roughness": "Smooth",
+                "Conductivity": 0.72,
+                "Density": 1856.0,
+                "SpecificHeat": 840.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.035277777777777776,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 505
+            },
+            {
+                "Name": "G01 16mm gypsum board",
+                "Thickness": 0.0159,
+                "Roughness": "MediumSmooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.099375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 544
+            },
+            {
+                "Name": "Nonres_Exterior_Wall_Insulation_grd",
+                "Thickness": 0.0,
+                "Roughness": "MediumSmooth",
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 1.06783369996193,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 258
+            },
+            {
+                "Name": "G01 16mm gypsum board",
+                "Thickness": 0.0159,
+                "Roughness": "MediumSmooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.099375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 544
+            }
+        ]
+    },
+    "Perimeter_ZN_3_wall_east": {
+        "massless": {
+            "Roughness": "Smooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.5,
+            "ThermalResistance": 0.15875
+        },
+        "int_wall": [
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            },
+            {
+                "Name": "G01 13mm gypsum board",
+                "Thickness": 0.0127,
+                "Roughness": "Smooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.5,
+                "ThermalResistance": 0.079375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 440
+            }
+        ]
+    },
+    "Perimeter_ZN_4_floor": {},
+    "Perimeter_ZN_2_floor": {},
+    "Perimeter_ZN_1_floor": {},
+    "Core_ZN_floor": {},
     "Attic_soffit_west": {
         "massless": {
             "Roughness": "Smooth",
@@ -1001,7 +1005,7 @@
                 "Thickness": 0.0159,
                 "Roughness": "Smooth",
                 "Conductivity": 0.12,
-                "Density": 0.12,
+                "Density": 544.0,
                 "SpecificHeat": 1210.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1028,7 +1032,7 @@
                 "Thickness": 0.0159,
                 "Roughness": "Smooth",
                 "Conductivity": 0.12,
-                "Density": 0.12,
+                "Density": 544.0,
                 "SpecificHeat": 1210.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1055,7 +1059,7 @@
                 "Thickness": 0.0159,
                 "Roughness": "Smooth",
                 "Conductivity": 0.12,
-                "Density": 0.12,
+                "Density": 544.0,
                 "SpecificHeat": 1210.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1082,7 +1086,7 @@
                 "Thickness": 0.0159,
                 "Roughness": "MediumSmooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1091,7 +1095,7 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 440
+                "id": 544
             },
             {
                 "Name": "Nonres_Roof_Insulation",
@@ -1125,7 +1129,7 @@
                 "Thickness": 0.0159,
                 "Roughness": "MediumSmooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1134,7 +1138,7 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 440
+                "id": 544
             },
             {
                 "Name": "Nonres_Roof_Insulation",
@@ -1168,7 +1172,7 @@
                 "Thickness": 0.0159,
                 "Roughness": "MediumSmooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1177,7 +1181,7 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 440
+                "id": 544
             },
             {
                 "Name": "Nonres_Roof_Insulation",
@@ -1211,7 +1215,7 @@
                 "Thickness": 0.0159,
                 "Roughness": "MediumSmooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1220,7 +1224,7 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 440
+                "id": 544
             },
             {
                 "Name": "Nonres_Roof_Insulation",
@@ -1254,7 +1258,7 @@
                 "Thickness": 0.0159,
                 "Roughness": "MediumSmooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1263,7 +1267,7 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 440
+                "id": 544
             },
             {
                 "Name": "Nonres_Roof_Insulation",
@@ -1297,7 +1301,7 @@
                 "Thickness": 0.0159,
                 "Roughness": "Smooth",
                 "Conductivity": 0.12,
-                "Density": 0.12,
+                "Density": 544.0,
                 "SpecificHeat": 1210.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1311,52 +1315,17 @@
         ]
     },
     "Perimeter_ZN_3_floor": {},
-    "Perimeter_ZN_2_floor": {},
-    "Core_ZN_floor": {},
-    "Perimeter_ZN_1_floor": {},
-    "Perimeter_ZN_4_floor": {
+    "Perimeter_ZN_4_ceiling": {
         "massless": {
-            "Roughness": "Smooth",
+            "Roughness": "MediumSmooth",
             "ThermalAbsorptance": 0.9,
             "SolarAbsorptance": 0.7,
             "VisibleAbsorptance": 0.7,
-            "ThermalResistance": 1.3018614777397077
+            "ThermalResistance": 6.33416187961654
         },
-        "nonres_ext_wall_grd": [
+        "nonres_roof": [
             {
-                "Name": "F07 25mm stucco",
-                "Thickness": 0.0254,
-                "Roughness": "Smooth",
-                "Conductivity": 0.72,
-                "Density": 0.72,
-                "SpecificHeat": 840.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.035277777777777776,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 518
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            },
-            {
-                "Name": "Nonres_Exterior_Wall_Insulation_grd",
+                "Name": "Nonres_Roof_Insulation",
                 "Thickness": 0.0,
                 "Roughness": "MediumSmooth",
                 "Conductivity": null,
@@ -1365,18 +1334,18 @@
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
                 "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 1.06783369996193,
+                "ThermalResistance": 6.23478687961654,
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 245
+                "id": 284
             },
             {
                 "Name": "G01 16mm gypsum board",
                 "Thickness": 0.0159,
                 "Roughness": "MediumSmooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1385,7 +1354,136 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 440
+                "id": 544
+            }
+        ]
+    },
+    "Perimeter_ZN_2_ceiling": {
+        "massless": {
+            "Roughness": "MediumSmooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.7,
+            "ThermalResistance": 6.33416187961654
+        },
+        "nonres_roof": [
+            {
+                "Name": "Nonres_Roof_Insulation",
+                "Thickness": 0.0,
+                "Roughness": "MediumSmooth",
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 6.23478687961654,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 284
+            },
+            {
+                "Name": "G01 16mm gypsum board",
+                "Thickness": 0.0159,
+                "Roughness": "MediumSmooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.099375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 544
+            }
+        ]
+    },
+    "Perimeter_ZN_1_ceiling": {
+        "massless": {
+            "Roughness": "MediumSmooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.7,
+            "ThermalResistance": 6.33416187961654
+        },
+        "nonres_roof": [
+            {
+                "Name": "Nonres_Roof_Insulation",
+                "Thickness": 0.0,
+                "Roughness": "MediumSmooth",
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 6.23478687961654,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 284
+            },
+            {
+                "Name": "G01 16mm gypsum board",
+                "Thickness": 0.0159,
+                "Roughness": "MediumSmooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.099375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 544
+            }
+        ]
+    },
+    "Core_ZN_ceiling": {
+        "massless": {
+            "Roughness": "MediumSmooth",
+            "ThermalAbsorptance": 0.9,
+            "SolarAbsorptance": 0.7,
+            "VisibleAbsorptance": 0.7,
+            "ThermalResistance": 6.33416187961654
+        },
+        "nonres_roof": [
+            {
+                "Name": "Nonres_Roof_Insulation",
+                "Thickness": 0.0,
+                "Roughness": "MediumSmooth",
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 6.23478687961654,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 284
+            },
+            {
+                "Name": "G01 16mm gypsum board",
+                "Thickness": 0.0159,
+                "Roughness": "MediumSmooth",
+                "Conductivity": 0.16,
+                "Density": 800.0,
+                "SpecificHeat": 1090.0,
+                "ThermalAbsorptance": 0.9,
+                "SolarAbsorptance": 0.7,
+                "VisibleAbsorptance": 0.7,
+                "ThermalResistance": 0.099375,
+                "UFactor": null,
+                "SolarHeatGainCoefficient": null,
+                "VisibleTransmittance": null,
+                "id": 544
             }
         ]
     },
@@ -1403,7 +1501,7 @@
                 "Thickness": 0.0032,
                 "Roughness": "VeryRough",
                 "Conductivity": 0.04,
-                "Density": 0.04,
+                "Density": 1120.0,
                 "SpecificHeat": 1260.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1412,14 +1510,14 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 479
+                "id": 466
             },
             {
                 "Name": "G02 16mm plywood",
                 "Thickness": 0.0159,
                 "Roughness": "Smooth",
                 "Conductivity": 0.12,
-                "Density": 0.12,
+                "Density": 544.0,
                 "SpecificHeat": 1210.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1446,7 +1544,7 @@
                 "Thickness": 0.0032,
                 "Roughness": "VeryRough",
                 "Conductivity": 0.04,
-                "Density": 0.04,
+                "Density": 1120.0,
                 "SpecificHeat": 1260.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1455,14 +1553,14 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 479
+                "id": 466
             },
             {
                 "Name": "G02 16mm plywood",
                 "Thickness": 0.0159,
                 "Roughness": "Smooth",
                 "Conductivity": 0.12,
-                "Density": 0.12,
+                "Density": 544.0,
                 "SpecificHeat": 1210.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1489,7 +1587,7 @@
                 "Thickness": 0.0032,
                 "Roughness": "VeryRough",
                 "Conductivity": 0.04,
-                "Density": 0.04,
+                "Density": 1120.0,
                 "SpecificHeat": 1260.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1498,14 +1596,14 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 479
+                "id": 466
             },
             {
                 "Name": "G02 16mm plywood",
                 "Thickness": 0.0159,
                 "Roughness": "Smooth",
                 "Conductivity": 0.12,
-                "Density": 0.12,
+                "Density": 544.0,
                 "SpecificHeat": 1210.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1532,7 +1630,7 @@
                 "Thickness": 0.0032,
                 "Roughness": "VeryRough",
                 "Conductivity": 0.04,
-                "Density": 0.04,
+                "Density": 1120.0,
                 "SpecificHeat": 1260.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1541,14 +1639,14 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 479
+                "id": 466
             },
             {
                 "Name": "G02 16mm plywood",
                 "Thickness": 0.0159,
                 "Roughness": "Smooth",
                 "Conductivity": 0.12,
-                "Density": 0.12,
+                "Density": 544.0,
                 "SpecificHeat": 1210.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1591,7 +1689,7 @@
                 "Thickness": 0.0159,
                 "Roughness": "MediumSmooth",
                 "Conductivity": 0.16,
-                "Density": 0.16,
+                "Density": 800.0,
                 "SpecificHeat": 1090.0,
                 "ThermalAbsorptance": 0.9,
                 "SolarAbsorptance": 0.7,
@@ -1600,499 +1698,7 @@
                 "UFactor": null,
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
-                "id": 440
-            }
-        ]
-    },
-    "Perimeter_ZN_2_ceiling": {
-        "massless": {
-            "Roughness": "MediumSmooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.7,
-            "ThermalResistance": 6.33416187961654
-        },
-        "nonres_roof": [
-            {
-                "Name": "Nonres_Roof_Insulation",
-                "Thickness": 0.0,
-                "Roughness": "MediumSmooth",
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 6.23478687961654,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 284
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            }
-        ]
-    },
-    "Core_ZN_ceiling": {
-        "massless": {
-            "Roughness": "MediumSmooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.7,
-            "ThermalResistance": 6.33416187961654
-        },
-        "nonres_roof": [
-            {
-                "Name": "Nonres_Roof_Insulation",
-                "Thickness": 0.0,
-                "Roughness": "MediumSmooth",
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 6.23478687961654,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 284
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            }
-        ]
-    },
-    "Perimeter_ZN_1_ceiling": {
-        "massless": {
-            "Roughness": "MediumSmooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.7,
-            "ThermalResistance": 6.33416187961654
-        },
-        "nonres_roof": [
-            {
-                "Name": "Nonres_Roof_Insulation",
-                "Thickness": 0.0,
-                "Roughness": "MediumSmooth",
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 6.23478687961654,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 284
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            }
-        ]
-    },
-    "Perimeter_ZN_4_ceiling": {
-        "massless": {
-            "Roughness": "MediumSmooth",
-            "ThermalAbsorptance": 0.9,
-            "SolarAbsorptance": 0.7,
-            "VisibleAbsorptance": 0.7,
-            "ThermalResistance": 6.33416187961654
-        },
-        "nonres_roof": [
-            {
-                "Name": "Nonres_Roof_Insulation",
-                "Thickness": 0.0,
-                "Roughness": "MediumSmooth",
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 6.23478687961654,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 284
-            },
-            {
-                "Name": "G01 16mm gypsum board",
-                "Thickness": 0.0159,
-                "Roughness": "MediumSmooth",
-                "Conductivity": 0.16,
-                "Density": 0.16,
-                "SpecificHeat": 1090.0,
-                "ThermalAbsorptance": 0.9,
-                "SolarAbsorptance": 0.7,
-                "VisibleAbsorptance": 0.7,
-                "ThermalResistance": 0.099375,
-                "UFactor": null,
-                "SolarHeatGainCoefficient": null,
-                "VisibleTransmittance": null,
-                "id": 440
-            }
-        ]
-    },
-    "Perimeter_ZN_3_wall_north_Window_1": {
-        "Window_U_0.504_SHGC_North_0.229": [
-            {
-                "Name": "Glazing Layer North",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 76
-            }
-        ]
-    },
-    "Perimeter_ZN_3_wall_north_Window_2": {
-        "Window_U_0.504_SHGC_North_0.229": [
-            {
-                "Name": "Glazing Layer North",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 76
-            }
-        ]
-    },
-    "Perimeter_ZN_3_wall_north_Window_3": {
-        "Window_U_0.504_SHGC_North_0.229": [
-            {
-                "Name": "Glazing Layer North",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 76
-            }
-        ]
-    },
-    "Perimeter_ZN_3_wall_north_Window_4": {
-        "Window_U_0.504_SHGC_North_0.229": [
-            {
-                "Name": "Glazing Layer North",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 76
-            }
-        ]
-    },
-    "Perimeter_ZN_3_wall_north_Window_5": {
-        "Window_U_0.504_SHGC_North_0.229": [
-            {
-                "Name": "Glazing Layer North",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 76
-            }
-        ]
-    },
-    "Perimeter_ZN_3_wall_north_Window_6": {
-        "Window_U_0.504_SHGC_North_0.229": [
-            {
-                "Name": "Glazing Layer North",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 76
-            }
-        ]
-    },
-    "Perimeter_ZN_2_wall_east_Window_4": {
-        "Window_U_0.504_SHGC_East_0.229": [
-            {
-                "Name": "Glazing Layer East",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 63
-            }
-        ]
-    },
-    "Perimeter_ZN_2_wall_east_Window_3": {
-        "Window_U_0.504_SHGC_East_0.229": [
-            {
-                "Name": "Glazing Layer East",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 63
-            }
-        ]
-    },
-    "Perimeter_ZN_2_wall_east_Window_2": {
-        "Window_U_0.504_SHGC_East_0.229": [
-            {
-                "Name": "Glazing Layer East",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 63
-            }
-        ]
-    },
-    "Perimeter_ZN_2_wall_east_Window_1": {
-        "Window_U_0.504_SHGC_East_0.229": [
-            {
-                "Name": "Glazing Layer East",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 63
-            }
-        ]
-    },
-    "Perimeter_ZN_1_wall_south_Window_1": {
-        "Window_U_0.504_SHGC_South_0.229": [
-            {
-                "Name": "Glazing Layer South",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 50
-            }
-        ]
-    },
-    "Perimeter_ZN_1_wall_south_Window_2": {
-        "Window_U_0.504_SHGC_South_0.229": [
-            {
-                "Name": "Glazing Layer South",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 50
-            }
-        ]
-    },
-    "Perimeter_ZN_1_wall_south_Window_3": {
-        "Window_U_0.504_SHGC_South_0.229": [
-            {
-                "Name": "Glazing Layer South",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 50
-            }
-        ]
-    },
-    "Perimeter_ZN_1_wall_south_Window_4": {
-        "Window_U_0.504_SHGC_South_0.229": [
-            {
-                "Name": "Glazing Layer South",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 50
-            }
-        ]
-    },
-    "Perimeter_ZN_1_wall_south_Window_5": {
-        "Window_U_0.504_SHGC_South_0.229": [
-            {
-                "Name": "Glazing Layer South",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 50
-            }
-        ]
-    },
-    "Perimeter_ZN_1_wall_south_Window_6": {
-        "Window_U_0.504_SHGC_South_0.229": [
-            {
-                "Name": "Glazing Layer South",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 50
+                "id": 544
             }
         ]
     },
@@ -2112,7 +1718,7 @@
                 "UFactor": 2.86184304,
                 "SolarHeatGainCoefficient": 0.229,
                 "VisibleTransmittance": 0.2519,
-                "id": 37
+                "id": 50
             }
         ]
     },
@@ -2132,7 +1738,7 @@
                 "UFactor": 2.86184304,
                 "SolarHeatGainCoefficient": 0.229,
                 "VisibleTransmittance": 0.2519,
-                "id": 37
+                "id": 50
             }
         ]
     },
@@ -2152,7 +1758,7 @@
                 "UFactor": 2.86184304,
                 "SolarHeatGainCoefficient": 0.229,
                 "VisibleTransmittance": 0.2519,
-                "id": 37
+                "id": 50
             }
         ]
     },
@@ -2172,7 +1778,347 @@
                 "UFactor": 2.86184304,
                 "SolarHeatGainCoefficient": 0.229,
                 "VisibleTransmittance": 0.2519,
+                "id": 50
+            }
+        ]
+    },
+    "Perimeter_ZN_2_wall_east_Window_4": {
+        "Window_U_0.504_SHGC_East_0.229": [
+            {
+                "Name": "Glazing Layer East",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 76
+            }
+        ]
+    },
+    "Perimeter_ZN_2_wall_east_Window_3": {
+        "Window_U_0.504_SHGC_East_0.229": [
+            {
+                "Name": "Glazing Layer East",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 76
+            }
+        ]
+    },
+    "Perimeter_ZN_2_wall_east_Window_2": {
+        "Window_U_0.504_SHGC_East_0.229": [
+            {
+                "Name": "Glazing Layer East",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 76
+            }
+        ]
+    },
+    "Perimeter_ZN_2_wall_east_Window_1": {
+        "Window_U_0.504_SHGC_East_0.229": [
+            {
+                "Name": "Glazing Layer East",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 76
+            }
+        ]
+    },
+    "Perimeter_ZN_1_wall_south_Window_1": {
+        "Window_U_0.504_SHGC_South_0.229": [
+            {
+                "Name": "Glazing Layer South",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 63
+            }
+        ]
+    },
+    "Perimeter_ZN_1_wall_south_Window_2": {
+        "Window_U_0.504_SHGC_South_0.229": [
+            {
+                "Name": "Glazing Layer South",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 63
+            }
+        ]
+    },
+    "Perimeter_ZN_1_wall_south_Window_3": {
+        "Window_U_0.504_SHGC_South_0.229": [
+            {
+                "Name": "Glazing Layer South",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 63
+            }
+        ]
+    },
+    "Perimeter_ZN_1_wall_south_Window_4": {
+        "Window_U_0.504_SHGC_South_0.229": [
+            {
+                "Name": "Glazing Layer South",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 63
+            }
+        ]
+    },
+    "Perimeter_ZN_1_wall_south_Window_5": {
+        "Window_U_0.504_SHGC_South_0.229": [
+            {
+                "Name": "Glazing Layer South",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 63
+            }
+        ]
+    },
+    "Perimeter_ZN_1_wall_south_Window_6": {
+        "Window_U_0.504_SHGC_South_0.229": [
+            {
+                "Name": "Glazing Layer South",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 63
+            }
+        ]
+    },
+    "Perimeter_ZN_3_wall_north_Window_1": {
+        "Window_U_0.504_SHGC_North_0.229": [
+            {
+                "Name": "Glazing Layer North",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
                 "id": 37
+            }
+        ]
+    },
+    "Perimeter_ZN_3_wall_north_Window_2": {
+        "Window_U_0.504_SHGC_North_0.229": [
+            {
+                "Name": "Glazing Layer North",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 37
+            }
+        ]
+    },
+    "Perimeter_ZN_3_wall_north_Window_3": {
+        "Window_U_0.504_SHGC_North_0.229": [
+            {
+                "Name": "Glazing Layer North",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 37
+            }
+        ]
+    },
+    "Perimeter_ZN_3_wall_north_Window_4": {
+        "Window_U_0.504_SHGC_North_0.229": [
+            {
+                "Name": "Glazing Layer North",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 37
+            }
+        ]
+    },
+    "Perimeter_ZN_3_wall_north_Window_5": {
+        "Window_U_0.504_SHGC_North_0.229": [
+            {
+                "Name": "Glazing Layer North",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 37
+            }
+        ]
+    },
+    "Perimeter_ZN_3_wall_north_Window_6": {
+        "Window_U_0.504_SHGC_North_0.229": [
+            {
+                "Name": "Glazing Layer North",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 37
+            }
+        ]
+    },
+    "Perimeter_ZN_1_wall_south_door": {
+        "Window_U_0.504_SHGC_South_0.229": [
+            {
+                "Name": "Glazing Layer South",
+                "Thickness": 0.0,
+                "Roughness": null,
+                "Conductivity": null,
+                "Density": null,
+                "SpecificHeat": null,
+                "ThermalAbsorptance": null,
+                "SolarAbsorptance": null,
+                "VisibleAbsorptance": null,
+                "ThermalResistance": null,
+                "UFactor": 2.86184304,
+                "SolarHeatGainCoefficient": 0.229,
+                "VisibleTransmittance": 0.2519,
+                "id": 63
             }
         ]
     },
@@ -2227,26 +2173,6 @@
                 "SolarHeatGainCoefficient": null,
                 "VisibleTransmittance": null,
                 "id": 557
-            }
-        ]
-    },
-    "Perimeter_ZN_1_wall_south_door": {
-        "Window_U_0.504_SHGC_South_0.229": [
-            {
-                "Name": "Glazing Layer South",
-                "Thickness": 0.0,
-                "Roughness": null,
-                "Conductivity": null,
-                "Density": null,
-                "SpecificHeat": null,
-                "ThermalAbsorptance": null,
-                "SolarAbsorptance": null,
-                "VisibleAbsorptance": null,
-                "ThermalResistance": null,
-                "UFactor": 2.86184304,
-                "SolarHeatGainCoefficient": 0.229,
-                "VisibleTransmittance": 0.2519,
-                "id": 50
             }
         ]
     }
