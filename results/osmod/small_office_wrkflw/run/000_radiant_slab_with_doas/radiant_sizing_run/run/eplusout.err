@@ -1,0 +1,153 @@
+Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2024.08.21 10:09,
+   ************* Beginning Zone Sizing Calculations
+   ** Warning ** Site:GroundTemperature:BuildingSurface: Some values fall outside the range of 15-25C.
+   **   ~~~   ** These values may be inappropriate.  Please consult the Input Output Reference for more details.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="CORE_ZN_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE DEFAULT", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="CORE_ZN_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE SUMMER DESIGN DAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="CORE_ZN_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE SUNDAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="CORE_ZN_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE WINTER DESIGN DAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_1_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE DEFAULT", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_1_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE SUMMER DESIGN DAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_1_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE SUNDAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_1_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE WINTER DESIGN DAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_2_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE DEFAULT", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_2_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE SUMMER DESIGN DAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_2_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE SUNDAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_2_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE WINTER DESIGN DAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_3_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE DEFAULT", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_3_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE SUMMER DESIGN DAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_3_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE SUNDAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_3_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE WINTER DESIGN DAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_4_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE DEFAULT", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_4_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE SUMMER DESIGN DAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_4_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE SUNDAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="PERIMETER_ZN_4_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE WINTER DESIGN DAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 10", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 11", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 12", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 13", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 14", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 15", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 16", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 7", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 8", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 9", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Year="CORE_ZN_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Year="PERIMETER_ZN_1_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Year="PERIMETER_ZN_2_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Year="PERIMETER_ZN_3_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Year="PERIMETER_ZN_4_TZONE RADIANT SYSTEM OCCUPIED SCHEDULE", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS OFF DISCRETE", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS ON CONTINUOUS", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** Construction RADIANT EXTERIOR CEILING SLAB CONSTRUCTION must have a temperature calculation that is between two layers
+   **   ~~~   ** The temperature calculation after layer parameter has been set to one less than the number of layers.
+   ** Warning ** Construction RADIANT EXTERIOR SLAB CONSTRUCTION must have a temperature calculation that is between two layers
+   **   ~~~   ** The temperature calculation after layer parameter has been set to one less than the number of layers.
+   ** Warning ** Construction RADIANT GROUND SLAB CONSTRUCTION must have a temperature calculation that is between two layers
+   **   ~~~   ** The temperature calculation after layer parameter has been set to one less than the number of layers.
+   ** Warning ** CheckUsedConstructions: There are 6 nominally unused constructions in input.
+   **   ~~~   ** For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;
+   ** Warning ** GetElectricEIRChillerInput: Chiller:Electric:EIR="90.1-2013 AIRCOOLED   CHILLER 0"
+   **   ~~~   ** Capacity ratio as a function of temperature curve output is not equal to 1.0 (+ or - 10%) at reference conditions.
+   **   ~~~   ** Curve output at reference conditions = 1.105
+   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =0.357 vs Max Allowed Temp Diff [C] =2.000000E-003
+   **   ~~~   **  During Sizing, Environment=SINGAPORE ANN CLG .4% CONDNS DB=>MWB, at Simulation time=06/21 17:50 - 17:55
+   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =2.224E-002 vs Max Allowed Temp Diff [C] =2.000000E-003
+   **   ~~~   **  During Sizing, Environment=SINGAPORE ANN CLG .4% CONDNS DB=>MWB, at Simulation time=06/21 18:00 - 18:05
+   ** Warning ** Calculated design heating load for zone=CORE_ZN_TZONE is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=PERIMETER_ZN_1_TZONE is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=PERIMETER_ZN_2_TZONE is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=PERIMETER_ZN_3_TZONE is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=PERIMETER_ZN_4_TZONE is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ************* Beginning System Sizing Calculations
+   ** Warning ** ManageSizing: Calculated Heating Design Air Flow Rate for System=5 ZONE DOAS is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ************* Beginning Plant Sizing Calculations
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="5 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="CORE_ZN_TZONE".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="5 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="PERIMETER_ZN_1_TZONE".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="5 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="PERIMETER_ZN_2_TZONE".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="5 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="PERIMETER_ZN_3_TZONE".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="5 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="PERIMETER_ZN_4_TZONE".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetDXCoils: Coil:Heating:DX:SingleSpeed="5 ZONE DOAS HTG COIL" curve values
+   **   ~~~   ** ... Defrost Energy Input Ratio Function of Temperature Curve Name = 5 ZONE DOAS HTG COIL DEFROST EIR FUNC OF TEMP CURVE output is not equal to 1.0 (+ or - 10%) at rated conditions.
+   **   ~~~   ** ... Curve output at rated conditions = 0.788
+   ** Warning ** CalcTwoSpeedDXCoilStandardRating: Did not find an appropriate fan associated with DX coil named = "5 ZONE DOAS 2SPD DX CLG COIL". Standard Ratings will not be calculated.
+   ** Warning ** Check input. Pump nominal power or motor efficiency is set to 0, for pump=HOT WATER LOOP PUMP
+   ** Warning ** Check input. Pump nominal flow rate is set or calculated = 0, for pump=HOT WATER LOOP PUMP
+   ** Warning ** Output:Meter: invalid Key Name="NATURALGAS:FACILITY" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="DISTRICTCOOLING:FACILITY" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="DISTRICTHEATING:FACILITY" - not found.
+   ** Warning ** Output:Meter:MeterFileOnly: invalid Key Name="NATURALGAS:FACILITY" - not found.
+   ** Warning ** Output:Meter:MeterFileOnly requested for "Electricity:Facility" (TimeStep), already on "Output:Meter". Will report to both eplusout.eso and eplusout.mtr
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ** Warning ** Output:Table:Monthly requested with SimulationControl Run Simulation for Weather File Run Periods set to No so Output:Table:Monthly will not be generated
+   ** Warning ** ZoneHVAC:LowTemperatureRadiant:VariableFlow [PERIMETER_ZN_2_TZONE RADIANT LOOP]
+   **   ~~~   ** Surface [PERIMETER_ZN_2_ENVELOPE_4] temperature below dew-point temperature--potential for condensation exists
+   **   ~~~   ** Flow to the radiant system will be shut-off to avoid condensation
+   **   ~~~   ** Predicted radiant system surface temperature = 20.48
+   **   ~~~   ** Zone dew-point temperature + safety delta T= 20.49
+   **   ~~~   **  Environment=SINGAPORE ANN CLG .4% CONDNS DB=>MWB HVAC Sizing Pass 1, at Simulation time=06/21 09:50 - 09:55
+   **   ~~~   ** Note that a 1.0000 C safety was chosen in the input for the shut-off criteria
+   **   ~~~   ** Note also that this affects all surfaces that are part of this radiant system
+   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =0.357 vs Max Allowed Temp Diff [C] =2.000000E-003
+   **   ~~~   **  Environment=SINGAPORE ANN CLG .4% CONDNS DB=>MWB HVAC Sizing Pass 1, at Simulation time=06/21 17:50 - 17:55
+   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =2.202E-002 vs Max Allowed Temp Diff [C] =2.000000E-003
+   **   ~~~   **  Environment=SINGAPORE ANN CLG .4% CONDNS DB=>MWB HVAC Sizing Pass 1, at Simulation time=06/21 18:00 - 18:05
+   ** Warning ** SizePlantLoop: Calculated Plant Sizing Design Volume Flow Rate=[0.00] is too small. Set to 0.0
+   **   ~~~   ** ..occurs for PlantLoop=HOT WATER LOOP
+   ** Warning ** SizePump: Calculated Pump Nominal Volume Flow Rate=[0.00] is too small. Set to 0.0
+   **   ~~~   ** ..occurs for Pump=HOT WATER LOOP PUMP
+   ************* Beginning Simulation
+   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =0.357 vs Max Allowed Temp Diff [C] =2.000000E-003
+   **   ~~~   **  Environment=SINGAPORE ANN CLG .4% CONDNS DB=>MWB, at Simulation time=06/21 17:50 - 17:55
+   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =2.202E-002 vs Max Allowed Temp Diff [C] =2.000000E-003
+   **   ~~~   **  Environment=SINGAPORE ANN CLG .4% CONDNS DB=>MWB, at Simulation time=06/21 18:00 - 18:05
+   ************* Simulation Error Summary *************
+   ************* There are 8 unused objects in input.
+   ************* Use Output:Diagnostics,DisplayUnusedObjects; to see them.
+   ************* There are 16 unused schedules in input.
+   ************* There are 16 unused week schedules in input.
+   ************* There are 40 unused day schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
+   *************
+   ************* ===== Recurring Error Summary =====
+   ************* The following recurring error messages occurred.
+   *************
+   *************  ** Warning ** ZoneHVAC:LowTemperatureRadiant:VariableFlow [PERIMETER_ZN_2_TZONE RADIANT LOOP] condensation shut-off occurrence continues.
+   *************  **   ~~~   **   This error occurred 4 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=19.490459 C  Min=19.478923 C
+   *************
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 51 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 76 Warning; 0 Severe Errors; Elapsed Time=00hr 00min  0.83sec
