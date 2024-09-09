@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<measure>
+  <schema_version>3.1</schema_version>
+  <name>add_ptac</name>
+  <uid>911a38da-2d24-4495-9b21-a5f652822144</uid>
+  <version_id>239f32ad-4417-486b-b555-0a444f5c496e</version_id>
+  <version_modified>2024-08-29T15:05:31Z</version_modified>
+  <xml_checksum>BA514947</xml_checksum>
+  <class_name>AddPTAC</class_name>
+  <display_name>Add Packaged Terminal Air-Conditioning (PTAC) Unit</display_name>
+  <description>Add Packaged Terminal Air-Conditioning (PTAC) unit to all the zones in the building</description>
+  <modeler_description>Loop through all the zones in the building and apply the PTAC unit to the thermal zone</modeler_description>
+  <arguments>
+    <argument>
+      <name>heating_type</name>
+      <display_name>heating_type</display_name>
+      <description>The heating unit type</description>
+      <type>Choice</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <default_value>Gas</default_value>
+      <choices>
+        <choice>
+          <value>Gas</value>
+          <display_name>Gas</display_name>
+        </choice>
+        <choice>
+          <value>Electricity</value>
+          <display_name>Electricity</display_name>
+        </choice>
+        <choice>
+          <value>Water</value>
+          <display_name>Water</display_name>
+        </choice>
+        <choice>
+          <value>No Heat</value>
+          <display_name>No Heat</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>fan_type</name>
+      <display_name>fan_type</display_name>
+      <description>The fan type of the system</description>
+      <type>Choice</type>
+      <required>false</required>
+      <model_dependent>false</model_dependent>
+      <default_value>Cycling</default_value>
+      <choices>
+        <choice>
+          <value>Cycling</value>
+          <display_name>Cycling</display_name>
+        </choice>
+        <choice>
+          <value>ConstantVolume</value>
+          <display_name>ConstantVolume</display_name>
+        </choice>
+      </choices>
+    </argument>
+  </arguments>
+  <outputs />
+  <provenances />
+  <tags>
+    <tag>HVAC.Whole System</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Language</name>
+      <value>Python</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>LICENSE.md</filename>
+      <filetype>md</filetype>
+      <usage_type>license</usage_type>
+      <checksum>6ADEEA1E</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>3.7.0</identifier>
+        <min_compatible>3.7.0</min_compatible>
+      </version>
+      <filename>measure.py</filename>
+      <filetype>py</filetype>
+      <usage_type>script</usage_type>
+      <checksum>C18DB9DF</checksum>
+    </file>
+    <file>
+      <filename>__pycache__/test_add_ptac.cpython-312-pytest-8.0.2.pyc</filename>
+      <filetype>pyc</filetype>
+      <usage_type>test</usage_type>
+      <checksum>FD694D37</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>01D27366</checksum>
+    </file>
+    <file>
+      <filename>test_add_ptac.py</filename>
+      <filetype>py</filetype>
+      <usage_type>test</usage_type>
+      <checksum>899BEB9E</checksum>
+    </file>
+  </files>
+</measure>

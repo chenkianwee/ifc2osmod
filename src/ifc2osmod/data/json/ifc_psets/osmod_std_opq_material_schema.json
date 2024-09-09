@@ -1,0 +1,79 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "osmod_std_opq_material",
+    "description": "IFC property set schema for mapping OpenStudio StandardOpaque Material properties to IFC material",
+    "type": "object",
+    "properties": {
+      "Roughness": {
+        "type": "object",
+        "description": "VeryRough, Rough, MediumRough, MediumSmooth, Smooth, and VerySmooth. This parameter only influences the convection coefficients, more specifically the exterior convection coefficient.",
+        "properties": {
+          "value": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcLabel"
+          }
+        } 
+      },
+      "Thickness": {
+        "type": "object",
+        "description": "Thickness of the material. Unit for this parameter is meter.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcLengthMeasure"
+          }
+        } 
+      },
+      "Conductivity": {
+        "type": "object",
+        "description": "Thermal conductivity of the material layer. Units for this parameter are W/(m-K)",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcThermalConductivityMeasure"
+          }
+        } 
+      },
+      "Density": {
+        "type": "object",
+        "description": "Density of the material layer in units of kg/m3",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcMassDensityMeasure"
+          }
+        } 
+      },
+      "SpecificHeat": {
+        "type": "object",
+        "description": "Specific heat of the material layer in units of J/(kg-K).",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcSpecificHeatCapacityMeasure"
+          }
+        } 
+      }
+    },
+    "required": [ "Roughness", "Thickness", "Conductivity", "Density", "SpecificHeat"]
+}

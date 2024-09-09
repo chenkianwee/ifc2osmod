@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<measure>
+  <schema_version>3.1</schema_version>
+  <name>site_zone_results</name>
+  <uid>2cfd908e-9d4a-43d3-ba4e-8253cb0364b3</uid>
+  <version_id>6760a2bd-5361-42a9-9338-a6b13ed95380</version_id>
+  <version_modified>2024-09-03T15:27:40Z</version_modified>
+  <xml_checksum>50718C83</xml_checksum>
+  <class_name>SiteZoneResults</class_name>
+  <display_name>Add site and zone level output variables</display_name>
+  <description>This measure adds site and zone level output such as temperatures and loads to the output dictonary of EP+ simulation</description>
+  <modeler_description>This measure uses the adds outputs using the openstudio.model.OutputVariable method</modeler_description>
+  <arguments />
+  <outputs />
+  <provenances />
+  <tags>
+    <tag>Reporting.QAQC</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Language</name>
+      <value>Python</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>LICENSE.md</filename>
+      <filetype>md</filetype>
+      <usage_type>license</usage_type>
+      <checksum>CD7F5672</checksum>
+    </file>
+    <file>
+      <filename>.gitkeep</filename>
+      <filetype>gitkeep</filetype>
+      <usage_type>doc</usage_type>
+      <checksum>00000000</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>3.7.0</identifier>
+        <min_compatible>3.7.0</min_compatible>
+      </version>
+      <filename>measure.py</filename>
+      <filetype>py</filetype>
+      <usage_type>script</usage_type>
+      <checksum>D9CA1905</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>53D14E69</checksum>
+    </file>
+    <file>
+      <filename>test_site_zone_results.py</filename>
+      <filetype>py</filetype>
+      <usage_type>test</usage_type>
+      <checksum>8B0A7F77</checksum>
+    </file>
+  </files>
+</measure>

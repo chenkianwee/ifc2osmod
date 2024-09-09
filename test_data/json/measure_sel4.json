@@ -1,0 +1,10 @@
+{"measures": [
+    {"dir": "../ifc2osmod/measures/radiant_slab_with_doas/", 
+    "arguments": {"remove_existing_hvac": true, "heating_plant_type": "Air Source Heat Pump", "cooling_plant_type": "Air Cooled Chiller",
+    "waterside_economizer": "none", "radiant_type": "ceiling", "include_carpet": false, "control_strategy": "proportional_control", 
+    "proportional_gain": 0.3, "switch_over_time": 24.0, "radiant_lockout": false, "lockout_start_time": 12.0,
+    "lockout_end_time": 20.0, "add_output_variables": true, "standards_template": "90.1-2013"}},
+    {"dir": "../ifc2osmod/measures/site_zone_results/", 
+    "arguments": {}}
+    ]
+}

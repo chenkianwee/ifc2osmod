@@ -14,17 +14,30 @@ requires-python = ">=3.10"
 classifiers = ["License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
                "Programming Language :: Python :: 3.10",
                "Operating System :: OS Independent"]
-dependencies = ['numpy==1.26.3',
-                'geomie3d==0.0.7',
-                'pyqtgraph==0.13.3', 
-                'PyOpenGL==3.1.7',
-                'PyQt6==6.6.1',
-                'python-dateutil==2.8.2',
-                'ifcopenshell==0.7.0.240423',
+dependencies = ['ifc_utils==0.0.1',
                 'openstudio==3.7.0',
-                'ladybug-core==0.42.24'
+                'ladybug-core==0.42.24',
+                'setuptools==74.1.2'
                 ]
 
 [project.urls]
 "Homepage" = "https://github.com/chenkianwee/ifc2osmod"
 "Bug Tracker" = "https://github.com/chenkianwee/ifc2osmod/issues"
+
+[project.scripts]
+add_sch2osmod = "ifc2osmod.add_sch2osmod:main"
+calc_massless_mat = "ifc2osmod.calc_massless_mat:main"
+epsql2csv = "ifc2osmod.epsql2csv:main"
+execute_osmod = "ifc2osmod.execute_osmod:main"
+extract_osmod_opq_constr = "ifc2osmod.extract_osmod_opq_constr:main"
+extract_osmod_smpl_glz_constr = "ifc2osmod.extract_osmod_smpl_glz_constr:main"
+freecad_custom_pset = "ifc2osmod.freecad_custom_pset:main"
+idf_transition = "ifc2osmod.idf_transition:main"
+idf2osmod = "ifc2osmod.idf2osmod:main"
+ifcarch2osmod = "ifc2osmod.ifcarch2osmod:main"
+osmod2ifcarch = "ifc2osmod.osmod2ifcarch:main"
+read_ifc_envlp_mat_pset = "ifc2osmod.read_ifc_envlp_mat_pset:main"
+read_ifc_mat_pset = "ifc2osmod.read_ifc_mat_pset:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,278 @@
+Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2024.09.05 10:18
+! This file shows details about the branches, nodes, and other
+! elements of the flow connections.
+! This file is intended for use in "debugging" potential problems
+! that may also be detected by the program, but may be more easily
+! identified by "eye".
+! This file is also intended to support software which draws a
+! schematic diagram of the HVAC system.
+! ===============================================================
+! #Nodes,<Number of Unique Nodes>
+ #Nodes,41
+! <Node>,<NodeNumber>,<Node Name>,<Node Fluid Type>,<# Times Node Referenced After Definition>
+ Node,1,NODE 10,Air,3
+ Node,2,NODE 9,Air,3
+ Node,3,NODE 12,Air,3
+ Node,4,NODE 11,Air,3
+ Node,5,NODE 14,Air,3
+ Node,6,NODE 13,Air,3
+ Node,7,NODE 8,Air,3
+ Node,8,NODE 7,Air,3
+ Node,9,NODE 16,Air,3
+ Node,10,NODE 15,Air,3
+ Node,11,NODE 4,Air,0
+ Node,12,CORE_ZN_TZONE PTAC COOLING COIL OUTLET NODE,Air,1
+ Node,13,CORE_ZN_TZONE PTAC HEATING COIL OUTLET NODE,Air,1
+ Node,14,PERIMETER_ZN_1_TZONE PTAC COOLING COIL OUTLET NODE,Air,1
+ Node,15,PERIMETER_ZN_1_TZONE PTAC HEATING COIL OUTLET NODE,Air,1
+ Node,16,PERIMETER_ZN_2_TZONE PTAC COOLING COIL OUTLET NODE,Air,1
+ Node,17,PERIMETER_ZN_2_TZONE PTAC HEATING COIL OUTLET NODE,Air,1
+ Node,18,PERIMETER_ZN_3_TZONE PTAC COOLING COIL OUTLET NODE,Air,1
+ Node,19,PERIMETER_ZN_3_TZONE PTAC HEATING COIL OUTLET NODE,Air,1
+ Node,20,PERIMETER_ZN_4_TZONE PTAC COOLING COIL OUTLET NODE,Air,1
+ Node,21,PERIMETER_ZN_4_TZONE PTAC HEATING COIL OUTLET NODE,Air,1
+ Node,22,CORE_ZN_TZONE PTAC MIXED AIR NODE,Air,1
+ Node,23,CORE_ZN_TZONE PTAC OA NODE,Air,1
+ Node,24,CORE_ZN_TZONE PTAC RELIEF AIR NODE,Air,0
+ Node,25,PERIMETER_ZN_1_TZONE PTAC MIXED AIR NODE,Air,1
+ Node,26,PERIMETER_ZN_1_TZONE PTAC OA NODE,Air,1
+ Node,27,PERIMETER_ZN_1_TZONE PTAC RELIEF AIR NODE,Air,0
+ Node,28,PERIMETER_ZN_2_TZONE PTAC MIXED AIR NODE,Air,1
+ Node,29,PERIMETER_ZN_2_TZONE PTAC OA NODE,Air,1
+ Node,30,PERIMETER_ZN_2_TZONE PTAC RELIEF AIR NODE,Air,0
+ Node,31,PERIMETER_ZN_3_TZONE PTAC MIXED AIR NODE,Air,1
+ Node,32,PERIMETER_ZN_3_TZONE PTAC OA NODE,Air,1
+ Node,33,PERIMETER_ZN_3_TZONE PTAC RELIEF AIR NODE,Air,0
+ Node,34,PERIMETER_ZN_4_TZONE PTAC MIXED AIR NODE,Air,1
+ Node,35,PERIMETER_ZN_4_TZONE PTAC OA NODE,Air,1
+ Node,36,PERIMETER_ZN_4_TZONE PTAC RELIEF AIR NODE,Air,0
+ Node,37,NODE 3,Air,0
+ Node,38,NODE 2,Air,0
+ Node,39,NODE 5,Air,0
+ Node,40,NODE 1,Air,0
+ Node,41,MODEL OUTDOOR AIR NODE,Air,0
+! ===============================================================
+! Suspicious nodes have 0 references.  It is normal for some nodes, however.
+! Listing nodes with 0 references (culled from previous list):
+! <Suspicious Node>,<NodeNumber>,<Node Name>,<Node Fluid Type>,<# Times Node Referenced After Definition>
+ Suspicious Node,11,NODE 4,Air,0
+ Suspicious Node,24,CORE_ZN_TZONE PTAC RELIEF AIR NODE,Air,0
+ Suspicious Node,27,PERIMETER_ZN_1_TZONE PTAC RELIEF AIR NODE,Air,0
+ Suspicious Node,30,PERIMETER_ZN_2_TZONE PTAC RELIEF AIR NODE,Air,0
+ Suspicious Node,33,PERIMETER_ZN_3_TZONE PTAC RELIEF AIR NODE,Air,0
+ Suspicious Node,36,PERIMETER_ZN_4_TZONE PTAC RELIEF AIR NODE,Air,0
+ Suspicious Node,37,NODE 3,Air,0
+ Suspicious Node,38,NODE 2,Air,0
+ Suspicious Node,39,NODE 5,Air,0
+ Suspicious Node,40,NODE 1,Air,0
+ Suspicious Node,41,MODEL OUTDOOR AIR NODE,Air,0
+! ===============================================================
+! <#Branch Lists>,<Number of Branch Lists>
+ #Branch Lists,0
+! <Branch List>,<Branch List Count>,<Branch List Name>,<Loop Name>,<Loop Type>,<Number of Branches>
+! <Branch>,<Branch Count>,<Branch Name>,<Loop Name>,<Loop Type>,<Branch Inlet Node Name>,<Branch Outlet Node Name>
+! ===============================================================
+! <#Supply Air Paths>,<Number of Supply Air Paths>
+ #Supply Air Paths,0
+! <Supply Air Path>,<Supply Air Path Count>,<Supply Air Path Name>,<AirLoopHVAC Name>
+! <#Components on Supply Air Path>,<Number of Components>
+! <Supply Air Path Component>,<Component Count>,<Component Type>,<Component Name>,<AirLoopHVAC Name>
+! <#Outlet Nodes on Supply Air Path Component>,<Number of Nodes>
+! <Supply Air Path Component Nodes>,<Node Count>,<Component Type>,<Component Name>,<Inlet Node Name>,<Outlet Node Name>,<AirLoopHVAC Name>
+! ===============================================================
+! <#Return Air Paths>,<Number of Return Air Paths>
+ #Return Air Paths,0
+! <Return Air Path>,<Return Air Path Count>,<Return Air Path Name>,<AirLoopHVAC Name>
+! <#Components on Return Air Path>,<Number of Components>
+! <Return Air Path Component>,<Component Count>,<Component Type>,<Component Name>,<AirLoopHVAC Name>
+! <#Inlet Nodes on Return Air Path Component>,<Number of Nodes>
+! <Return Air Path Component Nodes>,<Node Count>,<Component Type>,<Component Name>,<Inlet Node Name>,<Outlet Node Name>,<AirLoopHVAC Name>
+! ===============================================================
+! #Outdoor Air Nodes,<Number of Outdoor Air Nodes>
+ #Outdoor Air Nodes,6
+! <Outdoor Air Node>,<NodeNumber>,<Node Name>
+ Outdoor Air Node,23,CORE_ZN_TZONE PTAC OA NODE
+ Outdoor Air Node,26,PERIMETER_ZN_1_TZONE PTAC OA NODE
+ Outdoor Air Node,29,PERIMETER_ZN_2_TZONE PTAC OA NODE
+ Outdoor Air Node,32,PERIMETER_ZN_3_TZONE PTAC OA NODE
+ Outdoor Air Node,35,PERIMETER_ZN_4_TZONE PTAC OA NODE
+ Outdoor Air Node,41,MODEL OUTDOOR AIR NODE
+! ===============================================================
+! <#Component Sets>,<Number of Component Sets>
+ #Component Sets,20
+! <Component Set>,<Component Set Count>,<Parent Object Type>,<Parent Object Name>,<Component Type>,<Component Name>,<Inlet Node ID>,<Outlet Node ID>,<Description>
+ Component Set,1,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,CORE_ZN_TZONE PTAC,COIL:HEATING:ELECTRIC,CORE_ZN_TZONEPTAC NO HEAT,CORE_ZN_TZONE PTAC COOLING COIL OUTLET NODE,CORE_ZN_TZONE PTAC HEATING COIL OUTLET NODE,Air Nodes
+ Component Set,2,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_1_TZONE PTAC,COIL:HEATING:ELECTRIC,PERIMETER_ZN_1_TZONEPTAC NO HEAT,PERIMETER_ZN_1_TZONE PTAC COOLING COIL OUTLET NODE,PERIMETER_ZN_1_TZONE PTAC HEATING COIL OUTLET NODE,Air Nodes
+ Component Set,3,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_2_TZONE PTAC,COIL:HEATING:ELECTRIC,PERIMETER_ZN_2_TZONEPTAC NO HEAT,PERIMETER_ZN_2_TZONE PTAC COOLING COIL OUTLET NODE,PERIMETER_ZN_2_TZONE PTAC HEATING COIL OUTLET NODE,Air Nodes
+ Component Set,4,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_3_TZONE PTAC,COIL:HEATING:ELECTRIC,PERIMETER_ZN_3_TZONEPTAC NO HEAT,PERIMETER_ZN_3_TZONE PTAC COOLING COIL OUTLET NODE,PERIMETER_ZN_3_TZONE PTAC HEATING COIL OUTLET NODE,Air Nodes
+ Component Set,5,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_4_TZONE PTAC,COIL:HEATING:ELECTRIC,PERIMETER_ZN_4_TZONEPTAC NO HEAT,PERIMETER_ZN_4_TZONE PTAC COOLING COIL OUTLET NODE,PERIMETER_ZN_4_TZONE PTAC HEATING COIL OUTLET NODE,Air Nodes
+ Component Set,6,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,CORE_ZN_TZONE PTAC,OUTDOORAIR:MIXER,CORE_ZN_TZONE PTAC OA MIXER,CORE_ZN_TZONE PTAC OA NODE,CORE_ZN_TZONE PTAC MIXED AIR NODE,Air Nodes
+ Component Set,7,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_1_TZONE PTAC,OUTDOORAIR:MIXER,PERIMETER_ZN_1_TZONE PTAC OA MIXER,PERIMETER_ZN_1_TZONE PTAC OA NODE,PERIMETER_ZN_1_TZONE PTAC MIXED AIR NODE,Air Nodes
+ Component Set,8,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_2_TZONE PTAC,OUTDOORAIR:MIXER,PERIMETER_ZN_2_TZONE PTAC OA MIXER,PERIMETER_ZN_2_TZONE PTAC OA NODE,PERIMETER_ZN_2_TZONE PTAC MIXED AIR NODE,Air Nodes
+ Component Set,9,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_3_TZONE PTAC,OUTDOORAIR:MIXER,PERIMETER_ZN_3_TZONE PTAC OA MIXER,PERIMETER_ZN_3_TZONE PTAC OA NODE,PERIMETER_ZN_3_TZONE PTAC MIXED AIR NODE,Air Nodes
+ Component Set,10,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_4_TZONE PTAC,OUTDOORAIR:MIXER,PERIMETER_ZN_4_TZONE PTAC OA MIXER,PERIMETER_ZN_4_TZONE PTAC OA NODE,PERIMETER_ZN_4_TZONE PTAC MIXED AIR NODE,Air Nodes
+ Component Set,11,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,CORE_ZN_TZONE PTAC,FAN:ONOFF,CORE_ZN_TZONEPTAC_FAN,CORE_ZN_TZONE PTAC HEATING COIL OUTLET NODE,NODE 10,Air Nodes
+ Component Set,12,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_1_TZONE PTAC,FAN:ONOFF,PERIMETER_ZN_1_TZONEPTAC_FAN,PERIMETER_ZN_1_TZONE PTAC HEATING COIL OUTLET NODE,NODE 12,Air Nodes
+ Component Set,13,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_2_TZONE PTAC,FAN:ONOFF,PERIMETER_ZN_2_TZONEPTAC_FAN,PERIMETER_ZN_2_TZONE PTAC HEATING COIL OUTLET NODE,NODE 14,Air Nodes
+ Component Set,14,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_3_TZONE PTAC,FAN:ONOFF,PERIMETER_ZN_3_TZONEPTAC_FAN,PERIMETER_ZN_3_TZONE PTAC HEATING COIL OUTLET NODE,NODE 8,Air Nodes
+ Component Set,15,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_4_TZONE PTAC,FAN:ONOFF,PERIMETER_ZN_4_TZONEPTAC_FAN,PERIMETER_ZN_4_TZONE PTAC HEATING COIL OUTLET NODE,NODE 16,Air Nodes
+ Component Set,16,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,CORE_ZN_TZONE PTAC,COIL:COOLING:DX:SINGLESPEED,CORE_ZN_TZONEPTAC 1SPD DX AC CLG COIL,CORE_ZN_TZONE PTAC MIXED AIR NODE,CORE_ZN_TZONE PTAC COOLING COIL OUTLET NODE,Air Nodes
+ Component Set,17,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_1_TZONE PTAC,COIL:COOLING:DX:SINGLESPEED,PERIMETER_ZN_1_TZONEPTAC 1SPD DX AC CLG COIL,PERIMETER_ZN_1_TZONE PTAC MIXED AIR NODE,PERIMETER_ZN_1_TZONE PTAC COOLING COIL OUTLET NODE,Air Nodes
+ Component Set,18,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_2_TZONE PTAC,COIL:COOLING:DX:SINGLESPEED,PERIMETER_ZN_2_TZONEPTAC 1SPD DX AC CLG COIL,PERIMETER_ZN_2_TZONE PTAC MIXED AIR NODE,PERIMETER_ZN_2_TZONE PTAC COOLING COIL OUTLET NODE,Air Nodes
+ Component Set,19,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_3_TZONE PTAC,COIL:COOLING:DX:SINGLESPEED,PERIMETER_ZN_3_TZONEPTAC 1SPD DX AC CLG COIL,PERIMETER_ZN_3_TZONE PTAC MIXED AIR NODE,PERIMETER_ZN_3_TZONE PTAC COOLING COIL OUTLET NODE,Air Nodes
+ Component Set,20,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_4_TZONE PTAC,COIL:COOLING:DX:SINGLESPEED,PERIMETER_ZN_4_TZONEPTAC 1SPD DX AC CLG COIL,PERIMETER_ZN_4_TZONE PTAC MIXED AIR NODE,PERIMETER_ZN_4_TZONE PTAC COOLING COIL OUTLET NODE,Air Nodes
+! ===============================================================
+! <# Plant Loops>,<Number of Plant Loops>
+ #Plant Loops,0
+! <Plant Loop>,<Plant Loop Name>,<Loop Type>,<Inlet Node Name>,<Outlet Node Name>,<Branch List>,<Connector List>
+! <Plant Loop Connector>,<Connector Type>,<Connector Name>,<Loop Name>,<Loop Type>,<Number of Inlets/Outlets>
+! <Plant Loop Connector Branches>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Branch>,<Outlet Branch>,<Loop Name>,<Loop Type>
+! <Plant Loop Connector Nodes>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Node>,<Outlet Node>,<Loop Name>,<Loop Type>
+! <Plant Loop Supply Connection>,<Plant Loop Name>,<Supply Side Outlet Node Name>,<Demand Side Inlet Node Name>
+! <Plant Loop Return Connection>,<Plant Loop Name>,<Demand Side Outlet Node Name>,<Supply Side Inlet Node Name>
+! ===============================================================
+! <# Condenser Loops>,<Number of Condenser Loops>
+ #Condenser Loops,0
+! <Condenser Loop>,<Condenser Loop Name>,<Loop Type>,<Inlet Node Name>,<Outlet Node Name>,<Branch List>,<Connector List>
+! <Condenser Loop Connector>,<Connector Type>,<Connector Name>,<Loop Name>,<Loop Type>,<Number of Inlets/Outlets>
+! <Condenser Loop Connector Branches>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Branch>,<Outlet Branch>,<Loop Name>,<Loop Type>
+! <Condenser Loop Connector Nodes>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Node>,<Outlet Node>,<Loop Name>,<Loop Type>
+! <Condenser Loop Supply Connection>,<Condenser Loop Name>,<Supply Side Outlet Node Name>,<Demand Side Inlet Node Name>
+! <Condenser Loop Return Connection>,<Condenser Loop Name>,<Demand Side Outlet Node Name>,<Supply Side Inlet Node Name>
+! ===============================================================
+! <# Controlled Zones>,<Number of Controlled Zones>
+ #Controlled Zones,5
+! <Controlled Zone>,<Controlled Zone Name>,<Equip List Name>,<Control List Name>,<Zone Node Name>,<# Inlet Nodes>,<# Exhaust Nodes>,<# Return Nodes>
+! <Controlled Zone Inlet>,<Inlet Node Count>,<Controlled Zone Name>,<Supply Air Inlet Node Name>,<SD Sys:Cooling/Heating [DD:Cooling] Inlet Node Name>,<DD Sys:Heating Inlet Node Name>
+! <Controlled Zone Exhaust>,<Exhaust Node Count>,<Controlled Zone Name>,<Exhaust Air Node Name>
+ Controlled Zone,CORE_ZN_TZONE,CORE_ZN_TZONE EQUIPMENT LIST,,NODE 4,1,1,0
+   Controlled Zone Inlet,1,CORE_ZN_TZONE,NODE 10,Undefined,N/A
+   Controlled Zone Exhaust,1,CORE_ZN_TZONE,NODE 9
+ Controlled Zone,PERIMETER_ZN_1_TZONE,PERIMETER_ZN_1_TZONE EQUIPMENT LIST,,NODE 3,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_ZN_1_TZONE,NODE 12,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_ZN_1_TZONE,NODE 11
+ Controlled Zone,PERIMETER_ZN_2_TZONE,PERIMETER_ZN_2_TZONE EQUIPMENT LIST,,NODE 2,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_ZN_2_TZONE,NODE 14,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_ZN_2_TZONE,NODE 13
+ Controlled Zone,PERIMETER_ZN_3_TZONE,PERIMETER_ZN_3_TZONE EQUIPMENT LIST,,NODE 5,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_ZN_3_TZONE,NODE 8,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_ZN_3_TZONE,NODE 7
+ Controlled Zone,PERIMETER_ZN_4_TZONE,PERIMETER_ZN_4_TZONE EQUIPMENT LIST,,NODE 1,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_ZN_4_TZONE,NODE 16,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_ZN_4_TZONE,NODE 15
+! ===============================================================
+! <#Zone Equipment Lists>,<Number of Zone Equipment Lists>
+ #Zone Equipment Lists,5
+! <Zone Equipment List>,<Zone Equipment List Count>,<Zone Equipment List Name>,<Zone Name>,<Number of Components>
+! <Zone Equipment Component>,<Component Count>,<Component Type>,<Component Name>,<Zone Name>,<Heating Priority>,<Cooling Priority>
+ Zone Equipment List,2,CORE_ZN_TZONE EQUIPMENT LIST,CORE_ZN_TZONE,1
+   Zone Equipment Component,1,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,CORE_ZN_TZONE PTAC,CORE_ZN_TZONE,1,1
+ Zone Equipment List,3,PERIMETER_ZN_1_TZONE EQUIPMENT LIST,PERIMETER_ZN_1_TZONE,1
+   Zone Equipment Component,1,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_1_TZONE PTAC,PERIMETER_ZN_1_TZONE,1,1
+ Zone Equipment List,4,PERIMETER_ZN_2_TZONE EQUIPMENT LIST,PERIMETER_ZN_2_TZONE,1
+   Zone Equipment Component,1,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_2_TZONE PTAC,PERIMETER_ZN_2_TZONE,1,1
+ Zone Equipment List,5,PERIMETER_ZN_3_TZONE EQUIPMENT LIST,PERIMETER_ZN_3_TZONE,1
+   Zone Equipment Component,1,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_3_TZONE PTAC,PERIMETER_ZN_3_TZONE,1,1
+ Zone Equipment List,6,PERIMETER_ZN_4_TZONE EQUIPMENT LIST,PERIMETER_ZN_4_TZONE,1
+   Zone Equipment Component,1,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_4_TZONE PTAC,PERIMETER_ZN_4_TZONE,1,1
+! ===============================================================
+! <#AirLoopHVACs>,<Number of AirLoopHVACs>
+ #AirLoopHVACs,0
+! <AirLoopHVAC>,<Air Loop Name>,<# Return Nodes>,<# Supply Nodes>,<# Zones Cooled>,<# Zones Heated>,<Outdoor Air Used>
+! <AirLoop Return Connections>,<Connection Count>,<AirLoopHVAC Name>,<Zn Eqp Return Node #>,<Zn Eqp Return Node Name>,<AirLoop Return Node #>,<Air Loop Return Node Name>
+! <AirLoop Supply Connections>,<Connection Count>,<AirLoopHVAC Name>,<Zn Eqp Supply Node #>,<Zn Eqp Supply Node Name>,<AirLoop Supply Node #>,<Air Loop Supply Node Name>
+! <Cooled Zone Info>,<Cooled Zone Count>,<Cooled Zone Name>,<Cooled Zone Inlet Node #>,<Cooled Zone Inlet Node Name>,<AirLoopHVAC Name>
+! <Heated Zone Info>,<Heated Zone Count>,<Heated Zone Name>,<Heated Zone Inlet Node #>,<Heated Zone Inlet Node Name>,<AirLoopHVAC Name>
+! <Outdoor Air Connections>,<OA Inlet Node #>,<OA Return Air Inlet Node Name>,<OA Outlet Node #>,<OA Mixed Air Outlet Node Name>,<AirLoopHVAC Name>
+! <AirLoopHVAC Connector>,<Connector Type>,<Connector Name>,<Loop Name>,<Loop Type>,<Number of Inlets/Outlets>
+! <AirLoopHVAC Connector Branches>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Branch>,<Outlet Branch>,<Loop Name>,<Loop Type>
+! <AirLoopHVAC Connector Nodes>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Node>,<Outlet Node>,<Loop Name>,<Loop Type>
+! ===============================================================
+! <#Parent Node Connections>,<Number of Parent Node Connections>
+ #Parent Node Connections,10
+! <Parent Node Connection>,<Node Name>,<Node ObjectType>,<Node ObjectName>,<Node ConnectionType>,<Node FluidStream>
+ Parent Node Connection,NODE 9,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,CORE_ZN_TZONE PTAC,Inlet,1
+ Parent Node Connection,NODE 10,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,CORE_ZN_TZONE PTAC,Outlet,1
+ Parent Node Connection,NODE 11,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_1_TZONE PTAC,Inlet,1
+ Parent Node Connection,NODE 12,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_1_TZONE PTAC,Outlet,1
+ Parent Node Connection,NODE 13,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_2_TZONE PTAC,Inlet,1
+ Parent Node Connection,NODE 14,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_2_TZONE PTAC,Outlet,1
+ Parent Node Connection,NODE 7,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_3_TZONE PTAC,Inlet,1
+ Parent Node Connection,NODE 8,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_3_TZONE PTAC,Outlet,1
+ Parent Node Connection,NODE 15,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_4_TZONE PTAC,Inlet,1
+ Parent Node Connection,NODE 16,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,PERIMETER_ZN_4_TZONE PTAC,Outlet,1
+! ===============================================================
+! <#Non-Parent Node Connections>,<Number of Non-Parent Node Connections>
+ #Non-Parent Node Connections,71
+! <Non-Parent Node Connection>,<Node Name>,<Node ObjectType>,<Node ObjectName>,<Node ConnectionType>,<Node FluidStream>
+ Non-Parent Node Connection,NODE 4,ZONEHVAC:EQUIPMENTCONNECTIONS,CORE_ZN_TZONE,ZoneNode,1
+ Non-Parent Node Connection,CORE_ZN_TZONE PTAC COOLING COIL OUTLET NODE,COIL:HEATING:ELECTRIC,CORE_ZN_TZONEPTAC NO HEAT,Inlet,1
+ Non-Parent Node Connection,CORE_ZN_TZONE PTAC HEATING COIL OUTLET NODE,COIL:HEATING:ELECTRIC,CORE_ZN_TZONEPTAC NO HEAT,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_1_TZONE PTAC COOLING COIL OUTLET NODE,COIL:HEATING:ELECTRIC,PERIMETER_ZN_1_TZONEPTAC NO HEAT,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_1_TZONE PTAC HEATING COIL OUTLET NODE,COIL:HEATING:ELECTRIC,PERIMETER_ZN_1_TZONEPTAC NO HEAT,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_2_TZONE PTAC COOLING COIL OUTLET NODE,COIL:HEATING:ELECTRIC,PERIMETER_ZN_2_TZONEPTAC NO HEAT,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_2_TZONE PTAC HEATING COIL OUTLET NODE,COIL:HEATING:ELECTRIC,PERIMETER_ZN_2_TZONEPTAC NO HEAT,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_3_TZONE PTAC COOLING COIL OUTLET NODE,COIL:HEATING:ELECTRIC,PERIMETER_ZN_3_TZONEPTAC NO HEAT,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_3_TZONE PTAC HEATING COIL OUTLET NODE,COIL:HEATING:ELECTRIC,PERIMETER_ZN_3_TZONEPTAC NO HEAT,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_4_TZONE PTAC COOLING COIL OUTLET NODE,COIL:HEATING:ELECTRIC,PERIMETER_ZN_4_TZONEPTAC NO HEAT,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_4_TZONE PTAC HEATING COIL OUTLET NODE,COIL:HEATING:ELECTRIC,PERIMETER_ZN_4_TZONEPTAC NO HEAT,Outlet,1
+ Non-Parent Node Connection,CORE_ZN_TZONE PTAC MIXED AIR NODE,OUTDOORAIR:MIXER,CORE_ZN_TZONE PTAC OA MIXER,Outlet,1
+ Non-Parent Node Connection,CORE_ZN_TZONE PTAC OA NODE,OUTDOORAIR:MIXER,CORE_ZN_TZONE PTAC OA MIXER,Inlet,1
+ Non-Parent Node Connection,CORE_ZN_TZONE PTAC RELIEF AIR NODE,OUTDOORAIR:MIXER,CORE_ZN_TZONE PTAC OA MIXER,ReliefAir,1
+ Non-Parent Node Connection,NODE 9,OUTDOORAIR:MIXER,CORE_ZN_TZONE PTAC OA MIXER,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_1_TZONE PTAC MIXED AIR NODE,OUTDOORAIR:MIXER,PERIMETER_ZN_1_TZONE PTAC OA MIXER,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_1_TZONE PTAC OA NODE,OUTDOORAIR:MIXER,PERIMETER_ZN_1_TZONE PTAC OA MIXER,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_1_TZONE PTAC RELIEF AIR NODE,OUTDOORAIR:MIXER,PERIMETER_ZN_1_TZONE PTAC OA MIXER,ReliefAir,1
+ Non-Parent Node Connection,NODE 11,OUTDOORAIR:MIXER,PERIMETER_ZN_1_TZONE PTAC OA MIXER,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_2_TZONE PTAC MIXED AIR NODE,OUTDOORAIR:MIXER,PERIMETER_ZN_2_TZONE PTAC OA MIXER,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_2_TZONE PTAC OA NODE,OUTDOORAIR:MIXER,PERIMETER_ZN_2_TZONE PTAC OA MIXER,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_2_TZONE PTAC RELIEF AIR NODE,OUTDOORAIR:MIXER,PERIMETER_ZN_2_TZONE PTAC OA MIXER,ReliefAir,1
+ Non-Parent Node Connection,NODE 13,OUTDOORAIR:MIXER,PERIMETER_ZN_2_TZONE PTAC OA MIXER,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_3_TZONE PTAC MIXED AIR NODE,OUTDOORAIR:MIXER,PERIMETER_ZN_3_TZONE PTAC OA MIXER,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_3_TZONE PTAC OA NODE,OUTDOORAIR:MIXER,PERIMETER_ZN_3_TZONE PTAC OA MIXER,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_3_TZONE PTAC RELIEF AIR NODE,OUTDOORAIR:MIXER,PERIMETER_ZN_3_TZONE PTAC OA MIXER,ReliefAir,1
+ Non-Parent Node Connection,NODE 7,OUTDOORAIR:MIXER,PERIMETER_ZN_3_TZONE PTAC OA MIXER,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_4_TZONE PTAC MIXED AIR NODE,OUTDOORAIR:MIXER,PERIMETER_ZN_4_TZONE PTAC OA MIXER,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_4_TZONE PTAC OA NODE,OUTDOORAIR:MIXER,PERIMETER_ZN_4_TZONE PTAC OA MIXER,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_4_TZONE PTAC RELIEF AIR NODE,OUTDOORAIR:MIXER,PERIMETER_ZN_4_TZONE PTAC OA MIXER,ReliefAir,1
+ Non-Parent Node Connection,NODE 15,OUTDOORAIR:MIXER,PERIMETER_ZN_4_TZONE PTAC OA MIXER,Inlet,1
+ Non-Parent Node Connection,NODE 10,ZONEHVAC:EQUIPMENTCONNECTIONS,CORE_ZN_TZONE,ZoneInlet,1
+ Non-Parent Node Connection,NODE 9,ZONEHVAC:EQUIPMENTCONNECTIONS,CORE_ZN_TZONE,ZoneExhaust,1
+ Non-Parent Node Connection,NODE 3,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_ZN_1_TZONE,ZoneNode,1
+ Non-Parent Node Connection,NODE 12,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_ZN_1_TZONE,ZoneInlet,1
+ Non-Parent Node Connection,NODE 11,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_ZN_1_TZONE,ZoneExhaust,1
+ Non-Parent Node Connection,NODE 2,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_ZN_2_TZONE,ZoneNode,1
+ Non-Parent Node Connection,NODE 14,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_ZN_2_TZONE,ZoneInlet,1
+ Non-Parent Node Connection,NODE 13,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_ZN_2_TZONE,ZoneExhaust,1
+ Non-Parent Node Connection,NODE 5,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_ZN_3_TZONE,ZoneNode,1
+ Non-Parent Node Connection,NODE 8,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_ZN_3_TZONE,ZoneInlet,1
+ Non-Parent Node Connection,NODE 7,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_ZN_3_TZONE,ZoneExhaust,1
+ Non-Parent Node Connection,NODE 1,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_ZN_4_TZONE,ZoneNode,1
+ Non-Parent Node Connection,NODE 16,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_ZN_4_TZONE,ZoneInlet,1
+ Non-Parent Node Connection,NODE 15,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_ZN_4_TZONE,ZoneExhaust,1
+ Non-Parent Node Connection,CORE_ZN_TZONE PTAC OA NODE,OUTDOORAIR:NODELIST,OutdoorAir:NodeList,OutdoorAir,1
+ Non-Parent Node Connection,PERIMETER_ZN_1_TZONE PTAC OA NODE,OUTDOORAIR:NODELIST,OutdoorAir:NodeList,OutdoorAir,2
+ Non-Parent Node Connection,PERIMETER_ZN_2_TZONE PTAC OA NODE,OUTDOORAIR:NODELIST,OutdoorAir:NodeList,OutdoorAir,3
+ Non-Parent Node Connection,PERIMETER_ZN_3_TZONE PTAC OA NODE,OUTDOORAIR:NODELIST,OutdoorAir:NodeList,OutdoorAir,4
+ Non-Parent Node Connection,PERIMETER_ZN_4_TZONE PTAC OA NODE,OUTDOORAIR:NODELIST,OutdoorAir:NodeList,OutdoorAir,5
+ Non-Parent Node Connection,MODEL OUTDOOR AIR NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,6
+ Non-Parent Node Connection,CORE_ZN_TZONE PTAC HEATING COIL OUTLET NODE,FAN:ONOFF,CORE_ZN_TZONEPTAC_FAN,Inlet,1
+ Non-Parent Node Connection,NODE 10,FAN:ONOFF,CORE_ZN_TZONEPTAC_FAN,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_1_TZONE PTAC HEATING COIL OUTLET NODE,FAN:ONOFF,PERIMETER_ZN_1_TZONEPTAC_FAN,Inlet,1
+ Non-Parent Node Connection,NODE 12,FAN:ONOFF,PERIMETER_ZN_1_TZONEPTAC_FAN,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_2_TZONE PTAC HEATING COIL OUTLET NODE,FAN:ONOFF,PERIMETER_ZN_2_TZONEPTAC_FAN,Inlet,1
+ Non-Parent Node Connection,NODE 14,FAN:ONOFF,PERIMETER_ZN_2_TZONEPTAC_FAN,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_3_TZONE PTAC HEATING COIL OUTLET NODE,FAN:ONOFF,PERIMETER_ZN_3_TZONEPTAC_FAN,Inlet,1
+ Non-Parent Node Connection,NODE 8,FAN:ONOFF,PERIMETER_ZN_3_TZONEPTAC_FAN,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_4_TZONE PTAC HEATING COIL OUTLET NODE,FAN:ONOFF,PERIMETER_ZN_4_TZONEPTAC_FAN,Inlet,1
+ Non-Parent Node Connection,NODE 16,FAN:ONOFF,PERIMETER_ZN_4_TZONEPTAC_FAN,Outlet,1
+ Non-Parent Node Connection,CORE_ZN_TZONE PTAC MIXED AIR NODE,COIL:COOLING:DX:SINGLESPEED,CORE_ZN_TZONEPTAC 1SPD DX AC CLG COIL,Inlet,1
+ Non-Parent Node Connection,CORE_ZN_TZONE PTAC COOLING COIL OUTLET NODE,COIL:COOLING:DX:SINGLESPEED,CORE_ZN_TZONEPTAC 1SPD DX AC CLG COIL,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_1_TZONE PTAC MIXED AIR NODE,COIL:COOLING:DX:SINGLESPEED,PERIMETER_ZN_1_TZONEPTAC 1SPD DX AC CLG COIL,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_1_TZONE PTAC COOLING COIL OUTLET NODE,COIL:COOLING:DX:SINGLESPEED,PERIMETER_ZN_1_TZONEPTAC 1SPD DX AC CLG COIL,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_2_TZONE PTAC MIXED AIR NODE,COIL:COOLING:DX:SINGLESPEED,PERIMETER_ZN_2_TZONEPTAC 1SPD DX AC CLG COIL,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_2_TZONE PTAC COOLING COIL OUTLET NODE,COIL:COOLING:DX:SINGLESPEED,PERIMETER_ZN_2_TZONEPTAC 1SPD DX AC CLG COIL,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_3_TZONE PTAC MIXED AIR NODE,COIL:COOLING:DX:SINGLESPEED,PERIMETER_ZN_3_TZONEPTAC 1SPD DX AC CLG COIL,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_3_TZONE PTAC COOLING COIL OUTLET NODE,COIL:COOLING:DX:SINGLESPEED,PERIMETER_ZN_3_TZONEPTAC 1SPD DX AC CLG COIL,Outlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_4_TZONE PTAC MIXED AIR NODE,COIL:COOLING:DX:SINGLESPEED,PERIMETER_ZN_4_TZONEPTAC 1SPD DX AC CLG COIL,Inlet,1
+ Non-Parent Node Connection,PERIMETER_ZN_4_TZONE PTAC COOLING COIL OUTLET NODE,COIL:COOLING:DX:SINGLESPEED,PERIMETER_ZN_4_TZONEPTAC 1SPD DX AC CLG COIL,Outlet,1

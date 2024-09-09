@@ -1,0 +1,153 @@
+{
+   "completed_at" : "20240909T034237Z",
+   "completed_status" : "Success",
+   "created_at" : "20240909T034129Z",
+   "current_step" : 2,
+   "eplusout_err" : "Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2024.09.08 23:41,\n   ************* Beginning Zone Sizing Calculations\n   ** Warning ** Site:GroundTemperature:BuildingSurface: Some values fall outside the range of 15-25C.\n   **   ~~~   ** These values may be inappropriate.  Please consult the Input Output Reference for more details.\n   ** Warning ** ProcessScheduleInput: Schedule:Constant=\"ALWAYS ON DISCRETE\", Blank Schedule Type Limits Name input -- will not be validated.\n   ** Warning ** ProcessScheduleInput: Schedule:Constant=\"ALWAYS OFF DISCRETE\", Blank Schedule Type Limits Name input -- will not be validated.\n   ** Warning ** ProcessScheduleInput: Schedule:Constant=\"ALWAYS ON CONTINUOUS\", Blank Schedule Type Limits Name input -- will not be validated.\n   ** Warning ** CheckUsedConstructions: There are 1 nominally unused constructions in input.\n   **   ~~~   ** For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;\n   ** Warning ** GetElectricEIRChillerInput: Chiller:Electric:EIR=\"90.1-2013 AIRCOOLED   CHILLER 0\"\n   **   ~~~   ** Capacity ratio as a function of temperature curve output is not equal to 1.0 (+ or - 10%) at reference conditions.\n   **   ~~~   ** Curve output at reference conditions = 1.105\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =0.270 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  During Sizing, Environment=MIAMI INTL AP ANN CLG .4% CONDNS DB=>MWB, at Simulation time=07/21 17:30 - 17:35\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =0.212 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  During Sizing, Environment=MIAMI INTL AP ANN CLG .4% CONDNS DB=>MWB, at Simulation time=07/21 17:40 - 17:45\n   ** Warning ** Calculated design heating load for zone=CORE_ZN_TZONE is zero.\n   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.\n   ** Warning ** Calculated design heating load for zone=PERIMETER_ZN_1_TZONE is zero.\n   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.\n   ** Warning ** Calculated design heating load for zone=PERIMETER_ZN_2_TZONE is zero.\n   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.\n   ** Warning ** Calculated design heating load for zone=PERIMETER_ZN_3_TZONE is zero.\n   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.\n   ** Warning ** Calculated design heating load for zone=PERIMETER_ZN_4_TZONE is zero.\n   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.\n   ************* Beginning Plant Sizing Calculations\n   ** Warning ** SizePlantLoop: Calculated Plant Sizing Design Volume Flow Rate=[0.00] is too small. Set to 0.0\n   **   ~~~   ** ..occurs for PlantLoop=HOT WATER LOOP\n   ** Warning ** SizePump: Calculated Pump Nominal Volume Flow Rate=[0.00] is too small. Set to 0.0\n   **   ~~~   ** ..occurs for Pump=HOT WATER LOOP PUMP\n   ** Warning ** Check input. Pump nominal power or motor efficiency is set to 0, for pump=HOT WATER LOOP PUMP\n   ** Warning ** Check input. Pump nominal flow rate is set or calculated = 0, for pump=HOT WATER LOOP PUMP\n   ** Warning ** Output:Meter: invalid Key Name=\"NATURALGAS:FACILITY\" - not found.\n   ** Warning ** Output:Meter: invalid Key Name=\"DISTRICTCOOLING:FACILITY\" - not found.\n   ** Warning ** Output:Meter: invalid Key Name=\"DISTRICTHEATING:FACILITY\" - not found.\n   ** Warning ** Output:Meter:MeterFileOnly: invalid Key Name=\"NATURALGAS:FACILITY\" - not found.\n   ** Warning ** Output:Meter:MeterFileOnly requested for \"Electricity:Facility\" (TimeStep), already on \"Output:Meter\". Will report to both eplusout.eso and eplusout.mtr\n   ************* Testing Individual Branch Integrity\n   ************* All Branches passed integrity testing\n   ************* Testing Individual Supply Air Path Integrity\n   ************* All Supply Air Paths passed integrity testing\n   ************* Testing Individual Return Air Path Integrity\n   ************* All Return Air Paths passed integrity testing\n   ************* No node connection errors were found.\n   ************* Beginning Simulation\n   ** Warning ** Processing Monthly Tabular Reports: Variable names not valid for this simulation\n   **   ~~~   ** ...use Output:Diagnostics,DisplayExtraWarnings; to show more details on individual variables.\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =1.350 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=05/22 14:20 - 14:25\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =1.172E-002 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=05/22 14:20 - 14:25\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =0.928 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=05/22 14:30 - 14:35\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =0.320 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=05/22 14:30 - 14:35\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =0.628 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=05/22 14:40 - 14:45\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =0.411 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=05/22 14:40 - 14:45\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =0.503 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=05/22 14:50 - 14:55\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =0.249 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=05/29 16:30 - 16:33\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =9.395E-002 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=05/29 16:40 - 16:45\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =0.104 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=05/29 16:40 - 16:45\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =4.466E-002 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=05/29 16:50 - 16:55\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =5.512E-002 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=05/29 16:50 - 16:55\n   ** Warning ** Inside surface heat balance did not converge with Max Temp Difference [C] =2.643E-003 vs Max Allowed Temp Diff [C] =2.000000E-003\n   **   ~~~   **  Environment=RUN PERIOD 1, at Simulation time=06/03 17:10 - 17:20\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-ELECTRICITY\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-DISTILLATE OIL\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-RESIDUAL OIL\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-NATURAL GAS\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-COAL\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ************* Simulation Error Summary *************\n   ** Warning ** The following Report Variables were requested but not generated -- check.rdd file\n   **   ~~~   ** Either the IDF did not contain these elements, the variable name is misspelled,\n   **   ~~~   ** or the requested variable is an advanced output which requires Output : Diagnostics, DisplayAdvancedReportVariables;\n   ************* Key=*, VarName=WIND SPEED, Frequency=Hourly\n   ************* Key=*, VarName=AIR SYSTEM ELECTRICITY ENERGY, Frequency=Hourly\n   ************* Key=*, VarName=AIR SYSTEM TOTAL HEATING ENERGY, Frequency=Hourly\n   ************* Key=*, VarName=AIR SYSTEM TOTAL COOLING ENERGY, Frequency=Hourly\n   ************* There are 2 unused schedules in input.\n   ************* There are 2 unused week schedules in input.\n   ************* There are 11 unused day schedules in input.\n   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.\n   *************\n   ************* ===== Recurring Error Summary =====\n   ************* The following recurring error messages occurred.\n   *************\n   *************  ** Warning ** Inside surface heat balance convergence problem continues\n   *************  **   ~~~   **   This error occurred 133 total times;\n   *************  **   ~~~   **   during Warmup 0 times;\n   *************  **   ~~~   **   during Sizing 0 times.\n   *************  **   ~~~   **   Max=5.677426 [C]  Min=0.002072 [C]\n   *************\n   *************\n   ************* ===== Final Error Summary =====\n   ************* The following error categories occurred.  Consider correcting or noting.\n   ************* Nominally Unused Constructions\n   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause\n   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm\n   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).\n   *************\n   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.\n   ************* EnergyPlus Sizing Error Summary. During Sizing: 13 Warning; 0 Severe Errors.\n   ************* EnergyPlus Completed Successfully-- 175 Warning; 0 Severe Errors; Elapsed Time=00hr 00min 37.41sec\n",
+   "file_paths" : 
+   [
+      "/home/chenkianwee/kianwee_work/code_workspace/10.ifc2osmod/ifc2osmod/results/osmod/small_office_radiant_pnls/small_office_wrkflw/generated_files",
+      "./files",
+      "./weather",
+      "../../files",
+      "../../weather",
+      "./"
+   ],
+   "hash" : "953BBCB6",
+   "run_options" : null,
+   "seed_file" : "../small_office.osm",
+   "started_at" : "20240909T034130Z",
+   "steps" : 
+   [
+      {
+         "arguments" : 
+         {
+            "add_output_variables" : true,
+            "control_strategy" : "constant_control",
+            "cooling_plant_type" : "Air Cooled Chiller",
+            "heating_plant_type" : "Air Source Heat Pump",
+            "lockout_end_time" : 20,
+            "lockout_start_time" : 12,
+            "proportional_gain" : 0.29999999999999999,
+            "radiant_lockout" : false,
+            "remove_existing_hvac" : true,
+            "standards_template" : "90.1-2013",
+            "switch_over_time" : 24,
+            "waterside_economizer" : "none"
+         },
+         "measure_dir_name" : "radiant_pnls_with_doas",
+         "name" : "radiant_pnls_with_doas",
+         "result" : 
+         {
+            "completed_at" : "20240909T034157Z",
+            "measure_class_name" : "RadiantPnlsWithDoas",
+            "measure_display_name" : "Radiant Panels with DOAS",
+            "measure_name" : "radiant_pnls_with_doas",
+            "measure_taxonomy" : "HVAC.Whole System",
+            "measure_type" : "ModelMeasure",
+            "measure_uid" : "b7006e95-657a-487d-9046-899e0f70d001",
+            "measure_version_id" : "d1da0bfe-86fc-44ea-bbce-1a2db40b2951",
+            "measure_version_modified" : "20240829T150609Z",
+            "measure_xml_checksum" : "54A6B8F4",
+            "started_at" : "20240909T034133Z",
+            "stderr" : "",
+            "stdout" : "",
+            "step_errors" : [],
+            "step_files" : [],
+            "step_final_condition" : "This measure created 5 radiant ceiling objects.",
+            "step_info" : 
+            [
+               "Removing existing HVAC systems from the model",
+               "Based on model climate zone 1A, using 100.0F heating supply water temperature.",
+               "Adjusting HVAC equipment efficiencies and controls to follow template 90.1-2013."
+            ],
+            "step_initial_condition" : "This measure will add radiant systems to 5 conditioned zones with a hot water loop served by a Air Source Heat Pump and chilled water loop served by a Air Cooled Chiller.",
+            "step_result" : "Success",
+            "step_values" : 
+            [
+               {
+                  "name" : "remove_existing_hvac",
+                  "value" : true
+               },
+               {
+                  "name" : "heating_plant_type",
+                  "value" : "Air Source Heat Pump"
+               },
+               {
+                  "name" : "cooling_plant_type",
+                  "value" : "Air Cooled Chiller"
+               },
+               {
+                  "name" : "waterside_economizer",
+                  "value" : "none"
+               },
+               {
+                  "name" : "control_strategy",
+                  "value" : "constant_control"
+               },
+               {
+                  "name" : "proportional_gain",
+                  "value" : 0.29999999999999999
+               },
+               {
+                  "name" : "switch_over_time",
+                  "value" : 24.0
+               },
+               {
+                  "name" : "radiant_lockout",
+                  "value" : false
+               },
+               {
+                  "name" : "lockout_start_time",
+                  "value" : 12.0
+               },
+               {
+                  "name" : "lockout_end_time",
+                  "value" : 20.0
+               },
+               {
+                  "name" : "add_output_variables",
+                  "value" : true
+               },
+               {
+                  "name" : "standards_template",
+                  "value" : "90.1-2013"
+               }
+            ],
+            "step_warnings" : []
+         }
+      },
+      {
+         "arguments" : {},
+         "measure_dir_name" : "site_zone_results",
+         "name" : "site_zone_results",
+         "result" : 
+         {
+            "completed_at" : "20240909T034158Z",
+            "measure_class_name" : "SiteZoneResults",
+            "measure_display_name" : "Add site and zone level output variables",
+            "measure_name" : "site_zone_results",
+            "measure_taxonomy" : "Reporting.QAQC",
+            "measure_type" : "ModelMeasure",
+            "measure_uid" : "2cfd908e-9d4a-43d3-ba4e-8253cb0364b3",
+            "measure_version_id" : "6760a2bd-5361-42a9-9338-a6b13ed95380",
+            "measure_version_modified" : "20240903T152740Z",
+            "measure_xml_checksum" : "50718C83",
+            "started_at" : "20240909T034158Z",
+            "stderr" : "",
+            "stdout" : "",
+            "step_errors" : [],
+            "step_files" : [],
+            "step_final_condition" : "Successfully output variables",
+            "step_info" : 
+            [
+               "There are no user arguments in this measure"
+            ],
+            "step_result" : "Success",
+            "step_values" : [],
+            "step_warnings" : []
+         }
+      }
+   ],
+   "updated_at" : "20240909T034237Z"
+}

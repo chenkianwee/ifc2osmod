@@ -1,0 +1,51 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "osmod_simple_glazing",
+    "description": "IFC property set schema for mapping OpenStudio SimpleGlazing material properties to IFC Windows",
+    "type": "object",
+    "properties": {
+      "UFactor": {
+        "type": "object",
+        "description": "Overall heat transfer coefficient. Units are in W/m2-K.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcThermalTransmittanceMeasure"
+          }
+        } 
+      },
+      "SolarHeatGainCoefficient": {
+        "type": "object",
+        "description": "0-1.0 ratio of transmitted solar radiation to incident solar radiation of an entire window assembly.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "VisibleTransmittance": {
+        "type": "object",
+        "description": "0-1.0 amount of visible light that will be transmitted through the window.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      }
+    },
+    "required": ["UFactor", "SolarHeatGainCoefficient", "VisibleTransmittance"]
+}

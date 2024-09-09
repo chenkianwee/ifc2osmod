@@ -1,0 +1,79 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "osmod_massless",
+    "description": "IFC property set schema for mapping OpenStudio NoMass material properties to IFC Walls, Slabs, Roof, Doors",
+    "type": "object",
+    "properties": {
+      "Roughness": {
+        "type": "object",
+        "description": "VeryRough, Rough, MediumRough, MediumSmooth, Smooth, and VerySmooth. This parameter only influences the convection coefficients, more specifically the exterior convection coefficient.",
+        "properties": {
+          "value": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcLabel"
+          }
+        } 
+      },
+      "ThermalAbsorptance": {
+        "type": "object",
+        "description": "0-1.0 represents the fraction of incident long wavelength (>2.5 microns) radiation that is absorbed by the material.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "SolarAbsorptance": {
+        "type": "object",
+        "description": "0-1.0 fraction of incident solar radiation that is absorbed by the material.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "VisibleAbsorptance": {
+        "type": "object",
+        "description": "0-1.0 fraction of incident visible wavelength radiation that is absorbed by the material.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "ThermalResistance": {
+        "type": "object",
+        "description": "Thermal resistance (R-value) of the material layer. Units for this parameter are (m2-K)/W.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcThermalResistanceMeasure"
+          }
+        } 
+      }
+    },
+    "required": [ "Roughness", "ThermalAbsorptance", "SolarAbsorptance", "VisibleAbsorptance", "ThermalResistance"]
+}

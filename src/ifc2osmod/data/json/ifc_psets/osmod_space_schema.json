@@ -1,0 +1,107 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "osmod_space",
+    "description": "IFC property set schema for mapping OpenStudio space properties to IFC space",
+    "type": "object",
+    "properties": {
+      "OutdoorAirFlowperPerson": {
+        "type": "object",
+        "description": "design outdoor air volume flow rate per person for this zone in cubic meters per second per person (m3/s/person).",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "OutdoorAirFlowperFloorArea": {
+        "type": "object",
+        "description": "design outdoor air volume flow rate per person for this zone in cubic meters per second per area (m3/s/m2).",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "FloorAreaPerPerson": {
+        "type": "object",
+        "description": "floor area per person (m2/person)",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "LightingPowerPerFloorArea": {
+        "type": "object",
+        "description": "lighting power per floor area (W/m2)",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "ElectricEquipmentPowerPerFloorArea": {
+        "type": "object",
+        "description": "electric equipment power per flow area (W/m2).",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "CoolingSetpointTemperature": {
+        "type": "object",
+        "description": "cooling setpoint temperature in (degC).",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcThermodynamicTemperatureMeasure"
+          }
+        } 
+      },
+      "HeatingSetpointTemperature": {
+        "type": "object",
+        "description": "heating setpoint temperature in (degC).",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcThermodynamicTemperatureMeasure"
+          }
+        } 
+      }
+    },
+    "required": [ "OutdoorAirFlowperPerson", "OutdoorAirFlowperFloorArea", "FloorAreaPerPerson", "LightingPowerPerFloorArea", "ElectricEquipmentPowerPerFloorArea", "CoolingSetpointTemperature", "HeatingSetpointTemperature"]
+}

@@ -1,0 +1,59 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "osmod_opq_smplglz_constr_schema",
+    "description": "Schema to specify how opaque and simple glazing constructions are documented",
+    "type": "object",
+    "properties": {
+      "material_library": {
+        "type": "object",
+        "default": null,
+        "patternProperties": {
+          ".*": {
+            "type": "object",
+            "properties": {
+                "name" : {"type": ["string", "null"]},
+                "thickness": {"type": ["number", "null"]},
+                "roughness" : {"type": ["string", "null"]},
+                "conductivity" : {"type": ["number", "null"]},
+                "density" : {"type": ["number", "null"]},
+                "specificheat" : {"type": ["number", "null"]},
+                "thermalabsorptance" : {"type": ["number", "null"]},
+                "solarabsorptance" : {"type": ["number", "null"]},
+                "visibleabsorptance" : {"type": ["number", "null"]},
+                "thermalresistance" : {"type": ["number", "null"]},
+                "ufactor" : {"type": ["number", "null"]},
+                "solarheatgaincoefficient" : {"type": ["number", "null"]},
+                "visibletransmittance" : {"type": ["number", "null"]}
+            }
+          }
+        }
+      },
+      "construction_library": {
+        "type": "object",
+        "default": null,
+        "patternProperties": {
+          ".*": {
+            "type": "object",
+            "properties": {
+                "name" : {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "material_layers": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+            }
+          }
+        }
+      }
+    },
+    "required": ["material_library", "construction_library"]
+}

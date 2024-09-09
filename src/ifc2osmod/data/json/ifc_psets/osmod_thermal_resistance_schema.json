@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "osmod_thermal_resistance",
+    "description": "IFC property set schema for specifying thermal resistance of IFC Walls, Slabs, Roof, Opaque Doors",
+    "type": "object",
+    "properties": {
+      "ThermalResistance": {
+        "type": "object",
+        "description": "Thermal resistance (R-value) of the material layer. Units for this parameter are (m2-K)/W.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcThermalResistanceMeasure"
+          }
+        } 
+      }
+    },
+    "required": ["ThermalResistance"]
+}

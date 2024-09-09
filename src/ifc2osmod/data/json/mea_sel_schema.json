@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "measure_select_schema",
+    "description": "Schema to specify the measurements used in OpenStudio execution",
+    "type": "object",
+    "properties": {
+      "measures": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "dir" : {"type": ["string"], "default": null},
+                "arguments" : {"type": "object"}
+            }},
+        "default": null
+        } 
+    },
+    "required": ["measures"]
+}

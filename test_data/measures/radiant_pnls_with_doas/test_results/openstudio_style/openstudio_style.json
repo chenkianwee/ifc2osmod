@@ -1,0 +1,24 @@
+{
+  "by_measure": {
+    "RadiantPnlsWithDoas": {
+      "measure_info": 2,
+      "measure_warnings": 0,
+      "measure_errors": 0,
+      "issues": [
+        {
+          "message": "Argument display name 'Remove existing HVAC system (keeps service water heating and zone exhaust fans)' appears to have units. Set units in the setUnits method.",
+          "type": "error",
+          "severity": "info"
+        },
+        {
+          "message": "Argument display name 'Water-side economizer (water cooled chiller only)' appears to have units. Set units in the setUnits method.",
+          "type": "error",
+          "severity": "info"
+        }
+      ]
+    }
+  },
+  "total_info": 2,
+  "total_warnings": 0,
+  "total_errors": 0
+}

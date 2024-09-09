@@ -1,0 +1,163 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "osmod_material",
+    "description": "IFC property set schema for mapping OpenStudio material properties to IFC material",
+    "type": "object",
+    "properties": {
+      "Roughness": {
+        "type": "object",
+        "description": "VeryRough, Rough, MediumRough, MediumSmooth, Smooth, and VerySmooth. This parameter only influences the convection coefficients, more specifically the exterior convection coefficient.",
+        "properties": {
+          "value": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcLabel"
+          }
+        } 
+      },
+      "Conductivity": {
+        "type": "object",
+        "description": "Thermal conductivity of the material layer. Units for this parameter are W/(m-K)",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcThermalConductivityMeasure"
+          }
+        } 
+      },
+      "Density": {
+        "type": "object",
+        "description": "Density of the material layer in units of kg/m3",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcMassDensityMeasure"
+          }
+        } 
+      },
+      "SpecificHeat": {
+        "type": "object",
+        "description": "Specific heat of the material layer in units of J/(kg-K).",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcSpecificHeatCapacityMeasure"
+          }
+        } 
+      },
+      "ThermalAbsorptance": {
+        "type": "object",
+        "description": "0-1.0 represents the fraction of incident long wavelength (>2.5 microns) radiation that is absorbed by the material.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "SolarAbsorptance": {
+        "type": "object",
+        "description": "0-1.0 fraction of incident solar radiation that is absorbed by the material.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "VisibleAbsorptance": {
+        "type": "object",
+        "description": "0-1.0 fraction of incident visible wavelength radiation that is absorbed by the material.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "ThermalResistance": {
+        "type": "object",
+        "description": "Thermal resistance (R-value) of the material layer. Units for this parameter are (m2-K)/W.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcThermalResistanceMeasure"
+          }
+        } 
+      },
+      "UFactor": {
+        "type": "object",
+        "description": "Overall heat transfer coefficient. Units are in W/m2-K.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcThermalTransmittanceMeasure"
+          }
+        } 
+      },
+      "SolarHeatGainCoefficient": {
+        "type": "object",
+        "description": "0-1.0 ratio of transmitted solar radiation to incident solar radiation of an entire window assembly.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      },
+      "VisibleTransmittance": {
+        "type": "object",
+        "description": "0-1.0 amount of visible light that will be transmitted through the window.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcReal"
+          }
+        } 
+      }
+    },
+    "required": [ "Roughness", "Conductivity", "Density", "SpecificHeat", "ThermalAbsorptance", "SolarAbsorptance", "VisibleAbsorptance", "ThermalResistance", "UFactor", "SolarHeatGainCoefficient", "VisibleTransmittance"]
+}

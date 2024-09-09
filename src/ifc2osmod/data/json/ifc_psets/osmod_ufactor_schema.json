@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "osmod_ufactor",
+    "description": "IFC property set schema for specifying uvalue of IFC windows",
+    "type": "object",
+    "properties": {
+      "UFactor": {
+        "type": "object",
+        "description": "Overall heat transfer coefficient. Units are in W/m2-K.",
+        "properties": {
+          "value": {
+            "type": ["number", "null"],
+            "default": null
+          },
+          "primary_measure_type": {
+            "type": ["string"],
+            "default": "IfcThermalTransmittanceMeasure"
+          }
+        } 
+      }
+    },
+    "required": ["UFactor"]
+}

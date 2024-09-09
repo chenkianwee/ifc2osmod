@@ -1,0 +1,22 @@
+{
+  "radiant_pnls_with_doas" : 
+  {
+    "add_output_variables" : true,
+    "applicable" : true,
+    "control_strategy" : "constant_control",
+    "cooling_plant_type" : "Air Cooled Chiller",
+    "heating_plant_type" : "Air Source Heat Pump",
+    "lockout_end_time" : 20.0,
+    "lockout_start_time" : 12.0,
+    "proportional_gain" : 0.29999999999999999,
+    "radiant_lockout" : false,
+    "remove_existing_hvac" : true,
+    "standards_template" : "90.1-2013",
+    "switch_over_time" : 24.0,
+    "waterside_economizer" : "none"
+  },
+  "site_zone_results" : 
+  {
+    "applicable" : true
+  }
+}
