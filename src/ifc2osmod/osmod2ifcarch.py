@@ -95,67 +95,6 @@ def create_ifc_built_ele_type(ifcmodel: ifcopenshell.file, type_name: str, const
         const_types[type_name] = ifc_built_ele_type
     return ifc_built_ele_type
 
-def mv_extrude_srf(xyzs: np.ndarray, extrusion: float, movement: float) -> geomie3d.topobj.Solid:
-    '''
-    move the surface (defined by the xyzs) opposite of the surface normal and extrude in normal direction.
-
-    Parameters
-    ----------
-    xyzs: np.ndarray
-        np.ndarray[shape(number of points, 3)] points defining the surface to extrude.
-
-    extrusion: float
-        the magnitude of extrusion
-    
-    movement: float
-        the magnitude of the move
-
-    Returns
-    -------
-    dict
-        dictionary of the polymesh with two keys: vertices and indices.
-    '''
-    g3d_verts = geomie3d.create.vertex_list(xyzs)
-    face = geomie3d.create.polygon_face_frm_verts(g3d_verts) 
-    nrml = geomie3d.get.face_normal(face)
-    rev_nrml = geomie3d.calculate.reverse_vectorxyz(nrml)
-    midxyz = geomie3d.calculate.face_midxyz(face)
-    mv_xyz = geomie3d.calculate.move_xyzs([midxyz], [rev_nrml], [movement])[0]
-    mv_face = geomie3d.modify.move_topo(face, mv_xyz)
-    ext_face = geomie3d.create.extrude_polygon_face(mv_face, nrml, extrusion)
-    faces = geomie3d.get.faces_frm_solid(ext_face)
-    mesh_dict = geomie3d.modify.faces2polymesh(faces)
-    return mesh_dict
-
-def extrude(xyzs: np.ndarray | list, extrusion: float, direction: list[float] = None):
-    '''
-    extrude in normal direction or if specified the direction.
-
-    Parameters
-    ----------
-    xyzs: np.ndarray
-        np.ndarray[shape(number of points, 3)] the points forming the polygon face to be extruded.
-
-    extrusion: float
-        the magnitude of extrusion
-
-    direction: list[float]
-        list[shape(3)] direction of the extrusion. Default = None. If none normal of the face (defined by the xyzs) is used for extrusion.
-
-    Returns
-    -------
-    dict
-        dictionary of the polymesh with two keys: vertices and indices.
-    '''
-    g3d_verts = geomie3d.create.vertex_list(xyzs)
-    g3d_srf = geomie3d.create.polygon_face_frm_verts(g3d_verts)
-    if direction is None:
-        direction = geomie3d.get.face_normal(g3d_srf)
-    extruded = geomie3d.create.extrude_polygon_face(g3d_srf, direction, extrusion)
-    extruded_faces = geomie3d.get.faces_frm_solid(extruded)
-    poly_mesh_dict = geomie3d.modify.faces2polymesh(extruded_faces)
-    return poly_mesh_dict
-
 def srf_verts_2pt_wall(xyzs: np.ndarray | list) -> tuple[np.ndarray, float, float]:
     '''
     extrude in normal direction.
@@ -268,17 +207,17 @@ def create_an_ifc_surface(ifcmodel: ifcopenshell.file, xyzs: np.ndarray, name: s
     ifc_surface = ifcopenshell.api.run("root.create_entity", ifcmodel, ifc_class=ifc_class, name=name)
     if srf_const_dict is not None and const_thickness > 0:
         if ifc_class == 'IfcWall':
-            poly_mesh_dict = mv_extrude_srf(xyzs, const_thickness, const_thickness/2)
+            poly_mesh_dict = ifcopenshell_utils.mv_extrude_srf(xyzs, const_thickness, const_thickness/2)
             ifc_repr = ifcopenshell.api.run("geometry.add_mesh_representation", ifcmodel, context=body, 
                                             vertices=[poly_mesh_dict['vertices'].tolist()], faces=[poly_mesh_dict['indices']])
             ifcopenshell.api.run("geometry.edit_object_placement", ifcmodel, product=ifc_surface)
         elif ifc_class == 'IfcRoof':
-            poly_mesh_dict = extrude(xyzs, const_thickness, direction=[0,0,1])
+            poly_mesh_dict = ifcopenshell_utils.extrude(xyzs, const_thickness, direction=[0,0,1])
             ifc_repr = ifcopenshell.api.run("geometry.add_mesh_representation", ifcmodel, context=body, 
                                             vertices=[poly_mesh_dict['vertices'].tolist()], faces=[poly_mesh_dict['indices']])
             ifcopenshell.api.run("geometry.edit_object_placement", ifcmodel, product=ifc_surface)
         else:
-            poly_mesh_dict = extrude(xyzs, const_thickness)
+            poly_mesh_dict = ifcopenshell_utils.extrude(xyzs, const_thickness)
             ifc_repr = ifcopenshell.api.run("geometry.add_mesh_representation", ifcmodel, context=body, 
                                             vertices=[poly_mesh_dict['vertices'].tolist()], faces=[poly_mesh_dict['indices']])
             ifcopenshell.api.run("geometry.edit_object_placement", ifcmodel, product=ifc_surface)
@@ -430,7 +369,7 @@ def create_ifc_sub_surfaces(ifcmodel: ifcopenshell.file, sub_surface_dicts: dict
         ifc_host = surface_dicts[sub_srf_host]['ifc_surface']
         ifcopening = ifcopenshell.api.run("root.create_entity", ifcmodel, ifc_class="IfcOpeningElement", name=f"{sub_srf_name}_opening")
         # make a hole in the wall
-        extruded_ssrf = mv_extrude_srf(ssrf_vertices, host_thickness*2.5, host_thickness)
+        extruded_ssrf = ifcopenshell_utils.mv_extrude_srf(ssrf_vertices, host_thickness*2.5, host_thickness)
         opening_repr = ifcopenshell.api.run("geometry.add_mesh_representation", ifcmodel, context=body, 
                                             vertices=[extruded_ssrf['vertices'].tolist()], faces=[extruded_ssrf['indices']])
         ifcopenshell.api.run("geometry.edit_object_placement", ifcmodel, product=ifcopening)

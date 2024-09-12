@@ -12,10 +12,40 @@
             "visibleabsorptance": null,
             "thermalresistance": null,
             "ufactor": 2.86184304,
+            "solarheatgaincoefficient": 0.219,
+            "visibletransmittance": 0.2409
+        },
+        "1": {
+            "name": "Glazing Layer North",
+            "thickness": 0.0,
+            "roughness": null,
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": null,
+            "solarabsorptance": null,
+            "visibleabsorptance": null,
+            "thermalresistance": null,
+            "ufactor": 2.06120838,
+            "solarheatgaincoefficient": 0.359,
+            "visibletransmittance": 0.3949
+        },
+        "2": {
+            "name": "Glazing Layer North",
+            "thickness": 0.0,
+            "roughness": null,
+            "conductivity": null,
+            "density": null,
+            "specificheat": null,
+            "thermalabsorptance": null,
+            "solarabsorptance": null,
+            "visibleabsorptance": null,
+            "thermalresistance": null,
+            "ufactor": 2.86184304,
             "solarheatgaincoefficient": 0.229,
             "visibletransmittance": 0.2519
         },
-        "1": {
+        "3": {
             "name": "Glazing Layer North",
             "thickness": 0.0,
             "roughness": null,
@@ -32,13 +62,27 @@
         }
     },
     "construction_library": {
+        "2.06": {
+            "name": [
+                "Window_U_0.363_SHGC_North_0.359"
+            ],
+            "material_layers": [
+                [
+                    1
+                ]
+            ]
+        },
         "2.86": {
             "name": [
+                "Window_U_0.504_SHGC_North_0.219",
                 "Window_U_0.504_SHGC_North_0.229"
             ],
             "material_layers": [
                 [
                     0
+                ],
+                [
+                    2
                 ]
             ]
         },
@@ -48,7 +92,7 @@
             ],
             "material_layers": [
                 [
-                    1
+                    3
                 ]
             ]
         }

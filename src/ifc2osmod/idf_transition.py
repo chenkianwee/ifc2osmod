@@ -26,8 +26,8 @@ def parse_args():
                         help = 'The targetted EP+ version')
     
     parser.add_argument('-o', '--output', type = str,
-                        metavar = 'DIR', 
-                        help = 'The output directory path')
+                        metavar = 'FILE', 
+                        help = 'The output file path')
     
     parser.add_argument('-p', '--process', action = 'store_true',
                         default=False, help = 'turn it on if piping in the idf filepath')

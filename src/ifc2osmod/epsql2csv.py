@@ -12,7 +12,7 @@ from ladybug.sql import SQLiteResult
 #===================================================================================================
 def parse_args():
     # create parser object
-    parser = argparse.ArgumentParser(description = "Calculate the Massless opaque material for the envelope")
+    parser = argparse.ArgumentParser(description = "Convert the data from epsql file into csv file")
     
     parser.add_argument('-s', '--sql', type = str,
                         metavar = 'FILE',
