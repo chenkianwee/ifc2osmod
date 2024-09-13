@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ifc2osmod"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
   { name="Kian Wee CHEN", email="chenkianwee@gmail.com" },
 ]
