@@ -1,7 +1,0 @@
-{"measures": [
-    {"dir": "../ifc2osmod/measures/add_ptac/", 
-    "arguments": {"heating_type": "No Heat", "fan_type": "Cycling"}},
-    {"dir": "../ifc2osmod/measures/site_zone_results/", 
-    "arguments": {}}
-    ]
-}
