@@ -71,7 +71,7 @@ def idf_transition(idf_filepath: str, output_filepath: str, bin_dir: str, orig_v
     transition_dict = {9.0: 'Transition-V9-0-0-to-V9-1-0', 9.1: 'Transition-V9-1-0-to-V9-2-0', 9.2: 'Transition-V9-2-0-to-V9-3-0',
                        9.3: 'Transition-V9-3-0-to-V9-4-0', 9.4: 'Transition-V9-4-0-to-V9-5-0', 9.5: 'Transition-V9-5-0-to-V9-6-0',
                        9.6: 'Transition-V9-6-0-to-V22-1-0', 22.1: 'Transition-V22-1-0-to-V22-2-0', 22.2: 'Transition-V22-2-0-to-V23-1-0', 
-                       23.1: 'Transition-V23-1-0-to-V23-2-0', 23.2: 'Latest version'}
+                       23.1: 'Transition-V23-1-0-to-V23-2-0', 23.2: 'Transition-V23-2-0-to-V24-1-0', 24.1: 'latest'}
     
     transition_keys = transition_dict.keys()
     transition_keys = sorted(transition_keys)

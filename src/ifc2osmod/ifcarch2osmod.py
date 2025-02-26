@@ -9,7 +9,6 @@ import ifcopenshell.geom
 from openstudio import model as osmod
 
 import geomie3d
-import geomie3d.viz
 import ifc_utils.ifcopenshell_utils as ifcopenshell_utils
 from .utils import openstudio_utils
 from . import settings
@@ -523,6 +522,7 @@ def viz_bldg_dicts(ifcbldg_dicts: dict):
         dictionaries of produce by the ifcopenshell_utils.get_ifc_story_info function.
     
     '''
+    from geomie3d import viz
     all_envlps = []
     vals = ifcbldg_dicts.values()
     for val in vals:
@@ -535,7 +535,8 @@ def viz_bldg_dicts(ifcbldg_dicts: dict):
             srfs = envlp['surfaces']
             all_envlps.extend(srfs)
             # print(srfs)
-    geomie3d.viz.viz([{'topo_list': all_envlps, 'colour': 'blue'}])
+
+    viz.viz([{'topo_list': all_envlps, 'colour': 'blue'}])
 
 def viz_spatialzone_dicts(ifcspatial_zone_dicts: dict, shade_list: list[geomie3d.topobj.Face]):
     '''
@@ -549,6 +550,7 @@ def viz_spatialzone_dicts(ifcspatial_zone_dicts: dict, shade_list: list[geomie3d
     shade_list: list[geomie3d.topobj.Face]
         list of shades in the ifc model.
     '''
+    from geomie3d import viz
     subsrf_ls = []
     srf_ls = []
     vals = ifcspatial_zone_dicts.values()
@@ -564,15 +566,16 @@ def viz_spatialzone_dicts(ifcspatial_zone_dicts: dict, shade_list: list[geomie3d
     win_nrml_edges = geomie3d.create.pline_edges_frm_face_normals(subsrf_ls)
     envlp_nrml_edges = geomie3d.create.pline_edges_frm_face_normals(srf_ls)
     
+    
     if len(shade_list) !=0:
-        geomie3d.viz.viz([{'topo_list': srf_ls, 'colour': 'white'},
+        viz.viz([{'topo_list': srf_ls, 'colour': 'white'},
                         {'topo_list': subsrf_ls, 'colour': 'blue'},
                         {'topo_list': win_nrml_edges, 'colour': 'green'},
                         {'topo_list': envlp_nrml_edges, 'colour': 'white'},
                         {'topo_list': shade_list, 'colour': 'blue'},
                         ])
-    else:    
-        geomie3d.viz.viz([{'topo_list': srf_ls, 'colour': 'white'},
+    else:
+        viz.viz([{'topo_list': srf_ls, 'colour': 'white'},
                         {'topo_list': subsrf_ls, 'colour': 'blue'},
                         {'topo_list': win_nrml_edges, 'colour': 'green'},
                         {'topo_list': envlp_nrml_edges, 'colour': 'white'},

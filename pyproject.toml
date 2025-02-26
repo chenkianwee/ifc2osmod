@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ifc2osmod"
-version = "0.0.4"
+version = "0.0.6"
 authors = [
   { name="Kian Wee CHEN", email="chenkianwee@gmail.com" },
 ]
@@ -14,11 +14,13 @@ requires-python = ">=3.10,<3.13"
 classifiers = ["License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
                "Programming Language :: Python :: 3.10",
                "Operating System :: OS Independent"]
-dependencies = ['ifc_utils==0.0.3',
+dependencies = ['ifc_utils==0.0.5',
                 'openstudio==3.8.0',
                 'ladybug-core==0.43.22',
                 'setuptools==75.8.0'
                 ]
+[project.optional-dependencies]
+viewer3d = ['ifc_utils[viewer3d]==0.0.5']
 
 [project.urls]
 "Homepage" = "https://github.com/chenkianwee/ifc2osmod"

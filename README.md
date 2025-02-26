@@ -11,6 +11,7 @@
 
 ## Getting started
 - This tutorial uses Ubuntu 24.04 OS
+- install openstudio application 1.8.0 here (https://github.com/openstudiocoalition/OpenStudioApplication/releases/tag/v1.8.0)
 
 1. Create a virtual environment called ifc2osmod
     ```
@@ -33,6 +34,38 @@
     ```
     ifcarch2osmod -i ifc/small_office.ifc -o res/osmod/small_office.osm | add_sch2osmod -p -b "Small Office" -c 1A | execute_osmod -p -e epw/miami/USA_FL_Miami.Intl.AP.722020_TMY3.epw -d epw/miami/USA_FL_Miami.Intl.AP.722020_TMY3.ddy -m json/measure_sel.json -out res/osmod/small_office_radiant_pnls
     ```
+
+## Convert idf buildings to osmodel example
+- These instructions are only for Ubuntu 24.04. 
+
+### Update the idf to the right version
+1. Go to (https://www.energycodes.gov/prototype-building-models) and download [Small Office 90.1-2022 zip file](https://www.energycodes.gov/sites/default/files/2023-10/ASHRAE901_OfficeSmall_STD2022.zip)
+
+2. Once you unzip the file. Look for the file 'ASHRAE901_OfficeSmall_STD2022_NewYork.idf'. Lets conver this idf file to osmodel.
+
+3. We want to open the osmodel in Openstudio Application 1.8. So we need to update the idf file version to 24.1.0. Open the 'ASHRAE901_OfficeSmall_STD2022_NewYork.idf'. It is a text file. Search for the word 'version' using ctrl+f. The version of the idf file should be version 22.1.
+
+4. Download energyplus 24.1.0 from [here](https://github.com/NREL/EnergyPlus/releases/download/v24.1.0/EnergyPlus-24.1.0-9d7789a3ac-Linux-Ubuntu22.04-x86_64.tar.gz). Unzip the file. The IDFVersionUpdater folder is located in the PreProcess folder.
+
+5. Run the following command to transit the file to the target version.
+```
+idf_transition -u '/EnergyPlus-24.1.0-9d7789a3ac-Linux-Ubuntu22.04-x86_64/PreProcess/IDFVersionUpdater/' -i '/Downloads/ASHRAE901_OfficeSmall_STD2022/ASHRAE901_OfficeSmall_STD2022_NewYork.idf' -c 22.1 -t 24.1 -o 'idf/ASHRAE901_OfficeSmall_STD2022_NewYork_24_1.idf'
+```
+### Convert the idf to osm 
+1. Convert the idf to osm using this command.
+```
+idf2osmod -i '/idf/ASHRAE901_OfficeSmall_STD2022_NewYork_24_1.idf' -o '/osmod/idf2osmod_ASHRAE901_OfficeSmall_STD2022_NewYork.osm'
+```
+## Create construction json database to facilitate ifc2osmod conversion
+1. This is done by extracting the construction information, either opaque constructions or glazing contruction, from osmodel files in a directory. So put the osmodel files in the same directory.
+2. To extract the opaque construction, run the following command.
+```
+extract_osmod_opq_constr -o '/osmod/' -r '/json/osmod_opq_constr_info.json'  
+``` 
+3. To extract glazing construction, run the following command:
+```
+extract_osmod_smpl_glz_constr -o '/osmod/' -r '/json/osmod_smpl_glz_constr_info.json'
+```
 
 ## Development
 1. Download the example files from this url https://github.com/chenkianwee/ifc2osmod_gendgn_egs/archive/refs/heads/main.zip
